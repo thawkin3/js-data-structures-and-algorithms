@@ -28,12 +28,14 @@ const binarySearch = (haystack, needle, showLogs) => {
     return -1;
 }
 
-const binarySearchTest1 = [1, 3, 5, 8, 9, 10, 12];
-const binarySearchTest2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
+export default binarySearch;
 
-console.log(binarySearch(binarySearchTest1, 10, true))
-console.log(binarySearch(binarySearchTest1, 999, true))
-console.log(binarySearch(binarySearchTest2, 14, true))
-console.log(binarySearch(binarySearchTest2, 0, true))
-console.log(binarySearch(binarySearchTest2, 22, true))
-console.log(binarySearch(binarySearchTest2, 999, true))
+// const binarySearchTest1 = [1, 3, 5, 8, 9, 10, 12];
+// const binarySearchTest2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
+
+// console.log(binarySearch(binarySearchTest1, 10, true));
+// console.log(binarySearch(binarySearchTest1, 999, true));
+// console.log(binarySearch(binarySearchTest2, 14, true));
+// console.log(binarySearch(binarySearchTest2, 0, true));
+// console.log(binarySearch(binarySearchTest2, 22, true));
+// console.log(binarySearch(binarySearchTest2, 999, true));
