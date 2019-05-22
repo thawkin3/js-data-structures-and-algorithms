@@ -1,4 +1,5 @@
 // Binary Search
+// Starts at the midpoint and continues to cut the array into halves
 // Only can be used for sorted arrays
 // Best case: 0(1) (the element you're looking for is located at the array's midpoint)
 // Worst case: 0(log n) (the element is located near the beginning or end of the array)
@@ -29,13 +30,3 @@ const binarySearch = (haystack, needle, showLogs) => {
 }
 
 export default binarySearch;
-
-// const binarySearchTest1 = [1, 3, 5, 8, 9, 10, 12];
-// const binarySearchTest2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
-
-// console.log(binarySearch(binarySearchTest1, 10, true));
-// console.log(binarySearch(binarySearchTest1, 999, true));
-// console.log(binarySearch(binarySearchTest2, 14, true));
-// console.log(binarySearch(binarySearchTest2, 0, true));
-// console.log(binarySearch(binarySearchTest2, 22, true));
-// console.log(binarySearch(binarySearchTest2, 999, true));
