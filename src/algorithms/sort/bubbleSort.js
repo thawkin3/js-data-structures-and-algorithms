@@ -9,7 +9,7 @@ const bubbleSort = (arr, showLogs) => {
     let didSwapSomething = false;
     let iteration = 0;
 
-    showLogs && console.log(`starting array: ${sortedArr.join(' ')}`)
+    showLogs && console.log(`starting array: ${sortedArr.join(' ')}`);
 
     do {
         didSwapSomething = false;
@@ -29,5 +29,3 @@ const bubbleSort = (arr, showLogs) => {
 }
 
 export default bubbleSort;
-
-
