@@ -8,32 +8,33 @@
  * - peek: Constant — O(1)
  * - isEmpty: Constant — O(1)
  * - size: Constant — O(1)
- * - enumerate: O(n)
+ * - enumerate: Linear - O(n)
+ * - clear: Constant - O(1)
  */
 
 export class Stack {
   constructor() {
-    this.stack = []
+    this.items = []
     this.length = 0
   }
 
   push(val) {
     this.length++
-    this.stack.unshift(val)
+    this.items.unshift(val)
     return val
   }
 
   pop() {
     if (this.length) {
       this.length--
-      return this.stack.shift()
+      return this.items.shift()
     } else {
       return null
     }
   }
 
   peek() {
-    return this.stack[0] || null
+    return this.items[0] || null
   }
 
   isEmpty() {
@@ -45,6 +46,10 @@ export class Stack {
   }
 
   enumerate() {
-    return this.stack
+    return this.items
+  }
+
+  clear() {
+    return (this.items = [])
   }
 }

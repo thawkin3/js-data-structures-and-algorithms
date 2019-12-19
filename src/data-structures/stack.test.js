@@ -118,4 +118,14 @@ describe('Stack', () => {
       expect(stack1.enumerate()).toEqual(['a', 10, 42])
     })
   })
+
+  describe('clear', () => {
+    it('removes all elements from the stack', () => {
+      const stack1 = new Stack()
+      stack1.push(42)
+      stack1.push(10)
+      stack1.push('a')
+      expect(stack1.clear()).toEqual([])
+    })
+  })
 })
