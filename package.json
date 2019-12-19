@@ -7,11 +7,16 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "prettier-watch": "onchange \"**/*.{js,ts,tsx}\" -- prettier --write {{changed}}"
   },
   "eslintConfig": {
     "extends": "react-app"

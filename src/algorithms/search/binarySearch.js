@@ -5,28 +5,35 @@
 // Worst case: 0(log n) (the element is located near the beginning or end of the array)
 
 const binarySearch = (haystack, needle, showLogs) => {
-    let searchableHaystack = [...haystack];
-    let i = 1;
-    let fullHaystackMidpointIndex = 0;
+  let searchableHaystack = [...haystack]
+  let i = 1
+  let fullHaystackMidpointIndex = 0
 
-    while (searchableHaystack.length > 0) {
-        const midpointIndex = Math.floor(searchableHaystack.length / 2);
-        fullHaystackMidpointIndex += midpointIndex;
-        showLogs && console.log(`iteration ${i}: midpoint index: ${fullHaystackMidpointIndex}; array to search: ${searchableHaystack.join(', ')}; ${needle} === ${searchableHaystack[midpointIndex]} ? ... ${needle === searchableHaystack[midpointIndex]}!`);
+  while (searchableHaystack.length > 0) {
+    const midpointIndex = Math.floor(searchableHaystack.length / 2)
+    fullHaystackMidpointIndex += midpointIndex
+    showLogs &&
+      console.log(
+        `iteration ${i}: midpoint index: ${fullHaystackMidpointIndex}; array to search: ${searchableHaystack.join(
+          ', '
+        )}; ${needle} === ${
+          searchableHaystack[midpointIndex]
+        } ? ... ${needle === searchableHaystack[midpointIndex]}!`
+      )
 
-        if (searchableHaystack[midpointIndex] === needle) {
-            return fullHaystackMidpointIndex;
-        } else if (searchableHaystack[midpointIndex] > needle) {
-            fullHaystackMidpointIndex -= midpointIndex;
-            searchableHaystack = searchableHaystack.slice(0, midpointIndex);
-        } else {
-            fullHaystackMidpointIndex += 1;
-            searchableHaystack = searchableHaystack.slice(midpointIndex + 1);
-        }
-
-        i++;
+    if (searchableHaystack[midpointIndex] === needle) {
+      return fullHaystackMidpointIndex
+    } else if (searchableHaystack[midpointIndex] > needle) {
+      fullHaystackMidpointIndex -= midpointIndex
+      searchableHaystack = searchableHaystack.slice(0, midpointIndex)
+    } else {
+      fullHaystackMidpointIndex += 1
+      searchableHaystack = searchableHaystack.slice(midpointIndex + 1)
     }
-    return -1;
+
+    i++
+  }
+  return -1
 }
 
-export default binarySearch;
+export default binarySearch

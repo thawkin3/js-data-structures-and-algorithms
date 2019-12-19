@@ -1,11 +1,13 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 
 function App() {
   return (
     <div className="App">
       <header className="header" id="home">
-        <h1 id="page-title" className="text-uppercase">Data Structures and Algorithms</h1>
+        <h1 id="page-title" className="text-uppercase">
+          Data Structures and Algorithms
+        </h1>
       </header>
       <main>
         <h2>Searching an Array</h2>
@@ -23,7 +25,7 @@ function App() {
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

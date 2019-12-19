@@ -4,13 +4,17 @@
 // Worst case: 0(n) (the element you're looking for is the last in the array or not in the array at all)
 
 const linearSearch = (haystack, needle, showLogs = false) => {
-    for (let i = 0; i < haystack.length; i++) {
-        showLogs && console.log(`iteration ${i + 1}: ${needle} === ${haystack[i]} ? ... ${needle === haystack[i]}!`);
-        if (needle === haystack[i]) {
-            return i;
-        }
+  for (let i = 0; i < haystack.length; i++) {
+    showLogs &&
+      console.log(
+        `iteration ${i + 1}: ${needle} === ${haystack[i]} ? ... ${needle ===
+          haystack[i]}!`
+      )
+    if (needle === haystack[i]) {
+      return i
     }
-    return -1;
+  }
+  return -1
 }
 
-export default linearSearch;
+export default linearSearch
