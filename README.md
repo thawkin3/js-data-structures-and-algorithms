@@ -6,6 +6,12 @@ JavaScript implementations of common data structure and algorithm whiteboard que
 
 - Node
 - Linked List
+- Doubly Linked List
+- Stack
+- Queue
+- Priority Queue
+- Hash Table
+- Binary Tree
 
 ## Algorithms
 
