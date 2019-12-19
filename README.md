@@ -5,13 +5,13 @@ JavaScript implementations of common data structure and algorithm whiteboard que
 ## Data Structures
 
 - [Node](src/data-structures/node.js)
-- [Linked List](src/data-structures/linked-list.js)
-- [Doubly Linked List](src/data-structures/doubly-linked-list.js)
+- [Linked List](src/data-structures/linked-list.js) TODO
+- [Doubly Linked List](src/data-structures/doubly-linked-list.js) TODO
 - [Stack](src/data-structures/stack.js)
-- [Queue](src/data-structures/queue.js)
-- [Priority Queue](src/data-structures/priority-queue.js)
-- [Hash Table](src/data-structures/hash-table.js)
-- [Binary Tree](src/data-structures/binary-tree.js)
+- [Queue](src/data-structures/queue.js) TODO
+- [Priority Queue](src/data-structures/priority-queue.js) TODO
+- [Hash Table](src/data-structures/hash-table.js) TODO
+- [Binary Tree](src/data-structures/binary-tree.js) TODO
 
 ## Algorithms
 
