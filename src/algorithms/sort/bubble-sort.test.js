@@ -1,6 +1,6 @@
 import { bubbleSort } from './bubble-sort'
 
-const showLogs = false
+const showLogs = process.env.SHOW_LOGS === '1'
 
 describe('bubbleSort', () => {
   it('correctly sorts an unsorted array', () => {

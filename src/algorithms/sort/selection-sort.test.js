@@ -1,6 +1,6 @@
 import { selectionSort } from './selection-sort'
 
-const showLogs = false
+const showLogs = process.env.SHOW_LOGS === '1'
 
 describe('selectionSort', () => {
   it('correctly sorts an unsorted array', () => {

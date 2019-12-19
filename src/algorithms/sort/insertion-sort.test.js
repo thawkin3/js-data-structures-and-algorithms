@@ -1,6 +1,6 @@
 import { insertionSort } from './insertion-sort'
 
-const showLogs = false
+const showLogs = process.env.SHOW_LOGS === '1'
 
 describe('insertionSort', () => {
   it('correctly sorts an unsorted array', () => {

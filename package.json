@@ -12,12 +12,13 @@
     "prettier": "^1.19.1"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
-    "prettier-watch": "onchange \"**/*.{js,ts,tsx}\" -- prettier --write {{changed}}"
+    "prettier-watch": "onchange \"**/*.{js,ts,tsx}\" -- prettier --write {{changed}}",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "test:logs": "SHOW_LOGS=1 react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"

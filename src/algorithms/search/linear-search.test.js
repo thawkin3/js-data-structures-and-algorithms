@@ -1,6 +1,6 @@
 import { linearSearch } from './linear-search'
 
-const showLogs = false
+const showLogs = process.env.SHOW_LOGS === '1'
 
 describe('linearSearch', () => {
   it('returns the index when it finds an element that exists in the array', () => {
