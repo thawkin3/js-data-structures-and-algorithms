@@ -4,7 +4,7 @@
 // Best case: 0(1) (the element you're looking for is located at the array's midpoint)
 // Worst case: 0(log n) (the element is located near the beginning or end of the array)
 
-const binarySearch = (haystack, needle, showLogs) => {
+export const binarySearch = (haystack, needle, showLogs) => {
   let searchableHaystack = [...haystack]
   let i = 1
   let fullHaystackMidpointIndex = 0
@@ -35,5 +35,3 @@ const binarySearch = (haystack, needle, showLogs) => {
   }
   return -1
 }
-
-export default binarySearch

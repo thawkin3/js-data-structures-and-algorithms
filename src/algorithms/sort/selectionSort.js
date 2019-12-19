@@ -5,7 +5,7 @@
 // Best case: 0(n^2) (always loops through the entire array)
 // Worst case: 0(n^2) (always loops through the entire array)
 
-const selectionSort = (arr, showLogs) => {
+export const selectionSort = (arr, showLogs) => {
   const sortedArr = [...arr]
   showLogs && console.log(`starting array: ${sortedArr.join(' ')}`)
 
@@ -27,5 +27,3 @@ const selectionSort = (arr, showLogs) => {
 
   return sortedArr
 }
-
-export default selectionSort

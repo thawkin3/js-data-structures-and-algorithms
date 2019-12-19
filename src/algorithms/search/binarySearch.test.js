@@ -1,4 +1,4 @@
-import binarySearch from './binarySearch'
+import { binarySearch } from './binarySearch'
 
 const showLogs = false
 

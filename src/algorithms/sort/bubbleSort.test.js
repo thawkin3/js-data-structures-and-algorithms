@@ -1,4 +1,4 @@
-import bubbleSort from './bubbleSort'
+import { bubbleSort } from './bubbleSort'
 
 const showLogs = false
 

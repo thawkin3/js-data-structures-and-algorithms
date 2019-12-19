@@ -4,7 +4,7 @@
 // Best case: 0(n) (only one element is out of place, so only one iteration through the array)
 // Worst case: 0(n^2) (array is mostly unsorted, have to do a loop nested within a loop)
 
-const insertionSort = (arr, showLogs) => {
+export const insertionSort = (arr, showLogs) => {
   let sortedArr = [...arr]
   showLogs && console.log(`starting array: ${sortedArr.join(' ')}`)
 
@@ -39,5 +39,3 @@ const insertionSort = (arr, showLogs) => {
 
   return sortedArr
 }
-
-export default insertionSort

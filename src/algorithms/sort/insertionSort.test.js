@@ -1,4 +1,4 @@
-import insertionSort from './insertionSort'
+import { insertionSort } from './insertionSort'
 
 const showLogs = false
 

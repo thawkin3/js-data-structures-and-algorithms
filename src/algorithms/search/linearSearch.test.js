@@ -1,4 +1,4 @@
-import linearSearch from './linearSearch'
+import { linearSearch } from './linearSearch'
 
 const showLogs = false
 

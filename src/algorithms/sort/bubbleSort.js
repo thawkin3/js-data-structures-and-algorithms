@@ -4,7 +4,7 @@
 // Best case: 0(n) (only one element is out of place, so only one iteration through the array)
 // Worst case: 0(n^2) (array is mostly unsorted, have to do a loop nested within a loop)
 
-const bubbleSort = (arr, showLogs) => {
+export const bubbleSort = (arr, showLogs) => {
   const sortedArr = [...arr]
   let didSwapSomething = false
   let iteration = 0
@@ -28,5 +28,3 @@ const bubbleSort = (arr, showLogs) => {
 
   return sortedArr
 }
-
-export default bubbleSort

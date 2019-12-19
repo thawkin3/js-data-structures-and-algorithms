@@ -3,7 +3,7 @@
 // Best case: 0(1) (the element you're looking for is the first in the array)
 // Worst case: 0(n) (the element you're looking for is the last in the array or not in the array at all)
 
-const linearSearch = (haystack, needle, showLogs = false) => {
+export const linearSearch = (haystack, needle, showLogs = false) => {
   for (let i = 0; i < haystack.length; i++) {
     showLogs &&
       console.log(
@@ -16,5 +16,3 @@ const linearSearch = (haystack, needle, showLogs = false) => {
   }
   return -1
 }
-
-export default linearSearch

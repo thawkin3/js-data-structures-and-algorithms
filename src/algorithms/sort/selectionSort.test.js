@@ -1,4 +1,4 @@
-import selectionSort from './selectionSort'
+import { selectionSort } from './selectionSort'
 
 const showLogs = false
 
