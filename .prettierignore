@@ -3,5 +3,6 @@
 /build
 /coverage
 /node_modules
+/storybook-dist
 package.json
 *.css
