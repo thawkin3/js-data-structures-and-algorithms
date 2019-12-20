@@ -12,6 +12,7 @@ JavaScript implementations of common data structure and algorithm whiteboard que
 - [Priority Queue](src/data-structures/priority-queue.js)
 - [Hash Table](src/data-structures/hash-table.js) TODO
 - [Binary Tree](src/data-structures/binary-tree.js) TODO
+- [Array](src/data-structures/array.js)
 
 ## Algorithms
 
