@@ -1,5 +1,4 @@
 import { Stack } from './stack'
-import { Queue } from './queue'
 
 describe('Stack', () => {
   it('can be instantiated with the `new` keyword', () => {
