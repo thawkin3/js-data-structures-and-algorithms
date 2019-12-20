@@ -19,8 +19,8 @@ export class Queue {
   }
 
   enqueue(val) {
-    this.length++
     this.items.push(val)
+    this.length++
     return val
   }
 
@@ -50,6 +50,7 @@ export class Queue {
   }
 
   clear() {
+    this.length = 0
     return (this.items = [])
   }
 }

@@ -1,4 +1,5 @@
 import { Stack } from './stack'
+import { Queue } from './queue'
 
 describe('Stack', () => {
   it('can be instantiated with the `new` keyword', () => {
@@ -117,6 +118,11 @@ describe('Stack', () => {
       stack1.push('a')
       expect(stack1.enumerate()).toEqual(['a', 10, 42])
     })
+
+    it('returns an empty array when an empty stack is enumerated', () => {
+      const stack1 = new Stack()
+      expect(stack1.enumerate()).toEqual([])
+    })
   })
 
   describe('clear', () => {
@@ -126,6 +132,15 @@ describe('Stack', () => {
       stack1.push(10)
       stack1.push('a')
       expect(stack1.clear()).toEqual([])
+    })
+
+    it('sets the stack size to 0 when emptied', () => {
+      const stack1 = new Stack()
+      stack1.push(42)
+      stack1.push(10)
+      stack1.push('a')
+      stack1.clear()
+      expect(stack1.size()).toEqual(0)
     })
   })
 })

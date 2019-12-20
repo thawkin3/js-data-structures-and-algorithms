@@ -117,6 +117,11 @@ describe('Queue', () => {
       queue1.enqueue('a')
       expect(queue1.enumerate()).toEqual([42, 10, 'a'])
     })
+
+    it('returns an empty array when an empty queue is enumerated', () => {
+      const queue1 = new Queue()
+      expect(queue1.enumerate()).toEqual([])
+    })
   })
 
   describe('clear', () => {
@@ -126,6 +131,15 @@ describe('Queue', () => {
       queue1.enqueue(10)
       queue1.enqueue('a')
       expect(queue1.clear()).toEqual([])
+    })
+
+    it('sets the queue size to 0 when emptied', () => {
+      const queue1 = new Queue()
+      queue1.enqueue(42)
+      queue1.enqueue(10)
+      queue1.enqueue('a')
+      queue1.clear()
+      expect(queue1.size()).toEqual(0)
     })
   })
 })

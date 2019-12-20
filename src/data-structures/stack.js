@@ -19,8 +19,8 @@ export class Stack {
   }
 
   push(val) {
-    this.length++
     this.items.unshift(val)
+    this.length++
     return val
   }
 
@@ -50,6 +50,7 @@ export class Stack {
   }
 
   clear() {
+    this.length = 0
     return (this.items = [])
   }
 }
