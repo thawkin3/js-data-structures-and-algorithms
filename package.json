@@ -8,15 +8,21 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1"
   },
   "scripts": {
     "build": "react-scripts build",
+    "build-storybook": "build-storybook -s public -c .storybook -o storybook-dist",
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
     "prettier-watch": "onchange \"**/*.{js,ts,tsx}\" -- prettier --write {{changed}}",
     "start": "react-scripts start",
+    "storybook": "start-storybook -p 9009 -s public",
     "test": "react-scripts test",
     "test:logs": "SHOW_LOGS=1 react-scripts test"
   },
