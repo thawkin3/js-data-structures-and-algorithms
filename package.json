@@ -17,12 +17,12 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "build-storybook": "build-storybook -s public -c .storybook -o storybook-dist",
+    "build-storybook": "build-storybook -c .storybook -o storybook-dist",
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
     "prettier-watch": "onchange \"**/*.{js,ts,tsx}\" -- prettier --write {{changed}}",
     "start": "react-scripts start",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9009",
     "test": "react-scripts test",
     "test:logs": "SHOW_LOGS=1 react-scripts test"
   },
