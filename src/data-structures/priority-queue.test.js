@@ -6,21 +6,19 @@ describe('PriorityQueue', () => {
   })
 
   describe('enqueue', () => {
-    // TODO
     it('can have items added to it', () => {
       const priorityQueue1 = new PriorityQueue()
-      priorityQueue1.enqueue(42)
+      priorityQueue1.enqueue(42, 1)
       expect(priorityQueue1.size()).toBe(1)
 
-      priorityQueue1.enqueue(10)
+      priorityQueue1.enqueue(10, 2)
       expect(priorityQueue1.size()).toBe(2)
     })
 
-    // TODO
     it('returns the item that is added to the priority queue', () => {
       const priorityQueue1 = new PriorityQueue()
-      expect(priorityQueue1.enqueue(42)).toBe(42)
-      expect(priorityQueue1.enqueue(10)).toBe(10)
+      expect(priorityQueue1.enqueue(42, 1)).toBe(42)
+      expect(priorityQueue1.enqueue(10, 2)).toBe(10)
     })
   })
 
@@ -28,33 +26,33 @@ describe('PriorityQueue', () => {
     // TODO
     it('can have items removed from it', () => {
       const priorityQueue1 = new PriorityQueue()
-      priorityQueue1.enqueue(42)
-      priorityQueue1.enqueue(10)
-      priorityQueue1.enqueue('a')
+      priorityQueue1.enqueue(42, 2)
+      priorityQueue1.enqueue(10, 3)
+      priorityQueue1.enqueue('a', 1)
       expect(priorityQueue1.size()).toBe(3)
 
-      priorityQueue1.dePriorityqueue()
+      priorityQueue1.dequeue()
       expect(priorityQueue1.size()).toBe(2)
 
-      priorityQueue1.dePriorityqueue()
+      priorityQueue1.dequeue()
       expect(priorityQueue1.size()).toBe(1)
 
-      priorityQueue1.dePriorityqueue()
+      priorityQueue1.dequeue()
       expect(priorityQueue1.size()).toBe(0)
     })
 
     it('does not throw when trying to remove items from an empty queue', () => {
       const priorityQueue1 = new PriorityQueue()
-      expect(() => priorityQueue1.dePriorityqueue()).not.toThrow()
+      expect(() => priorityQueue1.dequeue()).not.toThrow()
     })
 
     // TODO
     it('returns the item that is removed from the priority queue', () => {
       const priorityQueue1 = new PriorityQueue()
-      expect(priorityQueue1.dePriorityqueue()).toBe(null)
+      expect(priorityQueue1.dequeue()).toBe(null)
 
       priorityQueue1.enqueue(42)
-      expect(priorityQueue1.dePriorityqueue()).toBe(42)
+      expect(priorityQueue1.dequeue()).toBe(42)
     })
   })
 
@@ -90,7 +88,6 @@ describe('PriorityQueue', () => {
   })
 
   describe('size', () => {
-    // TODO
     it('returns the correct number of elements in the priority queue', () => {
       const priorityQueue1 = new PriorityQueue()
       expect(priorityQueue1.size()).toBe(0)
@@ -104,36 +101,48 @@ describe('PriorityQueue', () => {
       priorityQueue1.enqueue('a')
       expect(priorityQueue1.size()).toBe(3)
 
-      priorityQueue1.dePriorityqueue()
+      priorityQueue1.dequeue()
       expect(priorityQueue1.size()).toBe(2)
 
-      priorityQueue1.dePriorityqueue()
+      priorityQueue1.dequeue()
       expect(priorityQueue1.size()).toBe(1)
 
-      priorityQueue1.dePriorityqueue()
+      priorityQueue1.dequeue()
       expect(priorityQueue1.size()).toBe(0)
     })
   })
 
   describe('enumerate', () => {
-    // TODO
     it('returns the entire priority queue in the correct prioritized order', () => {
       const priorityQueue1 = new PriorityQueue()
-      priorityQueue1.enqueue(42)
-      priorityQueue1.enqueue(10)
-      priorityQueue1.enqueue('a')
-      expect(priorityQueue1.enumerate()).toEqual([42, 10, 'a'])
+      priorityQueue1.enqueue(42, 2)
+      priorityQueue1.enqueue(10, 3)
+      priorityQueue1.enqueue('a', 1)
+      expect(priorityQueue1.enumerate()).toEqual(['a', 42, 10])
+    })
+
+    it('returns an empty array when an empty priority queue is enumerated', () => {
+      const priorityQueue1 = new PriorityQueue()
+      expect(priorityQueue1.enumerate()).toEqual([])
     })
   })
 
   describe('clear', () => {
-    // TODO
     it('removes all elements from the priority queue', () => {
       const priorityQueue1 = new PriorityQueue()
-      priorityQueue1.enqueue(42)
-      priorityQueue1.enqueue(10)
-      priorityQueue1.enqueue('a')
+      priorityQueue1.enqueue(42, 1)
+      priorityQueue1.enqueue(10, 2)
+      priorityQueue1.enqueue('a', 3)
       expect(priorityQueue1.clear()).toEqual([])
+    })
+
+    it('sets the priority queue size to 0 when emptied', () => {
+      const priorityQueue1 = new PriorityQueue()
+      priorityQueue1.enqueue(42, 1)
+      priorityQueue1.enqueue(10, 2)
+      priorityQueue1.enqueue('a', 3)
+      priorityQueue1.clear()
+      expect(priorityQueue1.size()).toEqual(0)
     })
   })
 })
