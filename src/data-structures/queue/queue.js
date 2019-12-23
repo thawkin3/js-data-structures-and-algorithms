@@ -51,6 +51,7 @@ export class Queue {
 
   clear() {
     this.length = 0
-    return (this.items = [])
+    this.items = []
+    return this.items
   }
 }
