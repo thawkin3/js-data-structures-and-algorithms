@@ -1,0 +1,28 @@
+.stackDemo .stackContainer {
+  width: 15rem;
+}
+
+.stackDemo .item {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.stackDemo .item.alt {
+  background: #ccc;
+}
+
+.stackDemo .newItemTextInput {
+  margin-right: 0.5rem;
+}
+
+.stackDemo button {
+  margin-bottom: 0.5rem;
+}

@@ -46,11 +46,13 @@ export class Stack {
   }
 
   enumerate() {
+    console.log(this.items)
     return this.items
   }
 
   clear() {
     this.length = 0
-    return (this.items = [])
+    this.items = []
+    return this.items
   }
 }
