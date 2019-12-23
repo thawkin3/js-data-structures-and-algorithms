@@ -21,21 +21,23 @@ export class PriorityQueue {
     this.length = 0
   }
 
-  enqueue(value, priority) {
+  enqueue(value, priority = 0) {
     // handle inserting the new item in the right place according to priority
     for (let i = 0; i < this.length; i++) {
       if (priority < this.items[i].priority) {
-        this.items.splice(i, 0, { value, priority })
+        const item = { value, priority }
+        this.items.splice(i, 0, item)
         this.length++
-        return value
+        return item
       }
     }
 
     // if we've iterated through the entire priority queue,
     // then just add the new value at the end
-    this.items.push({ value, priority })
+    const item = { value, priority }
+    this.items.push(item)
     this.length++
-    return value
+    return item
   }
 
   dequeue() {

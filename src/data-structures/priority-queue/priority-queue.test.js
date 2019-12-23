@@ -17,20 +17,28 @@ describe('PriorityQueue', () => {
 
     it('returns the item that is added to the priority queue', () => {
       const priorityQueue1 = new PriorityQueue()
-      expect(priorityQueue1.enqueue(42, 1)).toBe(42)
-      expect(priorityQueue1.enqueue(10, 2)).toBe(10)
+      expect(priorityQueue1.enqueue(42, 1)).toEqual({ value: 42, priority: 1 })
+      expect(priorityQueue1.enqueue(10, 2)).toEqual({ value: 10, priority: 2 })
     })
 
     it('adds items in the correct order according to priority', () => {
       const priorityQueue1 = new PriorityQueue()
-      expect(priorityQueue1.enqueue(42, 1)).toBe(42)
-      expect(priorityQueue1.enqueue(10, 2)).toBe(10)
-      expect(priorityQueue1.enqueue('a', 1)).toBe('a')
+      expect(priorityQueue1.enqueue(42, 1)).toEqual({ value: 42, priority: 1 })
+      expect(priorityQueue1.enqueue(10, 2)).toEqual({ value: 10, priority: 2 })
+      expect(priorityQueue1.enqueue('a', 1)).toEqual({
+        value: 'a',
+        priority: 1,
+      })
       expect(priorityQueue1.enumerate()).toEqual([
         { value: 42, priority: 1 },
         { value: 'a', priority: 1 },
         { value: 10, priority: 2 },
       ])
+    })
+
+    it('defaults the priority to 0 if no priority is provided', () => {
+      const priorityQueue1 = new PriorityQueue()
+      expect(priorityQueue1.enqueue(42)).toEqual({ value: 42, priority: 0 })
     })
   })
 
