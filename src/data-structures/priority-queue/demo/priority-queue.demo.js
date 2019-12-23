@@ -3,7 +3,7 @@ import { PriorityQueue } from '../priority-queue'
 import './priority-queue.demo.css'
 
 export default {
-  title: 'Priority Queue',
+  title: 'Data Structures|Priority Queue',
 }
 
 const Item = ({ item, className }) => {
@@ -68,7 +68,7 @@ class PriorityQueueVisualizer extends Component {
 
     return (
       <div className="priorityQueueDemo">
-        <h1>PriorityQueue Demo</h1>
+        <h1>Priority Queue Demo</h1>
         <form onSubmit={this.addItem}>
           <label>
             <span>Item Value:</span>
@@ -101,7 +101,7 @@ class PriorityQueueVisualizer extends Component {
           </button>
         </form>
         <div>
-          <p>PriorityQueue Contents:</p>
+          <p>Priority Queue Contents:</p>
           <div className="priorityQueueContainer">
             {priorityQueue.enumerate().map((item, index) => {
               return (

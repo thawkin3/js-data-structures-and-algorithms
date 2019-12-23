@@ -3,7 +3,7 @@ import { Queue } from '../queue'
 import './queue.demo.css'
 
 export default {
-  title: 'Queue',
+  title: 'Data Structures|Queue',
 }
 
 const Item = ({ value, className }) => {

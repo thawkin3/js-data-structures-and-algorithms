@@ -3,7 +3,7 @@ import { Stack } from '../stack'
 import './stack.demo.css'
 
 export default {
-  title: 'Stack',
+  title: 'Data Structures|Stack',
 }
 
 const Item = ({ value, className }) => {
