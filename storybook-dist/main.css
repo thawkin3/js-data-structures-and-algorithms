@@ -1,0 +1,117 @@
+html {
+  color: #071a32;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body {
+  padding: 0 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.priorityQueueDemo .priorityQueueContainer {
+  width: 15rem;
+}
+
+.priorityQueueDemo .item {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.priorityQueueDemo .item.alt {
+  background: #ccc;
+}
+
+.priorityQueueDemo .newItemTextInput {
+  margin-right: 0.5rem;
+}
+
+.priorityQueueDemo button,
+.priorityQueueDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.priorityQueueDemo label span {
+  margin-right: 1rem;
+}
+
+.queueDemo .queueContainer {
+  width: 15rem;
+}
+
+.queueDemo .item {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.queueDemo .item.alt {
+  background: #ccc;
+}
+
+.queueDemo .newItemTextInput {
+  margin-right: 0.5rem;
+}
+
+.queueDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.stackDemo .stackContainer {
+  width: 15rem;
+}
+
+.stackDemo .item {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.stackDemo .item.alt {
+  background: #ccc;
+}
+
+.stackDemo .newItemTextInput {
+  margin-right: 0.5rem;
+}
+
+.stackDemo button {
+  margin-bottom: 0.5rem;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
