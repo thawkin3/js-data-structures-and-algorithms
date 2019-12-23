@@ -35,7 +35,6 @@ class StackVisualizer extends Component {
     const { stack, item } = this.state
     if (item) {
       stack.push(item)
-      stack.enumerate()
       this.setState(
         { stack, item: '' },
         () => this.textInputRef.current && this.textInputRef.current.focus()

@@ -30,7 +30,6 @@ class QueueVisualizer extends Component {
     const { queue, item } = this.state
     if (item) {
       queue.enqueue(item)
-      queue.enumerate()
       this.setState(
         { queue, item: '' },
         () => this.textInputRef.current && this.textInputRef.current.focus()

@@ -15,7 +15,6 @@
  * - clear: Constant - O(1)
  */
 
-// TODO: This was just copied code from the Queue class. Still need to handle the priorities
 export class PriorityQueue {
   constructor() {
     this.items = []
@@ -41,16 +40,15 @@ export class PriorityQueue {
 
   dequeue() {
     if (this.length) {
-      const { value } = this.items.shift()
       this.length--
-      return value
+      return this.items.shift()
     } else {
       return null
     }
   }
 
   peek() {
-    return this.items[0] ? this.items[0].value : null
+    return this.items[0] || null
   }
 
   isEmpty() {
@@ -62,15 +60,12 @@ export class PriorityQueue {
   }
 
   enumerate() {
-    const priorityQueueValues = []
-    for (let i = 0; i < this.length; i++) {
-      priorityQueueValues.push(this.items[i].value)
-    }
-    return priorityQueueValues
+    return this.items
   }
 
   clear() {
     this.length = 0
-    return (this.items = [])
+    this.items = []
+    return this.items
   }
 }
