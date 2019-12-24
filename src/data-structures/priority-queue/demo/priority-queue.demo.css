@@ -19,10 +19,6 @@
   background: #ccc;
 }
 
-.priorityQueueDemo .newItemTextInput {
-  margin-right: 0.5rem;
-}
-
 .priorityQueueDemo button,
 .priorityQueueDemo label {
   margin-bottom: 0.5rem;

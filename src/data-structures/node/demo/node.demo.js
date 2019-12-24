@@ -13,7 +13,8 @@ const NodeItem = ({ node }) => {
         <b>Value:</b> {node.val}
       </div>
       <div>
-        <b>Next:</b> {node.next || 'null'}
+        <b>Next:</b>{' '}
+        <pre>{JSON.stringify(node.next, undefined, 2) || 'null'}</pre>
       </div>
     </div>
   )
@@ -23,7 +24,7 @@ class NodeVisualizer extends Component {
   state = {
     nodes: [],
     item: '',
-    next: null,
+    next: '',
   }
 
   textInputRef = createRef()
@@ -40,12 +41,12 @@ class NodeVisualizer extends Component {
     e.preventDefault()
     const { item, next } = this.state
     if (item) {
-      const node = new Node(item, next)
+      const node = new Node(item, JSON.parse(next || null))
       this.setState(
         prevState => ({
           nodes: [...prevState.nodes, node],
           item: '',
-          next: null,
+          next: '',
         }),
         () => this.textInputRef.current && this.textInputRef.current.focus()
       )
@@ -88,12 +89,12 @@ class NodeVisualizer extends Component {
               onChange={this.handleNextChange}
               className="input nodeNextTextInput"
             >
-              <option key="null-value" value={null}>
+              <option key="null-value" value="">
                 null
               </option>
               {nodes.map((node, index) => (
                 <option key={index} value={JSON.stringify(node)}>
-                  {JSON.stringify(node)}
+                  {JSON.stringify(node, undefined, 2)}
                 </option>
               ))}
             </select>
