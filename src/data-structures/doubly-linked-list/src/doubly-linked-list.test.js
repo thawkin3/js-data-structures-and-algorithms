@@ -333,6 +333,42 @@ describe('DoublyLinkedList', () => {
       expect(doublyLinkedList1.size()).toBe(2)
     })
 
+    it('deletes the node at the specified index for a doubly linked list that has multiple nodes when the index is 0', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(42)
+      doublyLinkedList1.insertAtBeginning(10)
+      doublyLinkedList1.insertAtBeginning('a')
+      doublyLinkedList1.deleteAt(0)
+
+      expect(doublyLinkedList1.head.val).toEqual(10)
+      expect(doublyLinkedList1.head.next.val).toEqual(42)
+      expect(doublyLinkedList1.head.prev).toEqual(null)
+
+      expect(doublyLinkedList1.tail.val).toEqual(42)
+      expect(doublyLinkedList1.tail.next).toEqual(null)
+      expect(doublyLinkedList1.tail.prev.val).toEqual(10)
+
+      expect(doublyLinkedList1.size()).toBe(2)
+    })
+
+    it('deletes the node at the specified index for a doubly linked list that has multiple nodes when the index is the last index', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(42)
+      doublyLinkedList1.insertAtBeginning(10)
+      doublyLinkedList1.insertAtBeginning('a')
+      doublyLinkedList1.deleteAt(2)
+
+      expect(doublyLinkedList1.head.val).toEqual('a')
+      expect(doublyLinkedList1.head.next.val).toEqual(10)
+      expect(doublyLinkedList1.head.prev).toEqual(null)
+
+      expect(doublyLinkedList1.tail.val).toEqual(10)
+      expect(doublyLinkedList1.tail.next).toEqual(null)
+      expect(doublyLinkedList1.tail.prev.val).toEqual('a')
+
+      expect(doublyLinkedList1.size()).toBe(2)
+    })
+
     it('handles non-existent indexes to delete for a doubly linked list that has multiple nodes', () => {
       const doublyLinkedList1 = new DoublyLinkedList()
       doublyLinkedList1.insertAtBeginning(42)

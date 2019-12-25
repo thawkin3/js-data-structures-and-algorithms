@@ -158,7 +158,7 @@ export class DoublyLinkedList {
 
     // node needs to be deleted from the end of the list
     // i.e. delete the tail.
-    if (index === this.length) {
+    if (index === this.length - 1) {
       return this.deleteLastNode()
     }
 
