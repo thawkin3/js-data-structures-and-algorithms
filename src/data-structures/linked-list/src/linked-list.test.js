@@ -305,7 +305,7 @@ describe('LinkedList', () => {
       expect(linkedList1.isEmpty()).toBe(true)
     })
 
-    it('returns false if the priority queue is not empty', () => {
+    it('returns false if the linked list is not empty', () => {
       const linkedList1 = new LinkedList()
       linkedList1.insertAtBeginning(42)
       expect(linkedList1.isEmpty()).toBe(false)
