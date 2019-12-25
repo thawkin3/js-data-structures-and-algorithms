@@ -75,6 +75,15 @@ describe('LinkedList', () => {
       expect(linkedList1.head).toEqual(new Node('hey', null))
     })
 
+    it('can have new items added at the beginning when an index of 0 is specified', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(42)
+
+      expect(() => linkedList1.insertAt('hey', 0)).not.toThrow()
+      expect(linkedList1.size()).toEqual(2)
+      expect(linkedList1.head).toEqual(new Node('hey', new Node(42, null)))
+    })
+
     it('adds items to the end of the list if the specified index is equal to the list length', () => {
       const linkedList1 = new LinkedList()
       linkedList1.insertAtBeginning(42)
@@ -216,6 +225,22 @@ describe('LinkedList', () => {
       expect(linkedList1.head).toEqual(new Node(10, null))
       expect(linkedList1.size()).toBe(1)
     })
+
+    it('deletes the last node for a linked list that has lots of nodes', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(42)
+      linkedList1.insertAtBeginning(10)
+      linkedList1.insertAtBeginning('a')
+      linkedList1.insertAtBeginning(50)
+      linkedList1.insertAtBeginning('hey')
+      expect(linkedList1.deleteLastNode()).toEqual(
+        new Node('hey', new Node(50, new Node('a', new Node(10, null))))
+      )
+      expect(linkedList1.head).toEqual(
+        new Node('hey', new Node(50, new Node('a', new Node(10, null))))
+      )
+      expect(linkedList1.size()).toBe(4)
+    })
   })
 
   describe('deleteAt', () => {
@@ -312,20 +337,19 @@ describe('LinkedList', () => {
     })
   })
 
-  // TODO
   describe('enumerate', () => {
-    // it('returns the entire linked list starting at the head', () => {
-    //   const linkedList1 = new LinkedList()
-    //   linkedList1.insertAtBeginning(42)
-    //   linkedList1.insertAtBeginning(10)
-    //   linkedList1.insertAtBeginning('a')
-    //   expect(linkedList1.enumerate()).toEqual(['a', 10, 42])
-    // })
-    //
-    // it('returns an empty array when an empty linked list is enumerated', () => {
-    //   const linkedList1 = new LinkedList()
-    //   expect(linkedList1.enumerate()).toEqual([])
-    // })
+    it('returns an array of values for the entire linked list starting at the head', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(42)
+      linkedList1.insertAtBeginning(10)
+      linkedList1.insertAtBeginning('a')
+      expect(linkedList1.enumerate()).toEqual(['a', 10, 42])
+    })
+
+    it('returns an empty array when an empty linked list is enumerated', () => {
+      const linkedList1 = new LinkedList()
+      expect(linkedList1.enumerate()).toEqual([])
+    })
   })
 
   describe('clear', () => {

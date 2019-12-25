@@ -58,17 +58,13 @@ export class LinkedList {
     // if the list is empty
     // i.e. head = null
     if (!this.head) {
-      this.head = new Node(val, null)
-      this.length++
-      return this.head
+      return this.insertAtBeginning(val)
     }
 
     // if new node needs to be inserted at the front of the list
     // i.e. before the head
     if (index === 0) {
-      this.head = new Node(val, this.head)
-      this.length++
-      return this.head
+      return this.insertAtBeginning(val)
     }
 
     // if new node needs to be inserted at the end of the list
@@ -174,8 +170,15 @@ export class LinkedList {
     return this.length
   }
 
-  // TODO
-  enumerate() {}
+  enumerate() {
+    const nodes = []
+    let node = this.head
+    while (node) {
+      nodes.push(node.val)
+      node = node.next
+    }
+    return nodes
+  }
 
   clear() {
     this.head = null
