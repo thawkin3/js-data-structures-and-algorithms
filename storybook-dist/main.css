@@ -51,6 +51,37 @@ body {
   margin-right: 1rem;
 }
 
+.nodeDemo .nodeContainer {
+  width: 15rem;
+}
+
+.nodeDemo .node {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.nodeDemo .node pre {
+  white-space: pre-wrap;
+}
+
+.nodeDemo button,
+.nodeDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.nodeDemo label span {
+  margin-right: 1rem;
+}
+
 .priorityQueueDemo .priorityQueueContainer {
   width: 15rem;
 }
