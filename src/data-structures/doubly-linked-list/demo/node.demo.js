@@ -3,7 +3,7 @@ import { Node } from '../src/node'
 import './node.demo.css'
 
 export default {
-  title: 'Data Structures|Doubly Linked List',
+  title: 'Data Structures|Doubly Linked List Node',
 }
 
 // TODO: This was copied from the Node for a singly linked list.

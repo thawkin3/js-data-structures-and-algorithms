@@ -3,7 +3,7 @@ import { Node } from '../src/node'
 import './node.demo.css'
 
 export default {
-  title: 'Data Structures|Linked List',
+  title: 'Data Structures|Linked List Node',
 }
 
 const NodeItem = ({ node }) => {
