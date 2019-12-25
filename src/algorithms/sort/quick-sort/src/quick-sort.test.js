@@ -4,4 +4,5 @@ const showLogs = process.env.SHOW_LOGS === '1'
 
 describe('quickSort', () => {
   // TODO
+  it('passes', () => {})
 })
