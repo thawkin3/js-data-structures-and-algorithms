@@ -37,8 +37,8 @@ body {
   min-width: 0;
 }
 
-.nodeDemo .newItemTextInput {
-  margin-right: 0.5rem;
+.nodeDemo .node pre {
+  white-space: pre-wrap;
 }
 
 .nodeDemo button,
@@ -70,10 +70,6 @@ body {
 
 .priorityQueueDemo .item.alt {
   background: #ccc;
-}
-
-.priorityQueueDemo .newItemTextInput {
-  margin-right: 0.5rem;
 }
 
 .priorityQueueDemo button,
