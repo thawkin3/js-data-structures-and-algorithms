@@ -18,7 +18,6 @@ JavaScript implementations of common data structure and algorithm concepts.
 - [Set](src/data-structures/set/src/set.js)
 - [Stack](src/data-structures/stack/src/stack.js)
 
-
 ## Algorithms
 
 ### Searching
@@ -33,3 +32,10 @@ JavaScript implementations of common data structure and algorithm concepts.
 - [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js)
 - [Quick Sort](src/algorithms/sort/quick-sort/src/quick-sort.js)
 - [Selection Sort](src/algorithms/sort/selection-sort/src/selection-sort.js)
+
+### Sets
+
+- [Intersection](src/algorithms/set/intersection/src/intersection.js)
+- [Set Difference](src/algorithms/set/set-difference/src/set-difference.js)
+- [Symmetric Difference](src/algorithms/set/symmetric-difference/src/symmetric-difference.js)
+- [Union](src/algorithms/set/union/src/union.js)
