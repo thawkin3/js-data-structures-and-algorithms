@@ -15,7 +15,7 @@ JavaScript implementations of common data structure and algorithm concepts.
 - [Stack](src/data-structures/stack/src/stack.js)
 - [Queue](src/data-structures/queue/src/queue.js)
 - [Priority Queue](src/data-structures/priority-queue/src/priority-queue.js)
-- [Binary Tree](src/data-structures/binary-tree/src/binary-tree.js) TODO
+- [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js) TODO
 
 
 ## Algorithms

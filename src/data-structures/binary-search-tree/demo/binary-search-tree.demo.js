@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Data Structures|Binary Tree',
+  title: 'Data Structures|Binary Search Tree',
 }
 
 export const todo = () => (
