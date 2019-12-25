@@ -43,9 +43,9 @@ class PriorityQueueVisualizer extends Component {
     e.preventDefault()
     const { priorityQueue, item, priority } = this.state
     if (item && priority) {
-      priorityQueue.enqueue(item, priority)
+      priorityQueue.enqueue(item, Number(priority || 1))
       this.setState(
-        { priorityQueue, item: '', value: 1 },
+        { priorityQueue, item: '', priority: 1 },
         () => this.textInputRef.current && this.textInputRef.current.focus()
       )
     }
