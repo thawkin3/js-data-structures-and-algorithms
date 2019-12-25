@@ -1,21 +1,4 @@
 /**
- * Node - Contains a value and a pointer to the next node and to the previous node
- *
- * Methods and properties:
- *
- * - val: any value
- * - next: pointer to the next node (or null)
- * - prev: pointer to the previous node (or null)
- */
-export class Node {
-  constructor(val, next = null, prev = null) {
-    this.val = val
-    this.next = next
-    this.prev = prev
-  }
-}
-
-/**
  * Doubly Linked List - list of nodes, with each node pointing to the previous and next nodes
  *
  * Methods and properties:
@@ -32,6 +15,9 @@ export class Node {
  * - enumerate: Linear - O(n)
  * - clear: Constant - O(1)
  */
+
+import { Node } from './node'
+
 export class DoublyLinkedList {
   constructor() {
     this.head = null

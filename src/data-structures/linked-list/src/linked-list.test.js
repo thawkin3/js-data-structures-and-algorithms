@@ -1,5 +1,5 @@
 import { LinkedList } from './linked-list'
-import { Node } from '../../node/src/node'
+import { Node } from './node'
 
 describe('LinkedList', () => {
   it('can be instantiated with the `new` keyword', () => {

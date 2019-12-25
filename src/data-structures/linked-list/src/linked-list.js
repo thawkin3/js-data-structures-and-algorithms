@@ -16,7 +16,7 @@
  * - clear: Constant - O(1)
  */
 
-import { Node } from '../../node/src/node'
+import { Node } from './node'
 
 export class LinkedList {
   constructor() {

@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 export default {
   title: 'Data Structures|Doubly Linked List',
 }
 
-export const todo = () => (
-  <div>
-    <p>Coming soon!</p>
-  </div>
-)
+class DoublyLinkedListVisualizer extends Component {
+  render() {
+    return (
+      <div>
+        <p>Coming soon!</p>
+      </div>
+    )
+  }
+}
+
+export const doublyLinkedListVisualizer = () => <DoublyLinkedListVisualizer />

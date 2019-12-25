@@ -1,6 +1,8 @@
 /**
  * Node - Contains a value and a pointer to the next node
  *
+ * Meant to be used with a singly linked list
+ *
  * Methods and properties:
  *
  * - val: any value

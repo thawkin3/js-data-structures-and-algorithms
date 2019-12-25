@@ -1,4 +1,5 @@
-import { DoublyLinkedList, Node } from './doubly-linked-list'
+import { DoublyLinkedList } from './doubly-linked-list'
+import { Node } from './node'
 
 describe('DoublyLinkedList', () => {
   it('can be instantiated with the `new` keyword', () => {
