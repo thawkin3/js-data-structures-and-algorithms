@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { Node } from '../node'
+import { Node } from '../src/node'
 import './node.demo.css'
 
 export default {

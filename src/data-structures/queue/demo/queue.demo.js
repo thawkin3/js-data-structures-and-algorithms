@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { Queue } from '../queue'
+import { Queue } from '../src/queue'
 import './queue.demo.css'
 
 export default {

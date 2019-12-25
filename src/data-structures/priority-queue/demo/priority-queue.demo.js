@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { PriorityQueue } from '../priority-queue'
+import { PriorityQueue } from '../src/priority-queue'
 import './priority-queue.demo.css'
 
 export default {

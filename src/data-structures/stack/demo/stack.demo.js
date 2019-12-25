@@ -1,5 +1,5 @@
 import React, { Component, createRef } from 'react'
-import { Stack } from '../stack'
+import { Stack } from '../src/stack'
 import './stack.demo.css'
 
 export default {
