@@ -1,7 +1,8 @@
 # Data Structures and Algorithms
 [![Build Status](https://travis-ci.com/thawkin3/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/thawkin3/data-structures-and-algorithms)
+[![Codecov](https://img.shields.io/codecov/c/github/thawkin3/data-structures-and-algorithms)](https://codecov.io/gh/thawkin3/data-structures-and-algorithms)
 
-JavaScript implementations of common data structure and algorithm whiteboard questions.
+JavaScript implementations of common data structure and algorithm concepts.
 
 ## Data Structures
 
