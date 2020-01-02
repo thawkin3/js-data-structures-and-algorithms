@@ -7,6 +7,8 @@
 
 export const selectionSort = (arr, showLogs) => {
   const sortedArr = [...arr]
+
+  /* istanbul ignore next */
   showLogs && console.log(`starting array: ${sortedArr.join(' ')}`)
 
   for (let i = 0; i < sortedArr.length - 1; i++) {
@@ -22,6 +24,7 @@ export const selectionSort = (arr, showLogs) => {
     sortedArr[i] = sortedArr[minValueIndex]
     sortedArr[minValueIndex] = originalStartingValue
 
+    /* istanbul ignore next */
     showLogs && console.log(`iteration ${i + 1}: array: ${sortedArr.join(' ')}`)
   }
 

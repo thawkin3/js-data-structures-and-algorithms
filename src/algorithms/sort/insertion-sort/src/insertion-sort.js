@@ -6,16 +6,20 @@
 
 export const insertionSort = (arr, showLogs) => {
   let sortedArr = [...arr]
+
+  /* istanbul ignore next */
   showLogs && console.log(`starting array: ${sortedArr.join(' ')}`)
 
   for (let i = 1; i < sortedArr.length; i++) {
     const valueToInsert = sortedArr.splice(i, 1)[0]
     let didInsertValue = false
     for (let j = i; j >= 1; j--) {
+      /* istanbul ignore next */
       showLogs &&
         console.log(`  comparing ${valueToInsert} with ${sortedArr[j - 1]}`)
 
       if (valueToInsert > sortedArr[j - 1]) {
+        /* istanbul ignore next */
         showLogs &&
           console.log(
             `    inserting ${valueToInsert} after ${sortedArr[j - 1]}`
@@ -30,10 +34,12 @@ export const insertionSort = (arr, showLogs) => {
       }
     }
     if (!didInsertValue) {
+      /* istanbul ignore next */
       showLogs && console.log(`    inserting ${valueToInsert} at first index`)
       sortedArr = [valueToInsert, ...sortedArr]
     }
 
+    /* istanbul ignore next */
     showLogs && console.log(`iteration ${i + 1}: array: ${sortedArr.join(' ')}`)
   }
 

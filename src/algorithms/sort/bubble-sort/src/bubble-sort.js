@@ -9,6 +9,7 @@ export const bubbleSort = (arr, showLogs) => {
   let didSwapSomething = false
   let iteration = 0
 
+  /* istanbul ignore next */
   showLogs && console.log(`starting array: ${sortedArr.join(' ')}`)
 
   do {
@@ -22,6 +23,8 @@ export const bubbleSort = (arr, showLogs) => {
         didSwapSomething = true
       }
     }
+
+    /* istanbul ignore next */
     showLogs &&
       console.log(`iteration ${iteration}: array: ${sortedArr.join(' ')}`)
   } while (didSwapSomething)

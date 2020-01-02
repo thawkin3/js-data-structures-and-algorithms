@@ -12,6 +12,8 @@ export const binarySearch = (haystack, needle, showLogs) => {
   while (searchableHaystack.length > 0) {
     const midpointIndex = Math.floor(searchableHaystack.length / 2)
     fullHaystackMidpointIndex += midpointIndex
+
+    /* istanbul ignore next */
     showLogs &&
       console.log(
         `iteration ${i}: midpoint index: ${fullHaystackMidpointIndex}; array to search: ${searchableHaystack.join(
