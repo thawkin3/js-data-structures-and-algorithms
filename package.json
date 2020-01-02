@@ -14,7 +14,8 @@
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
     "onchange": "^6.1.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "storybook-readme": "^5.0.8"
   },
   "scripts": {
     "build": "react-scripts build",
