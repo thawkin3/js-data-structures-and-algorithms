@@ -1,6 +1,6 @@
 # JS Data Structures and Algorithms
-[![Build Status](https://travis-ci.com/thawkin3/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/thawkin3/data-structures-and-algorithms)
-[![Codecov](https://img.shields.io/codecov/c/github/thawkin3/data-structures-and-algorithms)](https://codecov.io/gh/thawkin3/data-structures-and-algorithms)
+[![Build Status](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms)
+[![Codecov](https://img.shields.io/codecov/c/github/thawkin3/js-data-structures-and-algorithms)](https://codecov.io/gh/thawkin3/js-data-structures-and-algorithms)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 JavaScript implementations of common data structure and algorithm concepts.
