@@ -8,37 +8,37 @@ JavaScript implementations of common data structure and algorithm concepts.
 ## Data Structures
 
 - [Array](src/data-structures/array/src/array.js)
-- [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js) TODO
-- [Doubly Linked List](src/data-structures/doubly-linked-list/src/doubly-linked-list.js) TODO
+- [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js) TODO: Add implementation, tests, and Storybook example
+- [Doubly Linked List](src/data-structures/doubly-linked-list/src/doubly-linked-list.js) TODO: Add Storybook example
 - [Hash Table (Object)](src/data-structures/hash-table/src/hash-table.js)
-- [Linked List](src/data-structures/linked-list/src/linked-list.js) TODO
+- [Linked List](src/data-structures/linked-list/src/linked-list.js) TODO: Add Storybook example
 - [Node](src/data-structures/node/src/node.js)
 - [Priority Queue](src/data-structures/priority-queue/src/priority-queue.js)
 - [Queue](src/data-structures/queue/src/queue.js)
-- [Set](src/data-structures/set/src/set.js)
+- [Set](src/data-structures/set/src/set.js) TODO: Add Storybook example
 - [Stack](src/data-structures/stack/src/stack.js)
 
 ## Algorithms
 
 ### Searching
 
-- [Binary Search](src/algorithms/search/binary-search/src/binary-search.js)
-- [Linear Search](src/algorithms/search/linear-search/src/linear-search.js)
+- [Binary Search](src/algorithms/search/binary-search/src/binary-search.js) TODO: Add Storybook example
+- [Linear Search](src/algorithms/search/linear-search/src/linear-search.js) TODO: Add Storybook example
 
 ### Sorting
 
-- [Bubble Sort](src/algorithms/sort/bubble-sort/src/bubble-sort.js)
-- [Insertion Sort](src/algorithms/sort/insertion-sort/src/insertion-sort.js)
-- [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js)
-- [Quick Sort](src/algorithms/sort/quick-sort/src/quick-sort.js)
-- [Selection Sort](src/algorithms/sort/selection-sort/src/selection-sort.js)
+- [Bubble Sort](src/algorithms/sort/bubble-sort/src/bubble-sort.js) TODO: Add Storybook example
+- [Insertion Sort](src/algorithms/sort/insertion-sort/src/insertion-sort.js) TODO: Add Storybook example
+- [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js) TODO: Add implementation, tests, and Storybook example
+- [Quick Sort](src/algorithms/sort/quick-sort/src/quick-sort.js) TODO: Add implementation, tests, and Storybook example
+- [Selection Sort](src/algorithms/sort/selection-sort/src/selection-sort.js) TODO: Add Storybook example
 
 ### Sets
 
-- [Intersection](src/algorithms/set/intersection/src/intersection.js)
-- [Set Difference](src/algorithms/set/set-difference/src/set-difference.js)
-- [Symmetric Difference](src/algorithms/set/symmetric-difference/src/symmetric-difference.js)
-- [Union](src/algorithms/set/union/src/union.js)
+- [Intersection](src/algorithms/set/intersection/src/intersection.js) TODO: Add Storybook example
+- [Set Difference](src/algorithms/set/set-difference/src/set-difference.js) TODO: Add Storybook example
+- [Symmetric Difference](src/algorithms/set/symmetric-difference/src/symmetric-difference.js) TODO: Add Storybook example
+- [Union](src/algorithms/set/union/src/union.js) TODO: Add Storybook example
 
 ## Commands
 
