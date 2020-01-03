@@ -88,17 +88,25 @@ class StackVisualizer extends Component {
           </button>
         </form>
         <div>
-          <p>Stack Contents:</p>
           <div className="stackContainer">
-            {stack.enumerate().map((value, index, allItems) => {
-              return (
-                <Item
-                  value={value}
-                  className={generateOddOrEvenClassName(index, allItems.length)}
-                  key={index}
-                />
-              )
-            })}
+            <p className="topOfStack">Top of Stack</p>
+            {stack.isEmpty() ? (
+              <p>(stack is currently empty)</p>
+            ) : (
+              stack.enumerate().map((value, index, allItems) => {
+                return (
+                  <Item
+                    value={value}
+                    className={generateOddOrEvenClassName(
+                      index,
+                      allItems.length
+                    )}
+                    key={index}
+                  />
+                )
+              })
+            )}
+            <p className="bottomOfStack">Bottom of Stack</p>
           </div>
         </div>
       </div>

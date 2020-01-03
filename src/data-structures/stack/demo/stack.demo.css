@@ -26,3 +26,11 @@
 .stackDemo button {
   margin-bottom: 0.5rem;
 }
+
+.stackDemo .topOfStack {
+  border-bottom: 1px solid #071a32;
+}
+
+.stackDemo .bottomOfStack {
+  border-top: 1px solid #071a32;
+}
