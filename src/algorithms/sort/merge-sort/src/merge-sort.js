@@ -1,20 +1,26 @@
 // Merge Sort
+
 // The array is recursively split in half
 // When the array is in groups of 1, it is reconstructed in sort order
 // Each reconstructed array is merged with the other half
+
 // So if you had an array of 8 items, it’s broken down into two groups of 4,
 // then four groups of 2, then eight groups of 1
 // Then it’s built back up where you combine the eight groups of 1 into four groups of 2,
 // but you sort within each group of 2. Then you combine the four groups of 2 into two
 // groups of 4, and sort those groups of 4. Then you combine the two groups of 4 into
 // one group of 8, and you sort that group.
+
 // Appropriate for large data sets
 // Data splitting means that the algorithm can be done in parallel
-// Best case performance: O(n log n)
-// Average case performance: O(n log n)
+
+// Best case performance: Ω(n log n)
+// Average case performance: 0(n log n)
 // Worst case performance: O(n log n)
+
+// Space required: O(n) (merge sort can be performed in-place, but it’s often not)
+
 // Merge sort is a predictable algorithm since the time complexity is the same for the worst, average, and best case
-// Space required: O(n) - merge sort can be performed in-place, but it’s often not.
 // If you don’t do it in-place, then you take up extra memory allocations for the temporary arrays
 
 export const mergeSort = (arr, showLogs) => {
