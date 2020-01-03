@@ -76,7 +76,7 @@ class PriorityQueueVisualizer extends Component {
               value={item}
               onChange={this.handleItemChange}
               ref={this.textInputRef}
-              className="input newItemTextInput"
+              className="ti input newItemTextInput"
             />
           </label>
           <br />
@@ -85,18 +85,28 @@ class PriorityQueueVisualizer extends Component {
             <input
               value={priority}
               onChange={this.handlePriorityChange}
-              className="input itemPriorityTextInput"
+              className="ti input itemPriorityTextInput"
               type="number"
             />
           </label>
           <br />
-          <button type="submit">Add Item to Priority Queue</button>
+          <button className="button outline" type="submit">
+            Add Item to Priority Queue
+          </button>
           <br />
-          <button type="button" onClick={this.removeItem}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.removeItem}
+          >
             Remove Item from Priority Queue
           </button>
           <br />
-          <button type="button" onClick={this.clearPriorityQueue}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.clearPriorityQueue}
+          >
             Clear Priority Queue
           </button>
         </form>

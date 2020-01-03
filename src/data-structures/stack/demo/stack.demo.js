@@ -65,15 +65,25 @@ class StackVisualizer extends Component {
             value={item}
             onChange={this.handleItemChange}
             ref={this.textInputRef}
-            className="newItemTextInput"
+            className="ti newItemTextInput"
           />
-          <button type="submit">Add Item to Stack</button>
+          <button className="button outline" type="submit">
+            Add Item to Stack
+          </button>
           <br />
-          <button type="button" onClick={this.removeItem}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.removeItem}
+          >
             Remove Item from Stack
           </button>
           <br />
-          <button type="button" onClick={this.clearStack}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.clearStack}
+          >
             Clear Stack
           </button>
         </form>

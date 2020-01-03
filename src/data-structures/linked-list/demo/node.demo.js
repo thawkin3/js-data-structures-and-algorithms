@@ -78,7 +78,7 @@ class NodeVisualizer extends Component {
               value={item}
               onChange={this.handleItemChange}
               ref={this.textInputRef}
-              className="input newItemTextInput"
+              className="ti input newItemTextInput"
             />
           </label>
           <br />
@@ -100,13 +100,23 @@ class NodeVisualizer extends Component {
             </select>
           </label>
           <br />
-          <button type="submit">Add Item to Node List</button>
+          <button className="button outline" type="submit">
+            Add Item to Node List
+          </button>
           <br />
-          <button type="button" onClick={this.removeItem}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.removeItem}
+          >
             Remove Item from Node List
           </button>
           <br />
-          <button type="button" onClick={this.clearNodes}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.clearNodes}
+          >
             Clear Node List
           </button>
         </form>

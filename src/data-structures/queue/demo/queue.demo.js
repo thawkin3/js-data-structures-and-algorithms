@@ -60,15 +60,25 @@ class QueueVisualizer extends Component {
             value={item}
             onChange={this.handleItemChange}
             ref={this.textInputRef}
-            className="newItemTextInput"
+            className="ti newItemTextInput"
           />
-          <button type="submit">Add Item to Queue</button>
+          <button className="button outline" type="submit">
+            Add Item to Queue
+          </button>
           <br />
-          <button type="button" onClick={this.removeItem}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.removeItem}
+          >
             Remove Item from Queue
           </button>
           <br />
-          <button type="button" onClick={this.clearQueue}>
+          <button
+            className="button outline"
+            type="button"
+            onClick={this.clearQueue}
+          >
             Clear Queue
           </button>
         </form>
