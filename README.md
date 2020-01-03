@@ -74,3 +74,11 @@ Formats the code so you don't have to worry about white space and other formatti
 ### `yarn prettier-watch`
 
 Runs prettier in watch mode
+
+## Contributing
+
+Please see the [Contributing Guidelines](CONTRIBUTING.md).
+
+## Code of Conduct
+
+The [Code of Conduct](CODE_OF_CONDUCT.md) can be found here.
