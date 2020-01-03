@@ -20,7 +20,7 @@ Demos can be found at: http://tylerhawkins.info/data-structures-and-algorithms/s
 - [Node](src/data-structures/node/src/node.js)
 - [Priority Queue](src/data-structures/priority-queue/src/priority-queue.js)
 - [Queue](src/data-structures/queue/src/queue.js)
-- [Set](src/data-structures/set/src/set.js) TODO: Add Storybook example
+- [Set](src/data-structures/set/src/set.js)
 - [Stack](src/data-structures/stack/src/stack.js)
 
 ## Algorithms
