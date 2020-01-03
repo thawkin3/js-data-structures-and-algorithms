@@ -111,17 +111,22 @@ class PriorityQueueVisualizer extends Component {
           </button>
         </form>
         <div>
-          <p>Priority Queue Contents:</p>
           <div className="priorityQueueContainer">
-            {priorityQueue.enumerate().map((item, index) => {
-              return (
-                <Item
-                  item={item}
-                  className={generateOddOrEvenClassName(index)}
-                  key={index}
-                />
-              )
-            })}
+            <p className="frontOfPriorityQueue">Front of Priority Queue</p>
+            {priorityQueue.isEmpty() ? (
+              <p>(priority queue is currently empty)</p>
+            ) : (
+              priorityQueue.enumerate().map((item, index) => {
+                return (
+                  <Item
+                    item={item}
+                    className={generateOddOrEvenClassName(index)}
+                    key={index}
+                  />
+                )
+              })
+            )}
+            <p className="endOfPriorityQueue">End of Priority Queue</p>
           </div>
         </div>
       </div>

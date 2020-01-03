@@ -83,17 +83,22 @@ class QueueVisualizer extends Component {
           </button>
         </form>
         <div>
-          <p>Queue Contents:</p>
           <div className="queueContainer">
-            {queue.enumerate().map((value, index) => {
-              return (
-                <Item
-                  value={value}
-                  className={generateOddOrEvenClassName(index)}
-                  key={index}
-                />
-              )
-            })}
+            <p className="frontOfQueue">Front of Queue</p>
+            {queue.isEmpty() ? (
+              <p>(queue is currently empty)</p>
+            ) : (
+              queue.enumerate().map((value, index) => {
+                return (
+                  <Item
+                    value={value}
+                    className={generateOddOrEvenClassName(index)}
+                    key={index}
+                  />
+                )
+              })
+            )}
+            <p className="endOfQueue">End of Queue</p>
           </div>
         </div>
       </div>

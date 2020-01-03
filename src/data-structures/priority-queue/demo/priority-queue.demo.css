@@ -28,3 +28,11 @@
 .priorityQueueDemo label span {
   margin-right: 1rem;
 }
+
+.priorityQueueDemo .frontOfPriorityQueue {
+  border-bottom: 1px solid #071a32;
+}
+
+.priorityQueueDemo .endOfPriorityQueue {
+  border-top: 1px solid #071a32;
+}
