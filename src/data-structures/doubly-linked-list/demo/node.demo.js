@@ -2,10 +2,6 @@ import React, { Component, createRef } from 'react'
 import { Node } from '../src/node'
 import './node.demo.css'
 
-export default {
-  title: 'Data Structures|Doubly Linked List Node',
-}
-
 // TODO: This was copied from the Node for a singly linked list.
 // Still need to implement for a doubly linked list.
 
@@ -23,7 +19,7 @@ const NodeItem = ({ node }) => {
   )
 }
 
-class NodeVisualizer extends Component {
+export class NodeVisualizer extends Component {
   state = {
     nodes: [],
     item: '',
@@ -135,5 +131,3 @@ class NodeVisualizer extends Component {
     )
   }
 }
-
-export const nodeVisualizer = () => <NodeVisualizer />

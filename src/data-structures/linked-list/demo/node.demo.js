@@ -2,10 +2,6 @@ import React, { Component, createRef } from 'react'
 import { Node } from '../src/node'
 import './node.demo.css'
 
-export default {
-  title: 'Data Structures|Linked List Node',
-}
-
 const NodeItem = ({ node }) => {
   return (
     <div className="node">
@@ -20,7 +16,7 @@ const NodeItem = ({ node }) => {
   )
 }
 
-class NodeVisualizer extends Component {
+export class NodeVisualizer extends Component {
   state = {
     nodes: [],
     item: '',
@@ -132,5 +128,3 @@ class NodeVisualizer extends Component {
     )
   }
 }
-
-export const nodeVisualizer = () => <NodeVisualizer />

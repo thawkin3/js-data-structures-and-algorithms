@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NodeVisualizer } from './node.demo'
 
 export default {
   title: 'Data Structures|Doubly Linked List',
@@ -15,3 +16,5 @@ class DoublyLinkedListVisualizer extends Component {
 }
 
 export const doublyLinkedListVisualizer = () => <DoublyLinkedListVisualizer />
+
+export const nodeVisualizer = () => <NodeVisualizer />
