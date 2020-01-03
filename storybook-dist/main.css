@@ -1,3 +1,4 @@
+/* GENERAL */
 html {
   color: #071a32;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -20,6 +21,84 @@ body {
   box-sizing: border-box;
 }
 
+/* BUTTON */
+.button {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border-radius: 0.5rem;
+  background: deeppink;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  max-width: 18rem;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button:focus,
+.button:hover {
+  outline: none;
+}
+
+.button.outline:focus::before,
+.button.outline:hover::before {
+  box-shadow: deeppink 0 0 0 0.0625rem;
+  content: "";
+  height: calc(100% + 0.25rem);
+  left: 0px;
+  margin-left: -0.25rem;
+  margin-top: -0.25rem;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  width: calc(100% + 0.25rem);
+  border-radius: inherit;
+  padding: 0.125rem;
+}
+
+.button.underline {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: deeppink;
+  padding: 0;
+  margin: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+
+.button.underline:focus::before,
+.button.underline:hover::before {
+  border-bottom: 0.0625rem solid currentcolor;
+  bottom: -0.1875rem;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+}
+
+/* TEXT INPUT */
+.ti {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  border: 0.0625rem solid #071a32;
+  border-radius: 0.25rem;
+  background: #fff;
+  color: #071a32;
+  position: relative;
+}
+
+.ti:focus,
+.ti:hover {
+  outline: none;
+  border-bottom: 0.25rem solid #071a32;
+}
+
 .nodeDemo .nodeContainer {
   width: 15rem;
 }
@@ -31,7 +110,7 @@ body {
   border-radius: 0.25rem;
   background: #f2f2f2;
   color: #071a32;
-  text-align: center;
+  text-align: left;
   word-break: break-word;
   word-wrap: break-word;
   min-width: 0;
@@ -39,6 +118,7 @@ body {
 
 .nodeDemo .node pre {
   white-space: pre-wrap;
+  text-align: left;
 }
 
 .nodeDemo button,
@@ -62,7 +142,7 @@ body {
   border-radius: 0.25rem;
   background: #f2f2f2;
   color: #071a32;
-  text-align: center;
+  text-align: left;
   word-break: break-word;
   word-wrap: break-word;
   min-width: 0;
@@ -70,6 +150,7 @@ body {
 
 .nodeDemo .node pre {
   white-space: pre-wrap;
+  text-align: left;
 }
 
 .nodeDemo button,
@@ -113,6 +194,14 @@ body {
   margin-right: 1rem;
 }
 
+.priorityQueueDemo .frontOfPriorityQueue {
+  border-bottom: 1px solid #071a32;
+}
+
+.priorityQueueDemo .endOfPriorityQueue {
+  border-top: 1px solid #071a32;
+}
+
 .queueDemo .queueContainer {
   width: 15rem;
 }
@@ -139,6 +228,44 @@ body {
 }
 
 .queueDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.queueDemo .frontOfQueue {
+  border-bottom: 1px solid #071a32;
+}
+
+.queueDemo .endOfQueue {
+  border-top: 1px solid #071a32;
+}
+
+.setDemo .setContainer {
+  width: 15rem;
+}
+
+.setDemo .item {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.setDemo .item.alt {
+  background: #ccc;
+}
+
+.setDemo .newItemTextInput,
+.setDemo .removeItemTextInput {
+  margin-right: 0.5rem;
+}
+
+.setDemo button {
   margin-bottom: 0.5rem;
 }
 
@@ -169,6 +296,14 @@ body {
 
 .stackDemo button {
   margin-bottom: 0.5rem;
+}
+
+.stackDemo .topOfStack {
+  border-bottom: 1px solid #071a32;
+}
+
+.stackDemo .bottomOfStack {
+  border-top: 1px solid #071a32;
 }
 
 
