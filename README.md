@@ -8,7 +8,7 @@ JavaScript implementations of common data structure and algorithm concepts.
 
 ## Demos
 
-Demos can be found at: http://tylerhawkins.info/data-structures-and-algorithms/storybook-dist
+Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithms/storybook-dist
 
 ## Data Structures
 
@@ -73,7 +73,7 @@ Starts up the Storybook app locally so you can view the demos and examples
 ### `yarn build-storybook`
 
 Builds a static site out of the Storybook app (this is what is hosted here:
-http://tylerhawkins.info/data-structures-and-algorithms/storybook-dist)
+http://tylerhawkins.info/js-data-structures-and-algorithms/storybook-dist)
 
 ### `yarn prettier`
 
