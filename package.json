@@ -2,7 +2,33 @@
   "name": "js-data-structures-and-algorithms",
   "version": "0.1.0",
   "private": true,
+  "description": "Data structures and algorithms implemented in JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thawkin3/js-data-structures-and-algorithms.git"
+  },
+  "keywords": [
+    "algorithm",
+    "algorithm-concepts",
+    "algorithms",
+    "coding-interviews",
+    "computer-science",
+    "data-structure",
+    "data-structure-concepts",
+    "data-structures",
+    "data-structures-algorithms",
+    "interview",
+    "interview-preparation",
+    "javascript",
+    "javascript-algorithms",
+    "whiteboard"
+  ],
+  "author": "Tyler Hawkins (http://tylerhawkins.info)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thawkin3/js-data-structures-and-algorithms/issues"
+  },
+  "homepage": "http://tylerhawkins.info/js-data-structures-and-algorithms/storybook-dist",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
