@@ -1,4 +1,5 @@
 # JS Data Structures and Algorithms
+
 [![Build Status](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms)
 [![Codecov](https://img.shields.io/codecov/c/github/thawkin3/js-data-structures-and-algorithms)](https://codecov.io/gh/thawkin3/js-data-structures-and-algorithms)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -43,25 +44,33 @@ JavaScript implementations of common data structure and algorithm concepts.
 ## Commands
 
 ### `yarn install`
+
 Installs dependencies
 
 ### `yarn test`
+
 Runs tests in watch mode
 
 ### `yarn test:coverage`
+
 Runs tests and includes coverage report
 
 ### `yarn test:logs`
+
 Runs tests in watch mode and includes console log output to show the internals of what is going on during each iteration of algorithms being run (for instance, it shows the current state of an array that is being sorted during each step of the given algorithm)
 
 ### `yarn storybook`
+
 Starts up the Storybook app locally so you can view the demos and examples
 
 ### `yarn build-storybook`
+
 Builds a static site out of the Storybook app (this is what is hosted here: http://tylerhawkins.info/data-structures-and-algorithms/storybook-dist)
 
 ### `yarn prettier`
+
 Formats the code so you don't have to worry about white space and other formatting during development
 
 ### `yarn prettier-watch`
+
 Runs prettier in watch mode
