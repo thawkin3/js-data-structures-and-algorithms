@@ -64,8 +64,8 @@ export class NodeVisualizer extends Component {
       <div className="nodeDemo">
         <h1>Node Demo</h1>
         <p>
-          NOTE: This demo simply shows a collection of nodes, not an actual
-          linked list.
+          NOTE: This demo simply shows a collection of nodes that have pointers
+          to their next node. This is not an actual linked list.
         </p>
         <form onSubmit={this.addItem}>
           <label>

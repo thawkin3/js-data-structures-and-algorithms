@@ -12,6 +12,10 @@ const NodeItem = ({ node }) => {
         <b>Value:</b> {node.val}
       </div>
       <div>
+        <b>Previous:</b>{' '}
+        <pre>{JSON.stringify(node.prev, undefined, 2) || 'null'}</pre>
+      </div>
+      <div>
         <b>Next:</b>{' '}
         <pre>{JSON.stringify(node.next, undefined, 2) || 'null'}</pre>
       </div>
@@ -24,6 +28,7 @@ export class NodeVisualizer extends Component {
     nodes: [],
     item: '',
     next: '',
+    prev: '',
   }
 
   textInputRef = createRef()
@@ -32,20 +37,29 @@ export class NodeVisualizer extends Component {
     this.setState({ item: e.target.value })
   }
 
+  handlePrevChange = e => {
+    this.setState({ prev: e.target.value })
+  }
+
   handleNextChange = e => {
     this.setState({ next: e.target.value })
   }
 
   addItem = e => {
     e.preventDefault()
-    const { item, next } = this.state
+    const { item, next, prev } = this.state
     if (item) {
-      const node = new Node(item, JSON.parse(next || null))
+      const node = new Node(
+        item,
+        JSON.parse(next || null),
+        JSON.parse(prev || null)
+      )
       this.setState(
         prevState => ({
           nodes: [...prevState.nodes, node],
           item: '',
           next: '',
+          prev: '',
         }),
         () => this.textInputRef.current && this.textInputRef.current.focus()
       )
@@ -61,14 +75,14 @@ export class NodeVisualizer extends Component {
   }
 
   render() {
-    const { nodes, item, next } = this.state
+    const { nodes, item, next, prev } = this.state
 
     return (
       <div className="nodeDemo">
         <h1>Node Demo</h1>
         <p>
-          NOTE: This demo simply shows a collection of nodes, not an actual
-          linked list.
+          NOTE: This demo simply shows a collection of nodes that have pointers
+          to previous and next nodes. This is not an actual doubly linked list.
         </p>
         <form onSubmit={this.addItem}>
           <label>
@@ -79,6 +93,24 @@ export class NodeVisualizer extends Component {
               ref={this.textInputRef}
               className="ti input newItemTextInput"
             />
+          </label>
+          <br />
+          <label>
+            <span>Node Previous Pointer:</span>
+            <select
+              value={prev}
+              onChange={this.handlePrevChange}
+              className="input nodePrevTextInput"
+            >
+              <option key="null-value" value="">
+                null
+              </option>
+              {nodes.map((node, index) => (
+                <option key={index} value={JSON.stringify(node)}>
+                  {JSON.stringify(node, undefined, 2)}
+                </option>
+              ))}
+            </select>
           </label>
           <br />
           <label>

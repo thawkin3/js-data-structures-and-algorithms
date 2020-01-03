@@ -9,7 +9,7 @@
   border-radius: 0.25rem;
   background: #f2f2f2;
   color: #071a32;
-  text-align: center;
+  text-align: left;
   word-break: break-word;
   word-wrap: break-word;
   min-width: 0;
@@ -17,6 +17,7 @@
 
 .nodeDemo .node pre {
   white-space: pre-wrap;
+  text-align: left;
 }
 
 .nodeDemo button,
