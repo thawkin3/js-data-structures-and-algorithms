@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Algorithms|Binary Search',
+  title: 'Algorithms|Search/Binary Search',
 }
 
 export const todo = () => (

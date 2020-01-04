@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Algorithms|Bubble Sort',
+  title: 'Algorithms|Sort/Bubble Sort',
 }
 
 export const todo = () => (

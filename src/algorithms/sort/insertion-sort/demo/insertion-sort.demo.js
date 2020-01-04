@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Algorithms|Insertion Sort',
+  title: 'Algorithms|Sort/Insertion Sort',
 }
 
 export const todo = () => (

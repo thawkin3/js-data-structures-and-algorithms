@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Algorithms|Merge Sort',
+  title: 'Algorithms|Sort/Merge Sort',
 }
 
 export const todo = () => (

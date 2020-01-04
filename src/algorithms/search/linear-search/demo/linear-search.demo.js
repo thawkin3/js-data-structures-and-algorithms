@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Algorithms|Linear Search',
+  title: 'Algorithms|Search/Linear Search',
 }
 
 export const todo = () => (

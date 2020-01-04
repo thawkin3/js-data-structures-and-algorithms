@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Algorithms|Selection Sort',
+  title: 'Algorithms|Sort/Selection Sort',
 }
 
 export const todo = () => (
