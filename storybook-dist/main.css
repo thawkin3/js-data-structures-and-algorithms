@@ -99,6 +99,91 @@ body {
   border-bottom: 0.25rem solid #071a32;
 }
 
+.viewAllDemo h2 {
+  font-size: 1rem;
+}
+
+.viewAllDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.viewAllDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.viewAllDemo label span {
+  margin-right: 1rem;
+}
+
+.intersectionDemo .setContainer {
+  width: 15rem;
+}
+
+.intersectionDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.intersectionDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.intersectionDemo label span {
+  margin-right: 1rem;
+}
+
+.setDifferenceDemo .setContainer {
+  width: 15rem;
+}
+
+.setDifferenceDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.setDifferenceDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.setDifferenceDemo label span {
+  margin-right: 1rem;
+}
+
+.symmetricDifferenceDemo .setContainer {
+  width: 15rem;
+}
+
+.symmetricDifferenceDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.symmetricDifferenceDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.symmetricDifferenceDemo label span {
+  margin-right: 1rem;
+}
+
+.unionDemo .setContainer {
+  width: 15rem;
+}
+
+.unionDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.unionDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.unionDemo label span {
+  margin-right: 1rem;
+}
+
 .nodeDemo .nodeContainer {
   width: 15rem;
 }
