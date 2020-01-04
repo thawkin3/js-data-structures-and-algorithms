@@ -40,10 +40,10 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 
 ### Sets
 
-- [Intersection](src/algorithms/set/intersection/src/intersection.js) TODO: Add Storybook example
-- [Set Difference](src/algorithms/set/set-difference/src/set-difference.js) TODO: Add Storybook example
-- [Symmetric Difference](src/algorithms/set/symmetric-difference/src/symmetric-difference.js) TODO: Add Storybook example
-- [Union](src/algorithms/set/union/src/union.js) TODO: Add Storybook example
+- [Intersection](src/algorithms/set/intersection/src/intersection.js)
+- [Set Difference](src/algorithms/set/set-difference/src/set-difference.js)
+- [Symmetric Difference](src/algorithms/set/symmetric-difference/src/symmetric-difference.js)
+- [Union](src/algorithms/set/union/src/union.js)
 
 ## Commands
 

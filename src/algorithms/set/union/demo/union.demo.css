@@ -1,0 +1,16 @@
+.unionDemo .setContainer {
+  width: 15rem;
+}
+
+.unionDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.unionDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.unionDemo label span {
+  margin-right: 1rem;
+}

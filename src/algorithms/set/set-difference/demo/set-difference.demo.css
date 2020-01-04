@@ -1,0 +1,16 @@
+.setDifferenceDemo .setContainer {
+  width: 15rem;
+}
+
+.setDifferenceDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.setDifferenceDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.setDifferenceDemo label span {
+  margin-right: 1rem;
+}

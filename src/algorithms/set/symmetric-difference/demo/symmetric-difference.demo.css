@@ -1,0 +1,16 @@
+.symmetricDifferenceDemo .setContainer {
+  width: 15rem;
+}
+
+.symmetricDifferenceDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.symmetricDifferenceDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.symmetricDifferenceDemo label span {
+  margin-right: 1rem;
+}

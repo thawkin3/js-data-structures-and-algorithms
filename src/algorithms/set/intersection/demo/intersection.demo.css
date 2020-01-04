@@ -1,0 +1,16 @@
+.intersectionDemo .setContainer {
+  width: 15rem;
+}
+
+.intersectionDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.intersectionDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.intersectionDemo label span {
+  margin-right: 1rem;
+}
