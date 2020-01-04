@@ -1,0 +1,16 @@
+.viewAllDemo h2 {
+  font-size: 1rem;
+}
+
+.viewAllDemo button {
+  margin-bottom: 0.5rem;
+}
+
+.viewAllDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.viewAllDemo label span {
+  margin-right: 1rem;
+}
