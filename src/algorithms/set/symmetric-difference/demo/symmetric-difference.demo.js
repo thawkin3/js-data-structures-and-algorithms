@@ -79,8 +79,8 @@ class SymmetricDifferenceOfTwoSetsVisualizer extends Component {
           </label>
         </form>
         <div>
-          <p>Symmetric Difference of Set 1 and Set 2:</p>
-          <div className="setContainer">{this.findSymmetricDifference()}</div>
+          <h2>Symmetric Difference of Set 1 and Set 2:</h2>
+          {this.findSymmetricDifference()}
         </div>
       </div>
     )

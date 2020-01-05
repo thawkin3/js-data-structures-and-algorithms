@@ -79,8 +79,8 @@ class UnionOfTwoSetsVisualizer extends Component {
           </label>
         </form>
         <div>
-          <p>Union of Set 1 and Set 2:</p>
-          <div className="setContainer">{this.findUnion()}</div>
+          <h2>Union of Set 1 and Set 2:</h2>
+          {this.findUnion()}
         </div>
       </div>
     )

@@ -79,8 +79,8 @@ class IntersectionOfTwoSetsVisualizer extends Component {
           </label>
         </form>
         <div>
-          <p>Intersection of Set 1 and Set 2:</p>
-          <div className="setContainer">{this.findIntersection()}</div>
+          <h2>Intersection of Set 1 and Set 2:</h2>
+          {this.findIntersection()}
         </div>
       </div>
     )

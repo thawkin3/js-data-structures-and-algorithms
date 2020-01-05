@@ -64,6 +64,13 @@ class ViewAllSetAlgorithms extends Component {
             .join(', ')}
         </p>
         <hr />
+        <h2>Set Difference of Set 2 and Set 1:</h2>
+        <p>
+          {setDifference(set2, set1)
+            .enumerate()
+            .join(', ')}
+        </p>
+        <hr />
         <h2>Symmetric Difference of Set 1 and Set 2:</h2>
         <p>
           {symmetricDifference(set1, set2)
@@ -105,9 +112,7 @@ class ViewAllSetAlgorithms extends Component {
             />
           </label>
         </form>
-        <div>
-          <div className="setContainer">{this.renderOutput()}</div>
-        </div>
+        <div>{this.renderOutput()}</div>
       </div>
     )
   }
