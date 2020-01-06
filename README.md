@@ -32,11 +32,11 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 
 ### Sorting
 
-- [Bubble Sort](src/algorithms/sort/bubble-sort/src/bubble-sort.js) TODO: Add Storybook example
-- [Insertion Sort](src/algorithms/sort/insertion-sort/src/insertion-sort.js) TODO: Add Storybook example
-- [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js) TODO: Add Storybook example
-- [Quick Sort](src/algorithms/sort/quick-sort/src/quick-sort.js) TODO: Add Storybook example
-- [Selection Sort](src/algorithms/sort/selection-sort/src/selection-sort.js) TODO: Add Storybook example
+- [Bubble Sort](src/algorithms/sort/bubble-sort/src/bubble-sort.js)
+- [Insertion Sort](src/algorithms/sort/insertion-sort/src/insertion-sort.js)
+- [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js)
+- [Quick Sort](src/algorithms/sort/quick-sort/src/quick-sort.js)
+- [Selection Sort](src/algorithms/sort/selection-sort/src/selection-sort.js)
 
 ### Sets
 

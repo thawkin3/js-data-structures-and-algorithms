@@ -1,0 +1,9 @@
+.sortDemo button,
+.sortDemo label {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.sortDemo label span {
+  margin-right: 1rem;
+}
