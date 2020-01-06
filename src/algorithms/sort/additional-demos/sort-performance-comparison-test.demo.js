@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
-import './sort-performance-test.demo.css'
+import './sort-performance-comparison-test.demo.css'
+import { bubbleSort } from '../bubble-sort/src/bubble-sort'
+import { insertionSort } from '../insertion-sort/src/insertion-sort'
+import { mergeSort } from '../merge-sort/src/merge-sort'
+import { quickSort } from '../quick-sort/src/quick-sort'
+import { selectionSort } from '../selection-sort/src/selection-sort'
+
+export default {
+  title: 'Algorithms|Sort/Sort Comparisons',
+}
 
 const arrayElementCountOptions = [
   '0',
@@ -19,7 +28,7 @@ const initialSortOrderOptions = [
   'already sorted',
 ]
 
-export class SortPerformanceTest extends Component {
+class SortPerformanceComparisonTest extends Component {
   state = {
     selectedArrayElementCount: '100',
     selectedInitialSortOrder: 'randomly ordered',
@@ -114,7 +123,6 @@ export class SortPerformanceTest extends Component {
           elementCount: selectedArrayElementCount,
           initialSortOrder: selectedInitialSortOrder,
           initialArray: arrayBeingGenerated,
-          resultingArray: null,
           timeTaken: null,
         },
       },
@@ -131,16 +139,35 @@ export class SortPerformanceTest extends Component {
       storedArrays,
     } = this.state
 
-    const { sortMethod } = this.props
-
     const arrayKey = `${selectedInitialSortOrder.replace(
       /\s/g,
       '-'
     )}-${selectedArrayElementCount}`
 
-    const startTime = performance.now()
-    const resultingArray = sortMethod(storedArrays[arrayKey].initialArray)
-    const endTime = performance.now()
+    let initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForBubbleSort = performance.now()
+    bubbleSort(initialArrayCopy)
+    const endTimeForBubbleSort = performance.now()
+
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForInsertionSort = performance.now()
+    insertionSort(initialArrayCopy)
+    const endTimeForInsertionSort = performance.now()
+
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForMergeSort = performance.now()
+    mergeSort(initialArrayCopy)
+    const endTimeForMergeSort = performance.now()
+
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForQuickSort = performance.now()
+    quickSort(initialArrayCopy)
+    const endTimeForQuickSort = performance.now()
+
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForSelectionSort = performance.now()
+    selectionSort(initialArrayCopy)
+    const endTimeForSelectionSort = performance.now()
 
     this.setState(prevState => ({
       currentResultKey: arrayKey,
@@ -148,8 +175,13 @@ export class SortPerformanceTest extends Component {
         ...prevState.storedArrays,
         [arrayKey]: {
           ...prevState.storedArrays[arrayKey],
-          resultingArray,
-          timeTaken: endTime - startTime,
+          timeTaken: {
+            bubbleSort: endTimeForBubbleSort - startTimeForBubbleSort,
+            insertionSort: endTimeForInsertionSort - startTimeForInsertionSort,
+            mergeSort: endTimeForMergeSort - startTimeForMergeSort,
+            quickSort: endTimeForQuickSort - startTimeForQuickSort,
+            selectionSort: endTimeForSelectionSort - startTimeForSelectionSort,
+          },
         },
       },
     }))
@@ -164,11 +196,9 @@ export class SortPerformanceTest extends Component {
       storedArrays,
     } = this.state
 
-    const { sortMethodName } = this.props
-
     return (
-      <div className="sortDemo">
-        <h1>{sortMethodName} Performance Test</h1>
+      <div className="sortComparisonDemo">
+        <h1>Performance Test Comparing Various Sorting Algorithms</h1>
         <form onSubmit={this.runPerformanceTest}>
           <label>
             <span>Number of Elements in the Array:</span>
@@ -205,39 +235,109 @@ export class SortPerformanceTest extends Component {
             type="submit"
             disabled={isGeneratingNewArray}
           >
-            Run {sortMethodName}
+            Run All Sorting Algorithms
           </button>
           {isGeneratingNewArray && (
             <p>Generating new array... sit tight for a second.</p>
           )}
         </form>
         <div>
-          <h2>{sortMethodName} Performance Results:</h2>
+          <h2>Performance Results:</h2>
           {currentResultKey && currentResultKey in storedArrays && (
             <div>
               <p>
                 Sorting an array of{' '}
                 <b>{storedArrays[currentResultKey].elementCount}</b> elements
                 that were{' '}
-                <b>{storedArrays[currentResultKey].initialSortOrder}</b> using a{' '}
-                <b>{sortMethodName}</b> took{' '}
-                <b>{storedArrays[currentResultKey].timeTaken.toFixed(3)}</b>{' '}
+                <b>{storedArrays[currentResultKey].initialSortOrder}</b>.
+              </p>
+              <hr />
+              <div>
+                <h3>Bubble Sort </h3> took{' '}
+                <b>
+                  {storedArrays[currentResultKey].timeTaken.bubbleSort.toFixed(
+                    3
+                  )}
+                </b>{' '}
                 milliseconds (or{' '}
                 <b>
-                  {(storedArrays[currentResultKey].timeTaken / 1000).toFixed(6)}
+                  {(
+                    storedArrays[currentResultKey].timeTaken.bubbleSort / 1000
+                  ).toFixed(6)}
                 </b>{' '}
                 seconds).
-              </p>
+              </div>
+              <hr />
+              <div>
+                <h3>Insertion Sort </h3> took{' '}
+                <b>
+                  {storedArrays[
+                    currentResultKey
+                  ].timeTaken.insertionSort.toFixed(3)}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.insertionSort /
+                    1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
+              <hr />
+              <div>
+                <h3>Merge Sort</h3> took{' '}
+                <b>
+                  {storedArrays[currentResultKey].timeTaken.mergeSort.toFixed(
+                    3
+                  )}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.mergeSort / 1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
+              <hr />
+              <div>
+                <h3>Quick Sort</h3> took{' '}
+                <b>
+                  {storedArrays[currentResultKey].timeTaken.quickSort.toFixed(
+                    3
+                  )}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.quickSort / 1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
+              <hr />
+              <div>
+                <h3>Selection Sort</h3> took{' '}
+                <b>
+                  {storedArrays[
+                    currentResultKey
+                  ].timeTaken.selectionSort.toFixed(3)}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.selectionSort /
+                    1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
+              <hr />
               <p className="arrayData">
                 <b>Initial Array:</b>{' '}
                 <div className="elements">
                   {storedArrays[currentResultKey].initialArray.join(', ')}
-                </div>
-              </p>
-              <p className="arrayData">
-                <b>Sorted Array:</b>{' '}
-                <div className="elements">
-                  {storedArrays[currentResultKey].resultingArray.join(', ')}
                 </div>
               </p>
             </div>
@@ -247,3 +347,5 @@ export class SortPerformanceTest extends Component {
     )
   }
 }
+
+export const performanceTest = () => <SortPerformanceComparisonTest />

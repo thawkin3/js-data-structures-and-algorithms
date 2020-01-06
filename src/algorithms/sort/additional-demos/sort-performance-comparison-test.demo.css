@@ -1,14 +1,19 @@
-.sortDemo button,
-.sortDemo label {
+.sortComparisonDemo button,
+.sortComparisonDemo label {
   margin-bottom: 1rem;
   display: inline-block;
 }
 
-.sortDemo label span {
+.sortComparisonDemo label span {
   margin-right: 1rem;
 }
 
-.sortDemo .arrayData .elements {
+.sortComparisonDemo h3 {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.sortComparisonDemo .arrayData .elements {
   white-space: nowrap;
   overflow-x: scroll;
   border: 1px solid #071a32;
