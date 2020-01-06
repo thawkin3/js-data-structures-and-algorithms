@@ -116,8 +116,8 @@ body {
   margin-right: 1rem;
 }
 
-.intersectionDemo .setContainer {
-  width: 15rem;
+.intersectionDemo h2 {
+  font-size: 1rem;
 }
 
 .intersectionDemo button {
@@ -133,8 +133,8 @@ body {
   margin-right: 1rem;
 }
 
-.setDifferenceDemo .setContainer {
-  width: 15rem;
+.setDifferenceDemo h2 {
+  font-size: 1rem;
 }
 
 .setDifferenceDemo button {
@@ -150,8 +150,8 @@ body {
   margin-right: 1rem;
 }
 
-.symmetricDifferenceDemo .setContainer {
-  width: 15rem;
+.symmetricDifferenceDemo h2 {
+  font-size: 1rem;
 }
 
 .symmetricDifferenceDemo button {
@@ -167,8 +167,8 @@ body {
   margin-right: 1rem;
 }
 
-.unionDemo .setContainer {
-  width: 15rem;
+.unionDemo h2 {
+  font-size: 1rem;
 }
 
 .unionDemo button {
@@ -181,6 +181,16 @@ body {
 }
 
 .unionDemo label span {
+  margin-right: 1rem;
+}
+
+.sortDemo button,
+.sortDemo label {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.sortDemo label span {
   margin-right: 1rem;
 }
 
