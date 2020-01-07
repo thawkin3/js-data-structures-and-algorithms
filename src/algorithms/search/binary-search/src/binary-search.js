@@ -1,8 +1,13 @@
-// Binary Search
-// Starts at the midpoint and continues to cut the array into halves
-// Only can be used for sorted arrays
-// Best case: 0(1) (the element you're looking for is located at the array's midpoint)
-// Worst case: 0(log n) (the element is located near the beginning or end of the array)
+/**
+ * Binary Search
+ *
+ * Starts at the midpoint and continues to cut the array into halves
+ * Only can be used for sorted arrays
+ *
+ * Best case performance: Ω(1) (the element you're looking for is located at the array's midpoint)
+ * Average case performance: 0(log n)
+ * Worst case performance: O(log n) (the element is located near the beginning or end of the array)
+ */
 
 export const binarySearch = (haystack, needle, showLogs) => {
   let searchableHaystack = [...haystack]

@@ -1,17 +1,19 @@
-// Insertion Sort
-
-// Inserts each element into its correct place in the array, one element at a time
-// Loops through the array for every element
-
-// Everything to the left of the current item is known to be sorted
-// Everything to the right of the current item is unsorted
-// Not appropriate for large unsorted data sets
-
-// Best case performance: Ω(n) (only one element is out of place, so only one iteration through the array)
-// Average case performance: 0(n^2) (array is mostly unsorted, have to do a loop nested within a loop)
-// Worst case performance: O(n^2) (array is entirely unsorted, have to do a loop nested within a loop)
-
-// Space required: O(n) (because it operates directly on the input array)
+/**
+ * Insertion Sort
+ *
+ * Inserts each element into its correct place in the array, one element at a time
+ * Loops through the array for every element
+ *
+ * Everything to the left of the current item is known to be sorted
+ * Everything to the right of the current item is unsorted
+ * Not appropriate for large unsorted data sets
+ *
+ * Best case performance: Ω(n) (only one element is out of place, so only one iteration through the array)
+ * Average case performance: 0(n^2) (array is mostly unsorted, have to do a loop nested within a loop)
+ * Worst case performance: O(n^2) (array is entirely unsorted, have to do a loop nested within a loop)
+ *
+ * Space required: O(n) (because it operates directly on the input array)
+ */
 
 export const insertionSort = (arr, showLogs) => {
   let sortedArr = [...arr]
