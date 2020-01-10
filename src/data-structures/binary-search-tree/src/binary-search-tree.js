@@ -22,38 +22,50 @@ export class BinarySearchTree {
   insert(val) {
     const node = new BinarySearchTree(val)
 
-    function recurse(bst) {
+    // handle adding the first node
+    if (!this.val) {
+      this.val = node.val
+      this.left = node.left
+      this.right = node.right
+      return this
+    }
+
+    // adding a node to an existing tree
+    function findPlaceForNode(bst) {
       if (bst.val > val && bst.left === null) {
         bst.left = node
         return node
       } else if (bst.val > val) {
-        recurse(bst.left)
+        findPlaceForNode(bst.left)
       } else if (bst.val < val && bst.right === null) {
         bst.right = node
         return node
       } else if (bst.val < val) {
-        recurse(bst.right)
+        findPlaceForNode(bst.right)
       }
     }
 
-    recurse(this)
+    findPlaceForNode(this)
+
+    return node
   }
 
   contains(val) {
-    let doesContain = false
+    let doesTreeContainValue = false
 
-    function recurse(bst) {
+    function findValueInTree(bst) {
       if (bst.val === val) {
-        doesContain = true
+        doesTreeContainValue = true
       } else if (bst.left !== null && val < bst.val) {
-        recurse(bst.left)
+        findValueInTree(bst.left)
       } else if (bst.right !== null && val > bst.val) {
-        recurse(bst.right)
+        findValueInTree(bst.right)
       }
     }
 
-    recurse(this)
-    return doesContain
+    findValueInTree(this)
+
+    return doesTreeContainValue
   }
 
   remove(val) {
