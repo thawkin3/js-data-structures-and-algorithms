@@ -16,7 +16,7 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 - [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js) TODO: Add implementation, tests, and Storybook example
 - [Doubly Linked List](src/data-structures/doubly-linked-list/src/doubly-linked-list.js) TODO: Add Storybook example
 - [Hash Table (Object)](src/data-structures/hash-table/src/hash-table.js)
-- [Linked List](src/data-structures/linked-list/src/linked-list.js) TODO: Add Storybook example
+- [Linked List](src/data-structures/linked-list/src/linked-list.js)
 - [Node (with only Next pointer)](src/data-structures/linked-list/src/node.js)
 - [Node (with Next and Previous pointers)](src/data-structures/doubly-linked-list/src/node.js)
 - [Priority Queue](src/data-structures/priority-queue/src/priority-queue.js)
