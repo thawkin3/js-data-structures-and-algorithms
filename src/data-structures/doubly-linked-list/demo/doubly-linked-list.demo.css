@@ -1,22 +1,22 @@
-.linkedListDemo .flexContainer {
+.doublyLinkedListDemo .flexContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.linkedListDemo .flexContainer .leftColumn {
+.doublyLinkedListDemo .flexContainer .leftColumn {
   margin-right: 2rem;
 }
 
-.linkedListDemo .flexContainer .rightColumn {
+.doublyLinkedListDemo .flexContainer .rightColumn {
   flex-shrink: 0;
 }
 
-.linkedListDemo .linkedListContainer {
+.doublyLinkedListDemo .linkedListContainer {
   width: 15rem;
 }
 
-.linkedListDemo .node {
+.doublyLinkedListDemo .node {
   padding: 1rem;
   margin-bottom: 0.25rem;
   border: 1px solid #071a32;
@@ -29,16 +29,16 @@
   min-width: 0;
 }
 
-.linkedListDemo button,
-.linkedListDemo label {
+.doublyLinkedListDemo button,
+.doublyLinkedListDemo label {
   margin-bottom: 0.5rem;
   display: inline-block;
 }
 
-.linkedListDemo label span {
+.doublyLinkedListDemo label span {
   margin-right: 1rem;
 }
 
-.linkedListDemo fieldset {
+.doublyLinkedListDemo fieldset {
   margin-bottom: 0.5rem;
 }
