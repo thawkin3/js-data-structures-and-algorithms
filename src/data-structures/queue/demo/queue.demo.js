@@ -55,50 +55,55 @@ class QueueVisualizer extends Component {
     return (
       <div className="queueDemo">
         <h1>Queue Demo</h1>
-        <form onSubmit={this.addItem}>
-          <input
-            value={item}
-            onChange={this.handleItemChange}
-            ref={this.textInputRef}
-            className="ti newItemTextInput"
-          />
-          <button className="button outline" type="submit">
-            Add Item to Queue
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.removeItem}
-          >
-            Remove Item from Queue
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.clearQueue}
-          >
-            Clear Queue
-          </button>
-        </form>
-        <div>
-          <div className="queueContainer">
-            <p className="frontOfQueue">Front of Queue</p>
-            {queue.isEmpty() ? (
-              <p>(queue is currently empty)</p>
-            ) : (
-              queue.enumerate().map((value, index) => {
-                return (
-                  <Item
-                    value={value}
-                    className={generateOddOrEvenClassName(index)}
-                    key={index}
-                  />
-                )
-              })
-            )}
-            <p className="endOfQueue">End of Queue</p>
+        <div className="flexContainer">
+          <div className="leftColumn">
+            <form onSubmit={this.addItem}>
+              <input
+                value={item}
+                onChange={this.handleItemChange}
+                ref={this.textInputRef}
+                className="ti newItemTextInput"
+              />
+              <button className="button outline" type="submit">
+                Add Item to Queue
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.removeItem}
+              >
+                Remove Item from Queue
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.clearQueue}
+              >
+                Clear Queue
+              </button>
+            </form>
+          </div>
+          <div className="rightColumn">
+            <h2>Queue Contents:</h2>
+            <div className="queueContainer">
+              <p className="frontOfQueue">Front of Queue</p>
+              {queue.isEmpty() ? (
+                <p>(currently empty)</p>
+              ) : (
+                queue.enumerate().map((value, index) => {
+                  return (
+                    <Item
+                      value={value}
+                      className={generateOddOrEvenClassName(index)}
+                      key={index}
+                    />
+                  )
+                })
+              )}
+              <p className="endOfQueue">End of Queue</p>
+            </div>
           </div>
         </div>
       </div>

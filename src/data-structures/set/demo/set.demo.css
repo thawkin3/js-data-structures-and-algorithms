@@ -1,5 +1,27 @@
+.setDemo .flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.setDemo .flexContainer .leftColumn {
+  margin-right: 2rem;
+}
+
+.setDemo .flexContainer .rightColumn {
+  flex-shrink: 0;
+}
+
 .setDemo .setContainer {
-  width: 15rem;
+  width: 17rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.setDemo h2 {
+  margin-top: 0;
 }
 
 .setDemo .item {

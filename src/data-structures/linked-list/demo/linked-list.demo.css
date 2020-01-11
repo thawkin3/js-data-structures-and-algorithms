@@ -13,7 +13,15 @@
 }
 
 .linkedListDemo .linkedListContainer {
-  width: 15rem;
+  width: 17rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.linkedListDemo h2 {
+  margin-top: 0;
 }
 
 .linkedListDemo .node {

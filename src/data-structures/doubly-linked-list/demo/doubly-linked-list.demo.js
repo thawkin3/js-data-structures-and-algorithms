@@ -231,13 +231,20 @@ class DoublyLinkedListVisualizer extends Component {
             </form>
           </div>
           <div className="rightColumn">
-            <p>Doubly Linked List Contents:</p>
+            <h2>Doubly Linked List Contents:</h2>
             <div className="doublyLinkedListContainer">
-              {doublyLinkedList.enumerate().map((val, index) => {
-                return (
-                  <DoublyLinkedListNodeItem val={val} key={`${index}-${val}`} />
-                )
-              })}
+              {doublyLinkedList.isEmpty() ? (
+                <p>(currently empty)</p>
+              ) : (
+                doublyLinkedList.enumerate().map((val, index) => {
+                  return (
+                    <DoublyLinkedListNodeItem
+                      val={val}
+                      key={`${index}-${val}`}
+                    />
+                  )
+                })
+              )}
             </div>
           </div>
         </div>

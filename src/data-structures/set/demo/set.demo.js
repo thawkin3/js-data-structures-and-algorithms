@@ -68,48 +68,56 @@ class SetVisualizer extends Component {
     return (
       <div className="setDemo">
         <h1>Set Demo</h1>
-        <form onSubmit={this.addItem}>
-          <input
-            value={itemToAdd}
-            onChange={this.handleItemToAddChange}
-            ref={this.addItemInputRef}
-            className="ti newItemTextInput"
-          />
-          <button className="button outline" type="submit">
-            Add Item to Set
-          </button>
-        </form>
-        <form onSubmit={this.removeItem}>
-          <input
-            value={itemToRemove}
-            onChange={this.handleItemToRemoveChange}
-            ref={this.removeItemInputRef}
-            className="ti removeItemTextInput"
-          />
-          <button className="button outline" type="submit">
-            Remove Item from Set
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.clearSet}
-          >
-            Clear Set
-          </button>
-        </form>
-        <div>
-          <p>Set Contents:</p>
-          <div className="setContainer">
-            {set.enumerate().map((value, index) => {
-              return (
-                <Item
-                  value={value}
-                  className={generateOddOrEvenClassName(index)}
-                  key={index}
-                />
-              )
-            })}
+        <div className="flexContainer">
+          <div className="leftColumn">
+            <form onSubmit={this.addItem}>
+              <input
+                value={itemToAdd}
+                onChange={this.handleItemToAddChange}
+                ref={this.addItemInputRef}
+                className="ti newItemTextInput"
+              />
+              <button className="button outline" type="submit">
+                Add Item to Set
+              </button>
+            </form>
+            <form onSubmit={this.removeItem}>
+              <input
+                value={itemToRemove}
+                onChange={this.handleItemToRemoveChange}
+                ref={this.removeItemInputRef}
+                className="ti removeItemTextInput"
+              />
+              <button className="button outline" type="submit">
+                Remove Item from Set
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.clearSet}
+              >
+                Clear Set
+              </button>
+            </form>
+          </div>
+          <div className="rightColumn">
+            <h2>Set Contents:</h2>
+            <div className="setContainer">
+              {set.isEmpty() ? (
+                <p>(currently empty)</p>
+              ) : (
+                set.enumerate().map((value, index) => {
+                  return (
+                    <Item
+                      value={value}
+                      className={generateOddOrEvenClassName(index)}
+                      key={index}
+                    />
+                  )
+                })
+              )}
+            </div>
           </div>
         </div>
       </div>

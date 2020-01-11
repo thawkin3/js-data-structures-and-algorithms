@@ -226,11 +226,17 @@ class LinkedListVisualizer extends Component {
             </form>
           </div>
           <div className="rightColumn">
-            <p>Linked List Contents:</p>
+            <h2>Linked List Contents:</h2>
             <div className="linkedListContainer">
-              {linkedList.enumerate().map((val, index) => {
-                return <LinkedListNodeItem val={val} key={`${index}-${val}`} />
-              })}
+              {linkedList.isEmpty() ? (
+                <p>(currently empty)</p>
+              ) : (
+                linkedList.enumerate().map((val, index) => {
+                  return (
+                    <LinkedListNodeItem val={val} key={`${index}-${val}`} />
+                  )
+                })
+              )}
             </div>
           </div>
         </div>

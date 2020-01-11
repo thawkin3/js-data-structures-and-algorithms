@@ -60,53 +60,58 @@ class StackVisualizer extends Component {
     return (
       <div className="stackDemo">
         <h1>Stack Demo</h1>
-        <form onSubmit={this.addItem}>
-          <input
-            value={item}
-            onChange={this.handleItemChange}
-            ref={this.textInputRef}
-            className="ti newItemTextInput"
-          />
-          <button className="button outline" type="submit">
-            Add Item to Stack
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.removeItem}
-          >
-            Remove Item from Stack
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.clearStack}
-          >
-            Clear Stack
-          </button>
-        </form>
-        <div>
-          <div className="stackContainer">
-            <p className="topOfStack">Top of Stack</p>
-            {stack.isEmpty() ? (
-              <p>(stack is currently empty)</p>
-            ) : (
-              stack.enumerate().map((value, index, allItems) => {
-                return (
-                  <Item
-                    value={value}
-                    className={generateOddOrEvenClassName(
-                      index,
-                      allItems.length
-                    )}
-                    key={index}
-                  />
-                )
-              })
-            )}
-            <p className="bottomOfStack">Bottom of Stack</p>
+        <div className="flexContainer">
+          <div className="leftColumn">
+            <form onSubmit={this.addItem}>
+              <input
+                value={item}
+                onChange={this.handleItemChange}
+                ref={this.textInputRef}
+                className="ti newItemTextInput"
+              />
+              <button className="button outline" type="submit">
+                Add Item to Stack
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.removeItem}
+              >
+                Remove Item from Stack
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.clearStack}
+              >
+                Clear Stack
+              </button>
+            </form>
+          </div>
+          <div className="rightColumn">
+            <h2>Stack Contents:</h2>
+            <div className="stackContainer">
+              <p className="topOfStack">Top of Stack</p>
+              {stack.isEmpty() ? (
+                <p>(currently empty)</p>
+              ) : (
+                stack.enumerate().map((value, index, allItems) => {
+                  return (
+                    <Item
+                      value={value}
+                      className={generateOddOrEvenClassName(
+                        index,
+                        allItems.length
+                      )}
+                      key={index}
+                    />
+                  )
+                })
+              )}
+              <p className="bottomOfStack">Bottom of Stack</p>
+            </div>
           </div>
         </div>
       </div>

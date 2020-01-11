@@ -69,64 +69,69 @@ class PriorityQueueVisualizer extends Component {
     return (
       <div className="priorityQueueDemo">
         <h1>Priority Queue Demo</h1>
-        <form onSubmit={this.addItem}>
-          <label>
-            <span>Item Value:</span>
-            <input
-              value={item}
-              onChange={this.handleItemChange}
-              ref={this.textInputRef}
-              className="ti input newItemTextInput"
-            />
-          </label>
-          <br />
-          <label>
-            <span>Item Priority:</span>
-            <input
-              value={priority}
-              onChange={this.handlePriorityChange}
-              className="ti input itemPriorityTextInput"
-              type="number"
-            />
-          </label>
-          <br />
-          <button className="button outline" type="submit">
-            Add Item to Priority Queue
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.removeItem}
-          >
-            Remove Item from Priority Queue
-          </button>
-          <br />
-          <button
-            className="button outline"
-            type="button"
-            onClick={this.clearPriorityQueue}
-          >
-            Clear Priority Queue
-          </button>
-        </form>
-        <div>
-          <div className="priorityQueueContainer">
-            <p className="frontOfPriorityQueue">Front of Priority Queue</p>
-            {priorityQueue.isEmpty() ? (
-              <p>(priority queue is currently empty)</p>
-            ) : (
-              priorityQueue.enumerate().map((item, index) => {
-                return (
-                  <Item
-                    item={item}
-                    className={generateOddOrEvenClassName(index)}
-                    key={index}
-                  />
-                )
-              })
-            )}
-            <p className="endOfPriorityQueue">End of Priority Queue</p>
+        <div className="flexContainer">
+          <div className="leftColumn">
+            <form onSubmit={this.addItem}>
+              <label>
+                <span>Item Value:</span>
+                <input
+                  value={item}
+                  onChange={this.handleItemChange}
+                  ref={this.textInputRef}
+                  className="ti input newItemTextInput"
+                />
+              </label>
+              <br />
+              <label>
+                <span>Item Priority:</span>
+                <input
+                  value={priority}
+                  onChange={this.handlePriorityChange}
+                  className="ti input itemPriorityTextInput"
+                  type="number"
+                />
+              </label>
+              <br />
+              <button className="button outline" type="submit">
+                Add Item to Priority Queue
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.removeItem}
+              >
+                Remove Item from Priority Queue
+              </button>
+              <br />
+              <button
+                className="button outline"
+                type="button"
+                onClick={this.clearPriorityQueue}
+              >
+                Clear Priority Queue
+              </button>
+            </form>
+          </div>
+          <div className="rightColumn">
+            <h2>Priority Queue Contents:</h2>
+            <div className="priorityQueueContainer">
+              <p className="frontOfPriorityQueue">Front of Priority Queue</p>
+              {priorityQueue.isEmpty() ? (
+                <p>(currently empty)</p>
+              ) : (
+                priorityQueue.enumerate().map((item, index) => {
+                  return (
+                    <Item
+                      item={item}
+                      className={generateOddOrEvenClassName(index)}
+                      key={index}
+                    />
+                  )
+                })
+              )}
+              <p className="endOfPriorityQueue">End of Priority Queue</p>
+            </div>
           </div>
         </div>
       </div>

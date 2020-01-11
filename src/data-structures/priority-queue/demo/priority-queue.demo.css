@@ -1,5 +1,27 @@
+.priorityQueueDemo .flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.priorityQueueDemo .flexContainer .leftColumn {
+  margin-right: 2rem;
+}
+
+.priorityQueueDemo .flexContainer .rightColumn {
+  flex-shrink: 0;
+}
+
 .priorityQueueDemo .priorityQueueContainer {
-  width: 15rem;
+  width: 17rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.priorityQueueDemo h2 {
+  margin-top: 0;
 }
 
 .priorityQueueDemo .item {
@@ -31,8 +53,10 @@
 
 .priorityQueueDemo .frontOfPriorityQueue {
   border-bottom: 1px solid #071a32;
+  font-weight: bold;
 }
 
 .priorityQueueDemo .endOfPriorityQueue {
   border-top: 1px solid #071a32;
+  font-weight: bold;
 }

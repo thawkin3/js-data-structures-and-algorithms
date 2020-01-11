@@ -1,5 +1,27 @@
+.queueDemo .flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.queueDemo .flexContainer .leftColumn {
+  margin-right: 2rem;
+}
+
+.queueDemo .flexContainer .rightColumn {
+  flex-shrink: 0;
+}
+
 .queueDemo .queueContainer {
-  width: 15rem;
+  width: 17rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.queueDemo h2 {
+  margin-top: 0;
 }
 
 .queueDemo .item {
@@ -29,8 +51,10 @@
 
 .queueDemo .frontOfQueue {
   border-bottom: 1px solid #071a32;
+  font-weight: bold;
 }
 
 .queueDemo .endOfQueue {
   border-top: 1px solid #071a32;
+  font-weight: bold;
 }

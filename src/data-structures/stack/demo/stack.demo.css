@@ -1,5 +1,27 @@
+.stackDemo .flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.stackDemo .flexContainer .leftColumn {
+  margin-right: 2rem;
+}
+
+.stackDemo .flexContainer .rightColumn {
+  flex-shrink: 0;
+}
+
 .stackDemo .stackContainer {
-  width: 15rem;
+  width: 17rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.stackDemo h2 {
+  margin-top: 0;
 }
 
 .stackDemo .item {
@@ -29,8 +51,10 @@
 
 .stackDemo .topOfStack {
   border-bottom: 1px solid #071a32;
+  font-weight: bold;
 }
 
 .stackDemo .bottomOfStack {
   border-top: 1px solid #071a32;
+  font-weight: bold;
 }
