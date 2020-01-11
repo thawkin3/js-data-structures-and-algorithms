@@ -12,78 +12,142 @@
  * - clear: Constant - O(1)
  */
 
+import { Node } from './node'
+
 export class BinarySearchTree {
-  constructor(val = null, left = null, right = null) {
-    this.val = val
-    this.left = left
-    this.right = right
+  constructor() {
+    this.root = null
   }
 
   insert(val) {
-    const node = new BinarySearchTree(val)
+    const newNode = new Node(val)
 
     // handle adding the first node
-    if (!this.val) {
-      this.val = node.val
-      this.left = node.left
-      this.right = node.right
-      return this
+    if (this.root === null) {
+      this.root = newNode
+      return this.root
     }
 
     // adding a node to an existing tree
-    function findPlaceForNode(bst) {
-      if (bst.val > val && bst.left === null) {
-        bst.left = node
-        return node
-      } else if (bst.val > val) {
-        findPlaceForNode(bst.left)
-      } else if (bst.val < val && bst.right === null) {
-        bst.right = node
-        return node
-      } else if (bst.val < val) {
-        findPlaceForNode(bst.right)
-      }
+    this._insertNode(this.root, newNode)
+
+    return newNode
+  }
+
+  // helper method for recursively finding the correct place to insert the new node
+  _insertNode(currentNode, newNode) {
+    if (currentNode.val > newNode.val && currentNode.left === null) {
+      currentNode.left = newNode
+      return newNode
+    } else if (currentNode.val > newNode.val) {
+      this._insertNode(currentNode.left, newNode)
+    } else if (currentNode.val < newNode.val && currentNode.right === null) {
+      currentNode.right = newNode
+      return newNode
+    } else if (currentNode.val < newNode.val) {
+      // TODO: get test coverage
+      this._insertNode(currentNode.right, newNode)
     }
-
-    findPlaceForNode(this)
-
-    return node
   }
 
   contains(val) {
     let doesTreeContainValue = false
 
-    function findValueInTree(bst) {
-      if (bst.val === val) {
+    if (this.root === null) {
+      return doesTreeContainValue
+    }
+
+    function findValueInTree(currentNode) {
+      if (currentNode.val === val) {
         doesTreeContainValue = true
-      } else if (bst.left !== null && val < bst.val) {
-        findValueInTree(bst.left)
-      } else if (bst.right !== null && val > bst.val) {
-        findValueInTree(bst.right)
+      } else if (currentNode.left !== null && val < currentNode.val) {
+        findValueInTree(currentNode.left)
+      } else if (currentNode.right !== null && val > currentNode.val) {
+        findValueInTree(currentNode.right)
       }
     }
 
-    findValueInTree(this)
+    findValueInTree(this.root)
 
     return doesTreeContainValue
   }
 
   remove(val) {
-    // TODO
+    // the root is re-initialized with the root of a modified tree
+    this.root = this._removeNode(this.root, val)
+    return this.root
+  }
+
+  _removeNode(currentNode, key) {
+    // if the root is null then tree is empty
+    if (currentNode === null) {
+      return null
+    }
+
+    // if the value to be deleted is less than the root's value, then move to the left subtree
+    if (key < currentNode.val) {
+      currentNode.left = this._removeNode(currentNode.left, key)
+      return currentNode
+    }
+
+    // if the value to be deleted is greater than the root's value, then move to the right subtree
+    if (key > currentNode.val) {
+      currentNode.right = this._removeNode(currentNode.right, key)
+      return currentNode
+    }
+
+    // if the value to be deleted is equal to the root's data, then delete this node.
+    // the node could have 0, 1, or 2 children
+
+    // deleting a node with no children
+    if (currentNode.left === null && currentNode.right === null) {
+      currentNode = null
+      return currentNode
+    }
+
+    // deleting a node with one child (right)
+    if (currentNode.left === null) {
+      currentNode = currentNode.right
+      return currentNode
+    }
+
+    // deleting a node with one child (left)
+    if (currentNode.right === null) {
+      currentNode = currentNode.left
+      return currentNode
+    }
+
+    // deleting a node with two children.
+    // the minimum node of the right subtree is stored in a temporary variable
+    const temp = this._findMinNode(currentNode.right)
+    currentNode.val = temp.val
+
+    currentNode.right = this._removeNode(currentNode.right, temp.val)
+    return currentNode
   }
 
   isEmpty() {
-    return this.val === null
+    return this.root === null
   }
 
   enumerate() {
-    // TODO
+    // TODO: implement
   }
 
   clear() {
-    this.val = null
-    this.left = null
-    this.right = null
-    return this
+    this.root = null
+    return this.root
+  }
+
+  // TODO: get test coverage
+  // helper method to find the minimum node in the tree, starting at a specified node
+  _findMinNode(node) {
+    // if the left of a node is null, then it must be the minimum node
+    /* istanbul ignore next */
+    if (node.left === null) {
+      return node
+    }
+    /* istanbul ignore next */
+    return this._findMinNode(node.left)
   }
 }

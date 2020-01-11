@@ -6,20 +6,9 @@ describe('BinarySearchTree', () => {
       expect(() => new BinarySearchTree()).not.toThrow()
     })
 
-    it('can return null values for val, left, and right', () => {
+    it('creates a root node as null', () => {
       const bst1 = new BinarySearchTree()
-      expect(bst1.val).toBe(null)
-      expect(bst1.left).toBe(null)
-      expect(bst1.right).toBe(null)
-    })
-
-    it('can return non-null values for val, left, and right', () => {
-      const bst1 = new BinarySearchTree()
-      const bst2 = new BinarySearchTree()
-      const bst3 = new BinarySearchTree(42, bst1, bst2)
-      expect(bst3.val).toBe(42)
-      expect(bst3.left).toBe(bst1)
-      expect(bst3.right).toBe(bst2)
+      expect(bst1.root).toBe(null)
     })
   })
 
@@ -27,9 +16,9 @@ describe('BinarySearchTree', () => {
     it('can have new items added to the beginning of the tree', () => {
       const bst1 = new BinarySearchTree()
       expect(() => bst1.insert(42)).not.toThrow()
-      expect(bst1.val).toEqual(42)
-      expect(bst1.left).toEqual(null)
-      expect(bst1.right).toEqual(null)
+      expect(bst1.root.val).toEqual(42)
+      expect(bst1.root.left).toEqual(null)
+      expect(bst1.root.right).toEqual(null)
     })
 
     it('can have new items added to the end of the tree', () => {
@@ -40,20 +29,20 @@ describe('BinarySearchTree', () => {
       expect(() => bst1.insert(102)).not.toThrow()
       expect(() => bst1.insert(3)).not.toThrow()
 
-      expect(bst1.val).toEqual(42)
-      expect(bst1.left.val).toEqual(5)
-      expect(bst1.left.left.val).toEqual(3)
-      expect(bst1.right.val).toEqual(100)
-      expect(bst1.right.right.val).toEqual(102)
+      expect(bst1.root.val).toEqual(42)
+      expect(bst1.root.left.val).toEqual(5)
+      expect(bst1.root.left.left.val).toEqual(3)
+      expect(bst1.root.right.val).toEqual(100)
+      expect(bst1.root.right.right.val).toEqual(102)
     })
 
     it('sends the node that was added as the return value', () => {
       const bst1 = new BinarySearchTree()
-      expect(bst1.insert(42)).toEqual(new BinarySearchTree(42, null, null))
-      expect(bst1.insert(100)).toEqual(new BinarySearchTree(100, null, null))
-      expect(bst1.insert(5)).toEqual(new BinarySearchTree(5, null, null))
-      expect(bst1.insert(102)).toEqual(new BinarySearchTree(102, null, null))
-      expect(bst1.insert(3)).toEqual(new BinarySearchTree(3, null, null))
+      expect(bst1.insert(42).val).toEqual(42)
+      expect(bst1.insert(100).val).toEqual(100)
+      expect(bst1.insert(5).val).toEqual(5)
+      expect(bst1.insert(102).val).toEqual(102)
+      expect(bst1.insert(3).val).toEqual(3)
     })
   })
 
@@ -88,52 +77,158 @@ describe('BinarySearchTree', () => {
   })
 
   describe('remove', () => {
-    it('todo', () => {
+    it('returns null for an empty binary search tree', () => {
       const bst1 = new BinarySearchTree()
-      bst1.remove(0)
+      expect(bst1.remove(0)).toBe(null)
+      expect(bst1.root).toBe(null)
     })
 
-    // it('returns null for an empty binary search tree', () => {
-    //   const bst1 = new BinarySearchTree()
-    //   expect(bst1.remove(0)).toBe(null)
-    //   expect(bst1.val).toBe(null)
-    //   expect(bst1.left).toBe(null)
-    //   expect(bst1.right).toBe(null)
-    // })
-    //
-    // it('deletes the specified value for a binary search tree that has a single node', () => {
-    //   const bst1 = new BinarySearchTree()
-    //   bst1.insert(42)
-    //   expect(bst1.remove(42)).toBe(42)
-    //   expect(bst1.val).toBe(null)
-    //   expect(bst1.left).toBe(null)
-    //   expect(bst1.right).toBe(null)
-    // })
-    //
-    // it('handles non-existent values to delete for a binary search tree that has a single node', () => {
-    //   const bst1 = new BinarySearchTree()
-    //   bst1.insert(42)
-    //   expect(bst1.remove(100)).toEqual(null)
-    //   expect(bst1.val).toBe(42)
-    //   expect(bst1.left).toBe(null)
-    //   expect(bst1.right).toBe(null)
-    // })
-    //
-    // it('deletes the specified value for a binary search tree that has multiple nodes', () => {
-    //   const bst1 = new BinarySearchTree()
-    //   bst1.insert(42)
-    //   bst1.insert(10)
-    //   bst1.insert(100)
-    //   expect(bst1.remove(42)).toBe(42)
-    // })
-    //
-    // it('handles non-existent values to delete for a binary search tree that has multiple nodes', () => {
-    //   const bst1 = new BinarySearchTree()
-    //   bst1.insert(42)
-    //   bst1.insert(10)
-    //   bst1.insert(100)
-    //   expect(bst1.remove(42)).toBe(42)
-    // })
+    it('deletes the specified value for a binary search tree that has a single node', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      expect(bst1.remove(42)).toBe(null)
+      expect(bst1.root).toBe(null)
+    })
+
+    it('handles non-existent values to delete for a binary search tree that has a single node', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      expect(bst1.remove(100)).toEqual({ val: 42, left: null, right: null })
+      expect(bst1.root.val).toBe(42)
+      expect(bst1.root.left).toBe(null)
+      expect(bst1.root.right).toBe(null)
+    })
+
+    it('can delete the root node for a binary search tree that has three nodes', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      expect(bst1.remove(42)).toEqual({
+        val: 100,
+        left: { val: 10, left: null, right: null },
+        right: null,
+      })
+    })
+
+    it('can delete the left node for a binary search tree that has three nodes', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      expect(bst1.remove(10)).toEqual({
+        val: 42,
+        left: null,
+        right: { val: 100, left: null, right: null },
+      })
+    })
+
+    it('can delete the right node for a binary search tree that has three nodes', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      expect(bst1.remove(100)).toEqual({
+        val: 42,
+        left: { val: 10, left: null, right: null },
+        right: null,
+      })
+    })
+
+    it('handles non-existent values to delete for a binary search tree that has three nodes', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      expect(bst1.remove(9001)).toEqual({
+        val: 42,
+        left: { val: 10, left: null, right: null },
+        right: { val: 100, left: null, right: null },
+      })
+    })
+
+    it('can delete a node that has one right child', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      bst1.insert(102)
+      expect(bst1.remove(100)).toEqual({
+        val: 42,
+        left: { val: 10, left: null, right: null },
+        right: { val: 102, left: null, right: null },
+      })
+    })
+
+    it('can delete a node that has one left child', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      bst1.insert(2)
+      expect(bst1.remove(10)).toEqual({
+        val: 42,
+        left: { val: 2, left: null, right: null },
+        right: { val: 100, left: null, right: null },
+      })
+    })
+
+    it('can delete a node that has two children, somewhere in the middle of the tree', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(10)
+      bst1.insert(100)
+      bst1.insert(2)
+      bst1.insert(102)
+      bst1.insert(80)
+      bst1.insert(81)
+      bst1.insert(79)
+      bst1.insert(78)
+
+      // Before:
+      //          42
+      //         /  \
+      //        10   100
+      //       /     / \
+      //      2     80  102
+      //           / \
+      //          79  81
+      //         /
+      //        78
+
+      expect(bst1.remove(100)).toEqual({
+        val: 42,
+        left: {
+          val: 10,
+          left: { val: 2, left: null, right: null },
+          right: null,
+        },
+        right: {
+          val: 102,
+          left: {
+            val: 80,
+            left: {
+              val: 79,
+              left: { val: 78, left: null, right: null },
+              right: null,
+            },
+            right: { val: 81, left: null, right: null },
+          },
+          right: null,
+        },
+      })
+
+      // After:
+      //          42
+      //         /  \
+      //        10   102
+      //       /     /
+      //      2     80
+      //           / \
+      //          79  81
+      //         /
+      //        78
+    })
   })
 
   describe('isEmpty', () => {
@@ -157,15 +252,12 @@ describe('BinarySearchTree', () => {
   })
 
   describe('clear', () => {
-    it("removes all elements and sets the binary search tree's values for val, left, and right to null when emptied", () => {
+    it("removes all elements and sets the binary search tree's root to null when emptied", () => {
       const bst1 = new BinarySearchTree()
       bst1.insert(42)
       bst1.insert(10)
-      bst1.insert('a')
       bst1.clear()
-      expect(bst1.val).toEqual(null)
-      expect(bst1.left).toEqual(null)
-      expect(bst1.right).toEqual(null)
+      expect(bst1.root).toEqual(null)
     })
   })
 })
