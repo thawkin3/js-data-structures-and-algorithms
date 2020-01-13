@@ -48,7 +48,7 @@ for git hooks to run some validation.
 The process of adding, committing, and pushing your code will look like this:
 
 - `git add .`
-- `yarn commit` (Note that this is NOT `git commit`)
-- (Husky now runs the git hooks to verify that the tests are passing
+- `yarn cz` (Note that this replaces `git commit`)
+- (Husky then runs the git hooks to verify that the tests are passing
   and that the commit message is in the proper format)
 - `git push`
