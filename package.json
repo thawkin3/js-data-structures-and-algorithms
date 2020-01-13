@@ -53,8 +53,8 @@
     "build-storybook": "build-storybook -c .storybook -o storybook-dist",
     "cz": "git-cz",
     "eject": "react-scripts eject",
-    "prettier": "prettier --write \"**/*.{js,ts,tsx,md}\"",
-    "prettier-watch": "onchange \"**/*.{js,ts,tsx,md}\" -- prettier --write {{changed}}",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
+    "prettier-watch": "onchange \"**/*.{js,jsx,ts,tsx,md}\" -- prettier --write {{changed}}",
     "start": "react-scripts start",
     "storybook": "start-storybook -p 9009",
     "test": "react-scripts test",
@@ -116,8 +116,10 @@
       "commit-msg": "validate-commit-msg"
     }
   },
-  "lint-staged": [
-    "prettier --write \"**/*.{js,ts,tsx,md}\"",
-    "git add"
-  ]
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
