@@ -1,0 +1,29 @@
+{
+  "types":[
+    "feat",
+    "fix",
+    "docs",
+    "style",
+    "refactor",
+    "perf",
+    "test",
+    "build",
+    "ci",
+    "chore",
+    "revert"
+  ],
+  "scope":{
+    "required":true,
+    "allowed":[
+      "*"
+    ],
+    "validate":true,
+    "multiple":true
+  },
+  "warnOnFail":false,
+  "maxSubjectLength":100,
+  "subjectPattern":".+",
+  "subjectPatternErrorMsg":"subject does not match subject pattern!",
+  "helpMessage":"Your commit message failed validation set up with the package: validate-commit-msg. Your commit message must be in the following format: <type>(<scope>): <subject>",
+  "autoFix":true
+}

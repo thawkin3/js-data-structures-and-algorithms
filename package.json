@@ -64,71 +64,9 @@
     "stylelint-config-standard": "^19.0.0",
     "validate-commit-msg": "^2.14.0"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "validate-commit-msg": {
-    "types": [
-      "feat",
-      "fix",
-      "docs",
-      "style",
-      "refactor",
-      "perf",
-      "test",
-      "build",
-      "ci",
-      "chore",
-      "revert"
-    ],
-    "scope": {
-      "required": true,
-      "allowed": [
-        "*"
-      ],
-      "validate": true,
-      "multiple": true
-    },
-    "warnOnFail": false,
-    "maxSubjectLength": 100,
-    "subjectPattern": ".+",
-    "subjectPatternErrorMsg": "subject does not match subject pattern!",
-    "helpMessage": "Your commit message failed validation set up with the package: validate-commit-msg. Your commit message must be in the following format: <type>(<scope>): <subject>",
-    "autoFix": true
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && yarn test:coverage",
-      "commit-msg": "validate-commit-msg"
-    }
-  },
-  "lint-staged": {
-    "*.css": [
-      "stylelint --fix"
-    ],
-    "*.{js,jsx,ts,tsx,md}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }

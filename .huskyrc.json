@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "pre-commit": "lint-staged && yarn test:coverage",
+    "commit-msg": "validate-commit-msg"
+  }
+}
