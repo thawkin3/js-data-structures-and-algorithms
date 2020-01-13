@@ -2,5 +2,6 @@
 .idea
 /build
 /coverage
+/dist
 /node_modules
 /storybook-dist

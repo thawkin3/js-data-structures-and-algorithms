@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "description": "Data structures and algorithms implemented in JavaScript",
+  "main": "dist/main.cjs.min.js",
+  "module": "dist/main.esm.min.js",
+  "browser": "dist/main.umd.min.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thawkin3/js-data-structures-and-algorithms.git"
@@ -30,6 +36,7 @@
   },
   "homepage": "http://tylerhawkins.info/js-data-structures-and-algorithms/storybook-dist",
   "scripts": {
+    "build": "NODE_ENV=production rollup --config",
     "build-storybook": "build-storybook -c .storybook -o storybook-dist",
     "cz": "git-cz",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -37,10 +44,10 @@
     "prettier-watch": "onchange \"**/*.{js,jsx,ts,tsx,md}\" -- prettier --write {{changed}}",
     "storybook": "start-storybook -p 9009",
     "stylelint": "stylelint --fix \"src/**/*.css\"",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:logs": "SHOW_LOGS=1 jest --watch",
-    "test:watch": "jest --watch"
+    "test": "NODE_ENV=test jest",
+    "test:coverage": "NODE_ENV=test jest --coverage",
+    "test:logs": "SHOW_LOGS=1 NODE_ENV=test jest --watch",
+    "test:watch": "NODE_ENV=test jest --watch"
   },
   "dependencies": {},
   "devDependencies": {
@@ -68,6 +75,12 @@
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-delete": "^1.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.2.0",
     "storybook-readme": "^5.0.8",
     "stylelint": "^13.0.0",
     "stylelint-config-standard": "^19.0.0",

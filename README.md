@@ -53,6 +53,7 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 - `yarn storybook`: Starts up the Storybook app locally so you can view the demos and examples
 - `yarn build-storybook`: Builds a static site out of the Storybook app (this is what is hosted here:
   http://tylerhawkins.info/js-data-structures-and-algorithms/storybook-dist)
+- `yarn build`: Generates the minified build from the source code using [Rollup](https://rollupjs.org/)
 - `yarn test`: Runs all tests
 - `yarn test:coverage`: Runs all tests and includes coverage report
 - `yarn test:logs`: Runs tests in watch mode and includes console log output to show the internals
