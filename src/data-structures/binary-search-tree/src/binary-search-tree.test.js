@@ -245,6 +245,7 @@ describe('BinarySearchTree', () => {
   })
 
   describe('enumerate', () => {
+    /* eslint-disable-next-line jest/expect-expect */
     it('todo', () => {
       const bst1 = new BinarySearchTree()
       bst1.enumerate()
