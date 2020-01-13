@@ -1,5 +1,6 @@
 # JS Data Structures and Algorithms
 
+[![npm](https://img.shields.io/npm/v/js-data-structures-and-algorithms)](https://www.npmjs.com/package/js-data-structures-and-algorithms)
 [![Build Status](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms)
 [![Codecov](https://img.shields.io/codecov/c/github/thawkin3/js-data-structures-and-algorithms)](https://codecov.io/gh/thawkin3/js-data-structures-and-algorithms)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
