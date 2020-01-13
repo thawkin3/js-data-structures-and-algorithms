@@ -41,14 +41,16 @@
     "@storybook/react": "^5.2.8",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
+    "husky": "^4.0.7",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1",
-    "storybook-readme": "^5.0.8"
+    "storybook-readme": "^5.0.8",
+    "validate-commit-msg": "^2.14.0"
   },
   "scripts": {
     "build": "react-scripts build",
     "build-storybook": "build-storybook -c .storybook -o storybook-dist",
-    "commit": "git-cz",
+    "cz": "git-cz",
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"**/*.{js,ts,tsx,md}\"",
     "prettier-watch": "onchange \"**/*.{js,ts,tsx,md}\" -- prettier --write {{changed}}",
@@ -76,6 +78,27 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "validate-commit-msg": {
+    "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
+    "scope": {
+      "required": true,
+      "allowed": ["*"],
+      "validate": true,
+      "multiple": true
+    },
+    "warnOnFail": false,
+    "maxSubjectLength": 100,
+    "subjectPattern": ".+",
+    "subjectPatternErrorMsg": "subject does not match subject pattern!",
+    "helpMessage": "Your commit message failed validation set up with the package: validate-commit-msg. Your commit message must be in the following format: <type>(<scope>): <subject>",
+    "autoFix": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:coverage",
+      "commit-msg": "validate-commit-msg"
     }
   }
 }
