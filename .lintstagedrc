@@ -2,7 +2,7 @@
   "*.css": [
     "stylelint --fix"
   ],
-  "*.{js,jsx,ts,tsx,md,json}": [
+  "*.{js,jsx,ts,tsx,md}": [
     "eslint --fix",
     "prettier --write",
     "git add"
