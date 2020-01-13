@@ -86,6 +86,17 @@ formatting during development
 
 Runs prettier in watch mode
 
+### `yarn stylelint`
+
+Lints CSS files and auto-fixes issues where possible
+
+### `yarn cz`
+
+Uses [commitizen](https://github.com/commitizen/cz-cli)
+to walk you through some steps via the cli and then
+commits your code using a formatted commit message that
+it generates
+
 ## Contributing
 
 Please see the [Contributing Guidelines](CONTRIBUTING.md).
