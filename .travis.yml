@@ -8,6 +8,8 @@ install:
   - yarn install
   - yarn global add codecov
 script:
+  - yarn eslint
+  - yarn stylelint
   - yarn test:coverage
   - codecov
 on:
