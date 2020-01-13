@@ -42,6 +42,7 @@
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "husky": "^4.0.7",
+    "lint-staged": "^9.5.0",
     "onchange": "^6.1.0",
     "prettier": "^1.19.1",
     "storybook-readme": "^5.0.8",
@@ -81,10 +82,24 @@
     }
   },
   "validate-commit-msg": {
-    "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "build", "ci", "chore", "revert"],
+    "types": [
+      "feat",
+      "fix",
+      "docs",
+      "style",
+      "refactor",
+      "perf",
+      "test",
+      "build",
+      "ci",
+      "chore",
+      "revert"
+    ],
     "scope": {
       "required": true,
-      "allowed": ["*"],
+      "allowed": [
+        "*"
+      ],
       "validate": true,
       "multiple": true
     },
@@ -97,8 +112,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test:coverage",
+      "pre-commit": "lint-staged && yarn test:coverage",
       "commit-msg": "validate-commit-msg"
     }
-  }
+  },
+  "lint-staged": [
+    "prettier --write \"**/*.{js,ts,tsx,md}\"",
+    "git add"
+  ]
 }
