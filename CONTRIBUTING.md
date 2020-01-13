@@ -42,8 +42,13 @@ request to implement the feature yourself!
 If you would like to contribute to this project, please submit an
 issue and then create a pull request.
 This project uses [commitizen](https://github.com/commitizen/cz-cli)
-for commit message formatting, so to add your code, you'll use:
+for commit message formatting and [Husky](https://github.com/typicode/husky)
+for git hooks to run some validation.
+
+The process of adding, committing, and pushing your code will look like this:
 
 - `git add .`
 - `yarn commit` (Note that this is NOT `git commit`)
+- (Husky now runs the git hooks to verify that the tests are passing
+  and that the commit message is in the proper format)
 - `git push`
