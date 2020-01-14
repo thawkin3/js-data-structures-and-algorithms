@@ -6,4 +6,5 @@
 /node_modules
 /storybook-dist
 package.json
+CHANGELOG.md
 *.css
