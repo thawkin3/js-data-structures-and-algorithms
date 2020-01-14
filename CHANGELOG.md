@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.0.1...v1.1.0) (2020-01-14)
+
+
+### Features
+
+* **binary-search-tree:** implements three forms of traversal for the BST ([d4181da](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/d4181da639a4c86e65bdfb48062348528a6f9da3))
+
+
+### Bug Fixes
+
+* **binary-search-tree:** fixes use case where duplicate values are added to the tree ([2521d52](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/2521d520b269f76c4c67502a6b3ea0aaa5123722))
+
 ## [1.0.1](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.0.0...v1.0.1) (2020-01-14)
 
 ### Features
