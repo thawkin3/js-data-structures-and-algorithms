@@ -40,15 +40,45 @@ request to implement the feature yourself!
 ## Pull Requests
 
 If you would like to contribute to this project, please submit an
-issue and then create a pull request.
-This project uses [commitizen](https://github.com/commitizen/cz-cli)
-for commit message formatting and [Husky](https://github.com/typicode/husky)
-for git hooks to run some validation.
+issue, write some code, and then create a pull request.
+
+This project uses the following tools for automation and linting during the development process:
+
+- [prettier](https://prettier.io/) for code formatting (JS and MD files)
+- [stylelint](https://stylelint.io/) for CSS formatting
+  = [eslint](https://eslint.org/) for checking syntax errors
+- [commitizen](https://github.com/commitizen/cz-cli) for commit message formatting
+- [lint-staged](https://www.npmjs.com/package/lint-staged) to lint changes before committing them
+- [validate-commit-msg](https://www.npmjs.com/package/validate-commit-msg)
+  to validate the commit message is in a standard format
+- [Husky](https://github.com/typicode/husky) for git hooks to run some validation
+- [standard-version](https://github.com/conventional-changelog/standard-version)
+  to automate versioning and CHANGELOG generation
 
 The process of adding, committing, and pushing your code will look like this:
 
+- Write your code
 - `git add .`
 - `yarn cz` (Note that this replaces `git commit`)
-- (Husky then runs the git hooks to verify that the tests are passing
-  and that the commit message is in the proper format)
+- (Husky then runs the git hooks to verify that the tests are passing, that
+  the code has no errors, and that the commit message is in the proper format)
 - `git push`
+
+## Continuous Integration
+
+This project has continuous integration set up through [Travis CI](https://travis-ci.com/)
+
+## Cutting a New Release
+
+While the primary purpose of this project is education, the data structures
+and algorithms are implemented here as real working code and can be used as
+such. This project is published on npm as [js-data-structures-and-algorithms](https://www.npmjs.com/package/js-data-structures-and-algorithms).
+
+When we are ready to cut a new release, we follow these steps:
+
+- `yarn release` (This uses [standard-version](https://github.com/conventional-changelog/standard-version)
+  to automate bumping the version and generating the CHANGELOG)
+- `git push --follow-tags origin master` (pushes the new commit and the new tag to GitHub)
+- `yarn publish` (publishes the new package version on npm)
+
+Note that only those with access can publish a new package version.

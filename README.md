@@ -8,6 +8,18 @@
 
 JavaScript implementations of common data structure and algorithm concepts.
 
+## Purpose
+
+The purpose of this project is to help others learn and understand data
+structures and algorithms from a JavaScript perspective. Rather than
+containing only snippets of code with accompanying explanations, this
+project is meant to provide an eager learner with fully working code,
+good test cases, and a playground full of examples.
+
+While the primary purpose of this project is education, the data structures
+and algorithms are implemented here as real working code and can be used as
+such. This project is published on npm as [js-data-structures-and-algorithms](https://www.npmjs.com/package/js-data-structures-and-algorithms).
+
 ## Demos
 
 Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithms/storybook-dist
@@ -48,7 +60,30 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 - [Symmetric Difference](src/algorithms/set/symmetric-difference/src/symmetric-difference.js)
 - [Union](src/algorithms/set/union/src/union.js)
 
-## Local Development
+## Running the Demos Locally
+
+To run the Storybook examples locally on your own machine, follow these steps:
+
+1. Clone or download this repo
+2. Install the needed dependencies using `yarn install`
+3. Start up the Storybook app using `yarn storybook`
+
+That's it! The Storybook app should start running at your localhost on port 9009,
+and the browser tab should be opened for you automatically.
+
+## Using the npm Package in Your App
+
+To use these data structures and algorithms in your own app, follow these steps:
+
+1. Install the npm package using `yarn add js-data-structures-and-algorithms`
+   (or `npm install js-data-structures-and-algorithms`)
+2. Import any of the exported modules like `import { Stack } from 'js-data-structures-and-algorithms'`
+3. At this point, you're good to instantiate these classes
+   (ex. `const myStack = new Stack()`) and use their methods in your app (ex. `myStack.push(42)`).
+
+## Yarn Commands
+
+For a complete list, see [package.json](package.json).
 
 - `yarn install`: Installs dependencies
 - `yarn storybook`: Starts up the Storybook app locally so you can view the demos and examples
@@ -71,6 +106,8 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
   to walk you through some steps via the cli and then
   commits your code using a formatted commit message that
   it generates
+- `yarn release`: Bumps the package version and generates the changelog using
+  [standard-version](https://github.com/conventional-changelog/standard-version)
 
 ## Contributing
 
