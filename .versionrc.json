@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "prerelease": "yarn eslint && yarn stylelint && yarn test:coverage && yarn build"
+  }
+}
