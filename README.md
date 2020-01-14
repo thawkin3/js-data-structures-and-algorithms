@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/js-data-structures-and-algorithms)](https://www.npmjs.com/package/js-data-structures-and-algorithms)
 [![Build Status](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms.svg?branch=master)](https://travis-ci.com/thawkin3/js-data-structures-and-algorithms)
 [![Codecov](https://img.shields.io/codecov/c/github/thawkin3/js-data-structures-and-algorithms)](https://codecov.io/gh/thawkin3/js-data-structures-and-algorithms)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/js-data-structures-and-algorithms)](https://bundlephobia.com/result?p=js-data-structures-and-algorithms)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
