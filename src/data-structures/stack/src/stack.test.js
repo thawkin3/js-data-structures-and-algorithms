@@ -20,6 +20,15 @@ describe('Stack', () => {
       expect(stack1.push(42)).toBe(42)
       expect(stack1.push(10)).toBe(10)
     })
+
+    it('can have items added to it with the same value', () => {
+      const stack1 = new Stack()
+      stack1.push(42)
+      stack1.push(42)
+      stack1.push(42)
+      expect(stack1.size()).toBe(3)
+      expect(stack1.enumerate()).toEqual([42, 42, 42])
+    })
   })
 
   describe('pop', () => {

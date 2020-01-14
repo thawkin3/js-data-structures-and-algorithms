@@ -33,6 +33,17 @@ describe('LinkedList', () => {
       expect(linkedList1.size()).toEqual(2)
       expect(linkedList1.head).toEqual(new Node(100, new Node(42, null)))
     })
+
+    it('can have items with the same value added to the beginning of it', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(42)
+      linkedList1.insertAtBeginning(42)
+      linkedList1.insertAtBeginning(42)
+      expect(linkedList1.size()).toEqual(3)
+      expect(linkedList1.head).toEqual(
+        new Node(42, new Node(42, new Node(42, null)))
+      )
+    })
   })
 
   describe('insertAtEnd', () => {
@@ -48,6 +59,17 @@ describe('LinkedList', () => {
       expect(() => linkedList1.insertAtEnd(100)).not.toThrow()
       expect(linkedList1.size()).toEqual(2)
       expect(linkedList1.head).toEqual(new Node(42, new Node(100, null)))
+    })
+
+    it('can have items with the same value added to the end of it', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtEnd(42)
+      linkedList1.insertAtEnd(42)
+      linkedList1.insertAtEnd(42)
+      expect(linkedList1.size()).toEqual(3)
+      expect(linkedList1.head).toEqual(
+        new Node(42, new Node(42, new Node(42, null)))
+      )
     })
   })
 
@@ -109,6 +131,17 @@ describe('LinkedList', () => {
       expect(linkedList1.size()).toEqual(4)
       expect(linkedList1.head).toEqual(
         new Node('a', new Node(10, new Node(42, new Node('hey', null))))
+      )
+    })
+
+    it('can have items with the same value added at the specified index', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAt(42, 1)
+      linkedList1.insertAt(42, 1)
+      linkedList1.insertAt(42, 1)
+      expect(linkedList1.size()).toEqual(3)
+      expect(linkedList1.head).toEqual(
+        new Node(42, new Node(42, new Node(42, null)))
       )
     })
   })

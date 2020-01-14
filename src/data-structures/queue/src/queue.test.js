@@ -20,6 +20,15 @@ describe('Queue', () => {
       expect(queue1.enqueue(42)).toBe(42)
       expect(queue1.enqueue(10)).toBe(10)
     })
+
+    it('can have items with the same value added to it', () => {
+      const queue1 = new Queue()
+      queue1.enqueue(42)
+      queue1.enqueue(42)
+      queue1.enqueue(42)
+      expect(queue1.size()).toBe(3)
+      expect(queue1.enumerate()).toEqual([42, 42, 42])
+    })
   })
 
   describe('dequeue', () => {

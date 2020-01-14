@@ -51,6 +51,23 @@ describe('BinarySearchTree', () => {
       expect(bst1.insert(102).val).toEqual(102)
       expect(bst1.insert(3).val).toEqual(3)
     })
+
+    it('can have items with the same value added to it', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(42)
+      bst1.insert(42)
+      expect(bst1.root.val).toEqual(42)
+      expect(bst1.root.right.val).toEqual(42)
+      expect(bst1.root.right.right.val).toEqual(42)
+
+      // Tree state:
+      //    42
+      //     \
+      //      42
+      //       \
+      //        42
+    })
   })
 
   describe('contains', () => {
@@ -384,6 +401,30 @@ describe('BinarySearchTree', () => {
       //        79  90
       //       /    /
       //      78   85
+    })
+    it('can delete a value in the tree when there are duplicate values in the tree', () => {
+      const bst1 = new BinarySearchTree()
+      bst1.insert(42)
+      bst1.insert(42)
+      bst1.insert(42)
+
+      // Before removing the 42 value:
+      //          42
+      //            \
+      //             42
+      //               \
+      //                42
+
+      expect(bst1.remove(42)).toEqual({
+        val: 42,
+        left: null,
+        right: { val: 42, left: null, right: null },
+      })
+
+      // After removing the 42 value:
+      //         42
+      //           \
+      //            42
     })
   })
 

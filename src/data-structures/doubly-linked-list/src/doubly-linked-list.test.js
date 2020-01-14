@@ -48,6 +48,17 @@ describe('DoublyLinkedList', () => {
       expect(doublyLinkedList1.head.next.val).toEqual(42)
       expect(doublyLinkedList1.head.prev).toEqual(null)
     })
+
+    it('can have items with the same value added to the beginning of it', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(42)
+      doublyLinkedList1.insertAtBeginning(42)
+      doublyLinkedList1.insertAtBeginning(42)
+      expect(doublyLinkedList1.size()).toEqual(3)
+      expect(doublyLinkedList1.head.val).toEqual(42)
+      expect(doublyLinkedList1.head.next.val).toEqual(42)
+      expect(doublyLinkedList1.head.next.next.val).toEqual(42)
+    })
   })
 
   describe('insertAtEnd', () => {
@@ -65,6 +76,17 @@ describe('DoublyLinkedList', () => {
       expect(doublyLinkedList1.head.val).toEqual(42)
       expect(doublyLinkedList1.head.next.val).toEqual(100)
       expect(doublyLinkedList1.head.prev).toEqual(null)
+    })
+
+    it('can have items with the same value added to the end of it', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtEnd(42)
+      doublyLinkedList1.insertAtEnd(42)
+      doublyLinkedList1.insertAtEnd(42)
+      expect(doublyLinkedList1.size()).toEqual(3)
+      expect(doublyLinkedList1.head.val).toEqual(42)
+      expect(doublyLinkedList1.head.next.val).toEqual(42)
+      expect(doublyLinkedList1.head.next.next.val).toEqual(42)
     })
   })
 
@@ -129,6 +151,17 @@ describe('DoublyLinkedList', () => {
       expect(doublyLinkedList1.tail.val).toEqual('hey')
       expect(doublyLinkedList1.tail.next).toEqual(null)
       expect(doublyLinkedList1.tail.prev.val).toEqual(42)
+    })
+
+    it('can have items with the same value added at the specified index', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAt(42, 1)
+      doublyLinkedList1.insertAt(42, 1)
+      doublyLinkedList1.insertAt(42, 1)
+      expect(doublyLinkedList1.size()).toEqual(3)
+      expect(doublyLinkedList1.head.val).toEqual(42)
+      expect(doublyLinkedList1.head.next.val).toEqual(42)
+      expect(doublyLinkedList1.head.next.next.val).toEqual(42)
     })
   })
 

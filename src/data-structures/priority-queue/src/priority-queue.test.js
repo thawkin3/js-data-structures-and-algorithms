@@ -36,6 +36,19 @@ describe('PriorityQueue', () => {
       ])
     })
 
+    it('can have items with the same value and priority added to it', () => {
+      const priorityQueue1 = new PriorityQueue()
+      priorityQueue1.enqueue(42, 1)
+      priorityQueue1.enqueue(42, 1)
+      priorityQueue1.enqueue(42, 1)
+      expect(priorityQueue1.size()).toBe(3)
+      expect(priorityQueue1.enumerate()).toEqual([
+        { value: 42, priority: 1 },
+        { value: 42, priority: 1 },
+        { value: 42, priority: 1 },
+      ])
+    })
+
     it('defaults the priority to 0 if no priority is provided', () => {
       const priorityQueue1 = new PriorityQueue()
       expect(priorityQueue1.enqueue(42)).toEqual({ value: 42, priority: 0 })

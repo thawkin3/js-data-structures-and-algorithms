@@ -43,7 +43,10 @@ export class BinarySearchTree {
       return newNode
     } else if (currentNode.val > newNode.val) {
       return this._insertNode(currentNode.left, newNode)
-    } else if (currentNode.val < newNode.val && currentNode.right === null) {
+    } else if (
+      (currentNode.val < newNode.val || currentNode.val === newNode.val) &&
+      currentNode.right === null
+    ) {
       currentNode.right = newNode
       return newNode
     } else {
