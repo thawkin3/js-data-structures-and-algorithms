@@ -400,11 +400,168 @@ describe('BinarySearchTree', () => {
     })
   })
 
-  describe('enumerate', () => {
-    /* eslint-disable-next-line jest/expect-expect */
-    it('todo', () => {
-      const bst1 = new BinarySearchTree()
-      bst1.enumerate()
+  describe('traversal', () => {
+    describe('inOrderTraversal', () => {
+      it('calls the callback provided once for each node in the tree', () => {
+        const myCallback = jest.fn()
+        const bst1 = new BinarySearchTree()
+        expect(myCallback).toHaveBeenCalledTimes(0)
+        myCallback.mockClear()
+
+        bst1.insert(42)
+        bst1.inOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(1)
+        myCallback.mockClear()
+
+        bst1.insert(10)
+        bst1.inOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(2)
+        myCallback.mockClear()
+
+        bst1.insert(100)
+        bst1.inOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(3)
+        myCallback.mockClear()
+      })
+
+      it('visits the nodes in the correct order (1. left subtree, 2. root, 3. right subtree)', () => {
+        const visitedNodes = []
+        const myCallback = node => visitedNodes.push(node.val)
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        bst1.inOrderTraversal(bst1.root, myCallback)
+        expect(visitedNodes.join(', ')).toEqual('10, 42, 100')
+      })
+
+      it('does not throw when no callback method is provided as an argument', () => {
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        expect(() => bst1.inOrderTraversal(bst1.root)).not.toThrow()
+      })
+
+      it('does not throw when no root node is provided as an argument', () => {
+        const myCallback = jest.fn()
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        expect(() => bst1.inOrderTraversal(undefined, myCallback)).not.toThrow()
+        expect(myCallback).toHaveBeenCalledTimes(3)
+      })
+    })
+
+    describe('preOrderTraversal', () => {
+      it('calls the callback provided once for each node in the tree', () => {
+        const myCallback = jest.fn()
+        const bst1 = new BinarySearchTree()
+        expect(myCallback).toHaveBeenCalledTimes(0)
+        myCallback.mockClear()
+
+        bst1.insert(42)
+        bst1.preOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(1)
+        myCallback.mockClear()
+
+        bst1.insert(10)
+        bst1.preOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(2)
+        myCallback.mockClear()
+
+        bst1.insert(100)
+        bst1.preOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(3)
+        myCallback.mockClear()
+      })
+
+      it('visits the nodes in the correct order (1. root, 2. left subtree, 3. right subtree)', () => {
+        const visitedNodes = []
+        const myCallback = node => visitedNodes.push(node.val)
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        bst1.preOrderTraversal(bst1.root, myCallback)
+        expect(visitedNodes.join(', ')).toEqual('42, 10, 100')
+      })
+
+      it('does not throw when no callback method is provided as an argument', () => {
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        expect(() => bst1.preOrderTraversal(bst1.root)).not.toThrow()
+      })
+
+      it('does not throw when no root node is provided as an argument', () => {
+        const myCallback = jest.fn()
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        expect(() =>
+          bst1.preOrderTraversal(undefined, myCallback)
+        ).not.toThrow()
+        expect(myCallback).toHaveBeenCalledTimes(3)
+      })
+    })
+
+    describe('postOrderTraversal', () => {
+      it('calls the callback provided once for each node in the tree', () => {
+        const myCallback = jest.fn()
+        const bst1 = new BinarySearchTree()
+        expect(myCallback).toHaveBeenCalledTimes(0)
+        myCallback.mockClear()
+
+        bst1.insert(42)
+        bst1.postOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(1)
+        myCallback.mockClear()
+
+        bst1.insert(10)
+        bst1.postOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(2)
+        myCallback.mockClear()
+
+        bst1.insert(100)
+        bst1.postOrderTraversal(bst1.root, myCallback)
+        expect(myCallback).toHaveBeenCalledTimes(3)
+        myCallback.mockClear()
+      })
+
+      it('visits the nodes in the correct order (1. left subtree, 2. right subtree, 3. root)', () => {
+        const visitedNodes = []
+        const myCallback = node => visitedNodes.push(node.val)
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        bst1.postOrderTraversal(bst1.root, myCallback)
+        expect(visitedNodes.join(', ')).toEqual('10, 100, 42')
+      })
+
+      it('does not throw when no callback method is provided as an argument', () => {
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        expect(() => bst1.postOrderTraversal(bst1.root)).not.toThrow()
+      })
+
+      it('does not throw when no root node is provided as an argument', () => {
+        const myCallback = jest.fn()
+        const bst1 = new BinarySearchTree()
+        bst1.insert(42)
+        bst1.insert(10)
+        bst1.insert(100)
+        expect(() =>
+          bst1.postOrderTraversal(undefined, myCallback)
+        ).not.toThrow()
+        expect(myCallback).toHaveBeenCalledTimes(3)
+      })
     })
   })
 

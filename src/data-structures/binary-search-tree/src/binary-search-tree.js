@@ -8,7 +8,9 @@
  * - contains: average case: Logarithmic - O(log n); worst case: Linear — O(n)
  * - remove: average case: Logarithmic - O(log n); worst case: Linear — O(n)
  * - isEmpty: Constant — O(1)
- * - enumerate: average case: Logarithmic - O(log n); worst case: Linear — O(n)
+ * - inOrderTraversal: average case: Logarithmic - O(log n); worst case: Linear — O(n)
+ * - preOrderTraversal: average case: Logarithmic - O(log n); worst case: Linear — O(n)
+ * - postOrderTraversal: average case: Logarithmic - O(log n); worst case: Linear — O(n)
  * - clear: Constant - O(1)
  */
 
@@ -125,12 +127,47 @@ export class BinarySearchTree {
     return currentNode
   }
 
-  isEmpty() {
-    return this.root === null
+  // 1. Traverse the left subtree (i.e. perform inOrderTraversal on the left subtree)
+  // 2. Visit the root
+  // 3. Traverse the right subtree (i.e. perform inOrderTraversal on the right subtree)
+  inOrderTraversal(node = this.root, callback) {
+    if (node !== null) {
+      this.inOrderTraversal(node.left, callback)
+      if (typeof callback === 'function') {
+        callback(node)
+      }
+      this.inOrderTraversal(node.right, callback)
+    }
   }
 
-  enumerate() {
-    // TODO: implement
+  // 1. Visit the root
+  // 2. Traverse the left subtree (i.e. perform preOrderTraversal on the left subtree)
+  // 3. Traverse the right subtree (i.e. perform preOrderTraversal on the right subtree)
+  preOrderTraversal(node = this.root, callback) {
+    if (node !== null) {
+      if (typeof callback === 'function') {
+        callback(node)
+      }
+      this.preOrderTraversal(node.left, callback)
+      this.preOrderTraversal(node.right, callback)
+    }
+  }
+
+  // 1. Traverse the left subtree (i.e. perform postOrderTraversal on the left subtree)
+  // 2. Traverse the right subtree (i.e. perform postOrderTraversal on the right subtree)
+  // 3. Visit the root
+  postOrderTraversal(node = this.root, callback) {
+    if (node !== null) {
+      this.postOrderTraversal(node.left, callback)
+      this.postOrderTraversal(node.right, callback)
+      if (typeof callback === 'function') {
+        callback(node)
+      }
+    }
+  }
+
+  isEmpty() {
+    return this.root === null
   }
 
   clear() {
