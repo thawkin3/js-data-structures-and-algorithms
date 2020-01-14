@@ -23,18 +23,22 @@ Each data structure or algorithm should meet the following requirements:
 
 ## Bug Reports
 
-If you would like to file a bug, please create an issue on the repo
-here in GitHub. I do not have a bug report template as of yet, so
-please be as detailed as you can and include any information you
-feel is relevant.
+If you would like to file a bug, please create an
+[issue on the repo in GitHub](https://github.com/thawkin3/js-data-structures-and-algorithms/issues).
+You should click the "New issue" button and then select the
+"Bug report" template. Please be as detailed as you can and
+include any additional information that you feel is relevant.
 
 ## Feature Requests
 
 If you would like to request a feature such as a new data structure,
 new algorithm, new or improved example, or any other improvements,
-please create an issue on the repo here in GitHub. I will reply as
-soon as possible so we can take steps toward implementing your
-suggestion. Or, better yet, after filing an issue, create a pull
+please create an
+[issue on the repo in GitHub](https://github.com/thawkin3/js-data-structures-and-algorithms/issues).
+You should click the "New issue" button and then select the
+"Feature request" template. I will reply as soon as possible
+so we can take steps toward implementing your suggestion.
+Or, better yet, after filing an issue, create a pull
 request to implement the feature yourself!
 
 ## Pull Requests
