@@ -40,13 +40,12 @@ export class BinarySearchTree {
       currentNode.left = newNode
       return newNode
     } else if (currentNode.val > newNode.val) {
-      this._insertNode(currentNode.left, newNode)
+      return this._insertNode(currentNode.left, newNode)
     } else if (currentNode.val < newNode.val && currentNode.right === null) {
       currentNode.right = newNode
       return newNode
-    } else if (currentNode.val < newNode.val) {
-      // TODO: get test coverage
-      this._insertNode(currentNode.right, newNode)
+    } else {
+      return this._insertNode(currentNode.right, newNode)
     }
   }
 
@@ -139,15 +138,12 @@ export class BinarySearchTree {
     return this.root
   }
 
-  // TODO: get test coverage
   // helper method to find the minimum node in the tree, starting at a specified node
   _findMinNode(node) {
     // if the left of a node is null, then it must be the minimum node
-    /* istanbul ignore next */
     if (node.left === null) {
       return node
     }
-    /* istanbul ignore next */
     return this._findMinNode(node.left)
   }
 }
