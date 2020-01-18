@@ -334,12 +334,12 @@ class SortPerformanceComparisonTest extends Component {
                 seconds).
               </div>
               <hr />
-              <p className="arrayData">
+              <div className="arrayData">
                 <b>Initial Array:</b>{' '}
                 <div className="elements">
                   {storedArrays[currentResultKey].initialArray.join(', ')}
                 </div>
-              </p>
+              </div>
             </div>
           )}
         </div>

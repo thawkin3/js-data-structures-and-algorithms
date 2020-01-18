@@ -13,6 +13,10 @@
   margin: 0.5rem 0;
 }
 
+.sortComparisonDemo .arrayData {
+  margin: 1rem 0;
+}
+
 .sortComparisonDemo .arrayData .elements {
   white-space: nowrap;
   overflow-x: scroll;
