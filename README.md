@@ -44,8 +44,8 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 
 ### Searching
 
-- [Binary Search](src/algorithms/search/binary-search/src/binary-search.js) TODO: Add Storybook example
-- [Linear Search](src/algorithms/search/linear-search/src/linear-search.js) TODO: Add Storybook example
+- [Binary Search](src/algorithms/search/binary-search/src/binary-search.js)
+- [Linear Search](src/algorithms/search/linear-search/src/linear-search.js)
 
 ### Sorting
 

@@ -1,0 +1,43 @@
+.searchDemo button,
+.searchDemo label {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.searchDemo label span {
+  margin-right: 1rem;
+}
+
+.searchDemo h3 {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+.searchDemo .haystackTextAreaLabel {
+  width: 100%;
+}
+
+.searchDemo .haystackTextAreaLabel span {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.searchDemo .haystackTextArea {
+  width: 100%;
+  height: 10rem;
+  resize: none;
+}
+
+.searchDemo .stringHaystack {
+  margin: 1rem 0;
+}
+
+.searchDemo .stringHaystack .stringHaystackCharacters {
+  white-space: nowrap;
+  overflow-x: scroll;
+  border: 1px solid #071a32;
+  padding: 0.5rem;
+  background: #f6f6f6;
+  border-radius: 0.25rem;
+  margin-top: 0.55rem;
+}

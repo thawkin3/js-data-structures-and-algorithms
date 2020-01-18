@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { linearSearch } from './../linear-search/src/linear-search'
 import { binarySearch } from './../binary-search/src/binary-search'
 import './search-performance-comparison-test.demo.css'
-import { declarationOfIndependence } from './declaration-of-independence.js'
+import { declarationOfIndependence } from '../demo-utils/declaration-of-independence'
 
 export default {
   title: 'Algorithms|Search/Search Comparisions',
@@ -82,7 +82,8 @@ class SearchPerformanceComparisonTest extends Component {
           {lastResultSet && (
             <div>
               <p>
-                Searching the string for <b>{lastResultSet.needle}</b>:
+                Searching the string for{' '}
+                <b>&quot;{lastResultSet.needle}&quot;</b>:
               </p>
               <hr />
               <div>
