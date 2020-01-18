@@ -3,6 +3,7 @@
     "feat",
     "fix",
     "docs",
+    "improvement",
     "style",
     "refactor",
     "perf",
