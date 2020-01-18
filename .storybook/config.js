@@ -11,14 +11,11 @@ function importAll(requireContextResult, allStories) {
 }
 
 // import all files from 'src' and 'docs' ending in *.demo.js
-// It's actually kind of ridiculous trying to get the stories to
-// be shown in the Storybook table of contents in the order you want,
-// so this weird function grabs all the stories and then reverses
-// them so that the intro doc comes first, since I want that to act
+// NOTE: I want the docs to come first so that they can serve
 // as the landing page.
 configure(() => {
   const allStories = []
   importAll(require.context('../docs/', true, /^.*\.demo\.js$/), allStories)
   importAll(require.context('../src/', true, /^.*\.demo\.js$/), allStories)
-  return allStories.reverse()
+  return allStories
 }, module)
