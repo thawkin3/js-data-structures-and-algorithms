@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.1.0...v1.2.0) (2020-01-19)
+
+
+### Features
+
+* **binary-search,linear-search:** adds storybook example for searching algorithms performance test ([524f160](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/524f160df1e2835671c19e7ee084bc72b5130880))
+* **binary-search,linear-search:** adds storybook examples for binary search and linear search ([9638d04](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/9638d042ac4f94117cf913ddce3782227239621b))
+
+
+### Bug Fixes
+
+* **sorting:** fixes illegal element nesting in sorting perf test example ([3720a55](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/3720a550ab3c2cca643f966085eda3c64c33202e))
+* **storybook:** loads readme welcome page in storybook first now ([78910ac](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/78910acd9082b0e1a9b144487e530574e3f3601f))
+
 ## [1.1.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.0.1...v1.1.0) (2020-01-14)
 
 
