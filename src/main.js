@@ -2,9 +2,9 @@
 // Algorithms
 ////////////////////////
 
-// Search
-export { binarySearch } from './algorithms/search/binary-search/src/binary-search'
-export { linearSearch } from './algorithms/search/linear-search/src/linear-search'
+// Search (Array)
+export { binarySearch } from './algorithms/search/array/binary-search/src/binary-search'
+export { linearSearch } from './algorithms/search/array/linear-search/src/linear-search'
 
 // Set
 export { intersection } from './algorithms/set/intersection/src/intersection'

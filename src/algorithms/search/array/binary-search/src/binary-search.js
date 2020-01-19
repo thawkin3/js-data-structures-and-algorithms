@@ -10,6 +10,14 @@
  */
 
 export const binarySearch = (haystack, needle, showLogs) => {
+  if (
+    !(haystack instanceof Array) ||
+    typeof needle === 'undefined' ||
+    needle === null
+  ) {
+    return -1
+  }
+
   let searchableHaystack = [...haystack]
   let i = 1
   let fullHaystackMidpointIndex = 0

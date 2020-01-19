@@ -1,12 +1,15 @@
+/* eslint-disable */
 import React, { Component } from 'react'
-import { linearSearch } from './../linear-search/src/linear-search'
-import { binarySearch } from './../binary-search/src/binary-search'
+import { linearSearch } from '../linear-search/src/linear-search'
+import { binarySearch } from '../binary-search/src/binary-search'
 import './search-performance-comparison-test.demo.css'
 import { declarationOfIndependence } from '../demo-utils/declaration-of-independence'
 
-export default {
-  title: 'Algorithms|Search/Search Comparisions',
-}
+// TODO: Implement for strings, not arrays
+
+// export default {
+//   title: 'Algorithms|Search (Array)/Search Comparisions',
+// }
 
 class SearchPerformanceComparisonTest extends Component {
   state = {
@@ -118,4 +121,4 @@ class SearchPerformanceComparisonTest extends Component {
   }
 }
 
-export const performanceTest = () => <SearchPerformanceComparisonTest />
+// export const performanceTest = () => <SearchPerformanceComparisonTest />

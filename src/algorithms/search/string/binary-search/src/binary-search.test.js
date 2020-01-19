@@ -1,3 +1,5 @@
+// TODO: Implement for strings, not arrays
+
 import { binarySearch } from './binary-search'
 
 const showLogs = process.env.SHOW_LOGS === '1'
@@ -62,5 +64,19 @@ describe('binarySearch', () => {
 
     expect(binarySearch(testArray, 999, showLogs)).toBe(-1)
     expect(binarySearch(testArray2, 999, showLogs)).toBe(-1)
+  })
+
+  it('handles a missing needle argument', () => {
+    const testArray = [1, 3, 8, 5, 9, 10, 12]
+    expect(binarySearch(testArray, undefined, showLogs)).toBe(-1)
+    expect(binarySearch(testArray, null, showLogs)).toBe(-1)
+  })
+
+  it('handles a non-array haystack argument', () => {
+    expect(binarySearch('a string', 42, showLogs)).toBe(-1)
+    expect(binarySearch(100, 42, showLogs)).toBe(-1)
+    expect(binarySearch(null, 42, showLogs)).toBe(-1)
+    expect(binarySearch(undefined, 42, showLogs)).toBe(-1)
+    expect(binarySearch({ someKey: 'someValue' }, 42, showLogs)).toBe(-1)
   })
 })

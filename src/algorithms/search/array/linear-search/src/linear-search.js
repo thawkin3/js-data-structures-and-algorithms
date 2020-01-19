@@ -9,6 +9,14 @@
  */
 
 export const linearSearch = (haystack, needle, showLogs) => {
+  if (
+    !(haystack instanceof Array) ||
+    typeof needle === 'undefined' ||
+    needle === null
+  ) {
+    return -1
+  }
+
   for (let i = 0; i < haystack.length; i++) {
     /* istanbul ignore next */
     showLogs &&

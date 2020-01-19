@@ -47,12 +47,12 @@ body {
   box-shadow: deeppink 0 0 0 0.0625rem;
   content: "";
   height: calc(100% + 0.25rem);
-  left: 0px;
+  left: 0;
   margin-left: -0.25rem;
   margin-top: -0.25rem;
   pointer-events: none;
   position: absolute;
-  top: 0px;
+  top: 0;
   width: calc(100% + 0.25rem);
   border-radius: inherit;
   padding: 0.125rem;
