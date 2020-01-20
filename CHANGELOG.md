@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.2.0...v1.3.0) (2020-01-20)
+
+
+### Features
+
+* **naive-search,b-m-h-search:** adds placeholder implementations for string searching ([aa34a3a](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/aa34a3afad757e4f46a8a0b1fe01a801ef8b4c00))
+
+
+### Bug Fixes
+
+* **linear-search,binary-search:** updates search algorithms to handle bad input ([acb98db](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/acb98db70347a46fc3e9e04e0e60e8b6bbb7861b))
+* **text-input:** fixes the focus/hover state on the storybook text inputs ([6e99e29](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/6e99e29bb57a9b7d500776121ed1abed7333c137))
+
 ## [1.2.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.1.0...v1.2.0) (2020-01-19)
 
 
