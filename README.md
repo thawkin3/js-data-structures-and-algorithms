@@ -42,10 +42,15 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 
 ## Algorithms
 
-### Searching
+### Searching (Array)
 
-- [Binary Search](src/algorithms/search/binary-search/src/binary-search.js)
-- [Linear Search](src/algorithms/search/linear-search/src/linear-search.js)
+- [Binary Search](src/algorithms/search/array/binary-search/src/binary-search.js)
+- [Linear Search](src/algorithms/search/array/linear-search/src/linear-search.js)
+
+### Searching (String)
+
+- [Boyer-Moore-Horspool Search](src/algorithms/search/string/boyer-moore-horspool-search/src/boyer-moore-horspool-search.js) TODO: Add implementation, tests, and Storybook example
+- [Naive Search](src/algorithms/search/string/naive-search/src/naive-search.js) TODO: Add implementation, tests, and Storybook example
 
 ### Sorting
 

@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import './search-performance-test.demo.css'
 import { declarationOfIndependence } from './declaration-of-independence'
 
-// TODO: Implement for strings, not arrays
-
 export class SearchPerformanceTest extends Component {
   state = {
     needle: '',
@@ -45,7 +43,10 @@ export class SearchPerformanceTest extends Component {
 
     return (
       <div className="searchComparisonDemo">
-        <h1>{searchMethodName} Performance Test</h1>
+        <h1>
+          {searchMethodName} Performance Test{' '}
+          <span className="todo">(TODO)</span>
+        </h1>
         <form onSubmit={this.runPerformanceTest}>
           <label>
             <span>String to search for (needle):</span>

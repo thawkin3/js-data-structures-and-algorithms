@@ -1,15 +1,12 @@
-/* eslint-disable */
 import React, { Component } from 'react'
-import { linearSearch } from '../linear-search/src/linear-search'
-import { binarySearch } from '../binary-search/src/binary-search'
+import { naiveSearch } from '../naive-search/src/naive-search'
+import { boyerMooreHorspoolSearch } from '../boyer-moore-horspool-search/src/boyer-moore-horspool-search'
 import './search-performance-comparison-test.demo.css'
 import { declarationOfIndependence } from '../demo-utils/declaration-of-independence'
 
-// TODO: Implement for strings, not arrays
-
-// export default {
-//   title: 'Algorithms|Search (Array)/Search Comparisions',
-// }
+export default {
+  title: 'Algorithms|Search (String)/Search Comparisions',
+}
 
 class SearchPerformanceComparisonTest extends Component {
   state = {
@@ -31,21 +28,24 @@ class SearchPerformanceComparisonTest extends Component {
 
     const { needle, haystack } = this.state
 
-    const startTimeForLinearSearch = performance.now()
-    linearSearch(haystack, needle)
-    const endTimeForLinearSearch = performance.now()
+    const startTimeForNaiveSearch = performance.now()
+    naiveSearch(haystack, needle)
+    const endTimeForNaiveSearch = performance.now()
 
-    const startTimeForBinarySearch = performance.now()
-    binarySearch(haystack, needle)
-    const endTimeForBinarySearch = performance.now()
+    const startTimeForBoyerMooreHorspoolSearch = performance.now()
+    const result = boyerMooreHorspoolSearch(haystack, needle)
+    const endTimeForBoyerMooreHorspoolSearch = performance.now()
 
     this.setState({
       lastResultSet: {
         haystack,
         needle,
+        result,
         timeTaken: {
-          linearSearch: endTimeForLinearSearch - startTimeForLinearSearch,
-          binarySearch: endTimeForBinarySearch - startTimeForBinarySearch,
+          naiveSearch: endTimeForNaiveSearch - startTimeForNaiveSearch,
+          boyerMooreHorspoolSearch:
+            endTimeForBoyerMooreHorspoolSearch -
+            startTimeForBoyerMooreHorspoolSearch,
         },
       },
     })
@@ -56,7 +56,10 @@ class SearchPerformanceComparisonTest extends Component {
 
     return (
       <div className="searchComparisonDemo">
-        <h1>Performance Test Comparing Various Searching Algorithms</h1>
+        <h1>
+          Performance Test Comparing Various Searching Algorithms{' '}
+          <span className="todo">(TODO)</span>
+        </h1>
         <form onSubmit={this.runPerformanceTest}>
           <label>
             <span>String to search for (needle):</span>
@@ -86,25 +89,33 @@ class SearchPerformanceComparisonTest extends Component {
             <div>
               <p>
                 Searching the string for{' '}
-                <b>&quot;{lastResultSet.needle}&quot;</b>:
+                <b>&quot;{lastResultSet.needle}&quot;</b>. The string was{' '}
+                <b>
+                  {lastResultSet.result === -1
+                    ? 'not found'
+                    : `found at index ${lastResultSet.result}`}
+                </b>
+                .
               </p>
               <hr />
               <div>
-                <h3>Linear Search </h3> took{' '}
-                <b>{lastResultSet.timeTaken.linearSearch.toFixed(3)}</b>{' '}
+                <h3>Naive Search </h3> took{' '}
+                <b>{lastResultSet.timeTaken.naiveSearch.toFixed(3)}</b>{' '}
                 milliseconds (or{' '}
-                <b>
-                  {(lastResultSet.timeTaken.linearSearch / 1000).toFixed(6)}
-                </b>{' '}
+                <b>{(lastResultSet.timeTaken.naiveSearch / 1000).toFixed(6)}</b>{' '}
                 seconds).
               </div>
               <hr />
               <div>
-                <h3>Binary Search </h3> took{' '}
-                <b>{lastResultSet.timeTaken.binarySearch.toFixed(3)}</b>{' '}
+                <h3>Boyer-Moore-Horspool Search </h3> took{' '}
+                <b>
+                  {lastResultSet.timeTaken.boyerMooreHorspoolSearch.toFixed(3)}
+                </b>{' '}
                 milliseconds (or{' '}
                 <b>
-                  {(lastResultSet.timeTaken.binarySearch / 1000).toFixed(6)}
+                  {(
+                    lastResultSet.timeTaken.boyerMooreHorspoolSearch / 1000
+                  ).toFixed(6)}
                 </b>{' '}
                 seconds).
               </div>
@@ -121,4 +132,4 @@ class SearchPerformanceComparisonTest extends Component {
   }
 }
 
-// export const performanceTest = () => <SearchPerformanceComparisonTest />
+export const performanceTest = () => <SearchPerformanceComparisonTest />
