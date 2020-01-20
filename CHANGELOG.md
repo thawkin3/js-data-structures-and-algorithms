@@ -50,19 +50,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.0.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/9dca9d2...v1.0.0) (2020-01-13)
 
-### Bug Fixes
-
-* **prettier:** stops checking json files when formatting with prettier ([f497b97](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/f497b97))
-* corrects file paths to node data structure in README ([9553f6f](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/9553f6f))
-* fixes storybook url in README ([a6ae188](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/a6ae188))
-* fixes storybook directory names ([d12abe3](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/d12abe3))
-* fixes typo in linked list test file ([a049e12](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/a049e12))
-* corrects name of 'binary tree' to 'binary search tree' ([e09c9e3](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/e09c9e3))
-* fixes priority queue demo bug for priority value ([355c637](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/355c637))
-* corrected the binary tree storybook placement ([1a39e23](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/1a39e23))
-* removes unneeded import ([e4f3642](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/e4f3642))
-* fixes bugs regarding clearing stacks and queues ([1ea8587](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/1ea8587))
-
 ### Features
 
 * **npmrc:** adds an npmrc file but gitignores it ([5a3a33f](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/5a3a33f))
@@ -228,3 +215,17 @@ All notable changes to this project will be documented in this file. See [standa
 * Delete .DS_Store ([3c45efb](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/3c45efb))
 * init ([09b4d0e](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/09b4d0e))
 * Initial commit ([9dca9d2](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/9dca9d2))
+
+
+### Bug Fixes
+
+* **prettier:** stops checking json files when formatting with prettier ([f497b97](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/f497b97))
+* corrects file paths to node data structure in README ([9553f6f](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/9553f6f))
+* fixes storybook url in README ([a6ae188](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/a6ae188))
+* fixes storybook directory names ([d12abe3](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/d12abe3))
+* fixes typo in linked list test file ([a049e12](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/a049e12))
+* corrects name of 'binary tree' to 'binary search tree' ([e09c9e3](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/e09c9e3))
+* fixes priority queue demo bug for priority value ([355c637](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/355c637))
+* corrected the binary tree storybook placement ([1a39e23](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/1a39e23))
+* removes unneeded import ([e4f3642](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/e4f3642))
+* fixes bugs regarding clearing stacks and queues ([1ea8587](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/1ea8587))
