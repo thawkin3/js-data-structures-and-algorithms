@@ -98,9 +98,3 @@ body {
   border-bottom: 0.25rem solid #071a32;
   padding: 0.5rem 0.75rem 0.3125rem 0.75rem;
 }
-
-/* TODO */
-.todo {
-  color: red;
-  font-weight: bold;
-}

@@ -56,10 +56,7 @@ class SearchPerformanceComparisonTest extends Component {
 
     return (
       <div className="searchComparisonDemo">
-        <h1>
-          Performance Test Comparing Various Searching Algorithms{' '}
-          <span className="todo">(TODO)</span>
-        </h1>
+        <h1>Performance Test Comparing Various Searching Algorithms</h1>
         <form onSubmit={this.runPerformanceTest}>
           <label>
             <span>String to search for (needle):</span>

@@ -49,8 +49,8 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 
 ### Searching (String)
 
-- [Boyer-Moore-Horspool Search](src/algorithms/search/string/boyer-moore-horspool-search/src/boyer-moore-horspool-search.js) TODO: Add implementation, tests, and Storybook example
-- [Naive Search](src/algorithms/search/string/naive-search/src/naive-search.js) TODO: Add implementation, tests, and Storybook example
+- [Boyer-Moore-Horspool Search](src/algorithms/search/string/boyer-moore-horspool-search/src/boyer-moore-horspool-search.js)
+- [Naive Search](src/algorithms/search/string/naive-search/src/naive-search.js)
 
 ### Sorting
 
