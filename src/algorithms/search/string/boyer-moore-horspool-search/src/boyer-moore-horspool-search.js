@@ -33,8 +33,6 @@
  * Worst case performance: O(n*m), where n is the length of the string to search and m is the length of the string to find
  */
 
-// TODO: Actually implement this. Right now it's just a naive search.
-
 export const boyerMooreHorspoolSearch = (haystack, needle, showLogs) => {
   if (typeof haystack !== 'string' || typeof needle !== 'string') {
     /* istanbul ignore next */
@@ -42,17 +40,51 @@ export const boyerMooreHorspoolSearch = (haystack, needle, showLogs) => {
     return -1
   }
 
-  for (let i = 0; i < haystack.length; i++) {
-    for (let j = 0; j < needle.length; j++) {
-      if (haystack[i + j] !== needle[j]) {
-        break
-      }
+  const needleLength = needle.length
+  let haystackRemainingLength = haystack.length
 
-      if (j === needle.length - 1) {
-        return i
-      }
-    }
+  if (needleLength > haystackRemainingLength) {
+    /* istanbul ignore next */
+    showLogs && console.log('needle is longer than the haystack, exiting early')
+    return -1
   }
 
+  // first loop through the needle once to
+  // create the mismatch table so you know how much
+  // to offset by for each character on mismatch
+  const lastIndexOfNeedle = needleLength - 1
+  const mismatchTable = {}
+  for (let i = 0; i < needleLength; i++) {
+    mismatchTable[needle[i]] = lastIndexOfNeedle - i
+  }
+
+  let jumpAmount
+  let haystackOffset = 0
+  let currentIndex = 0
+
+  // loop through the haystack from beginning to end
+  while (haystackRemainingLength >= needleLength) {
+    // loop through the needle, starting at the end and moving backward
+    for (
+      currentIndex = lastIndexOfNeedle;
+      haystack[haystackOffset + currentIndex] === needle[currentIndex];
+      currentIndex--
+    ) {
+      // if you've gotten all the way to the front of the needle,
+      // then you've found an exact match. you're done!
+      if (currentIndex === 0) {
+        return haystackOffset
+      }
+    }
+
+    // if you're here, that means we got a mismatch and can jump further down the haystack
+    jumpAmount =
+      mismatchTable[haystack[haystackOffset + lastIndexOfNeedle]] ||
+      needleLength
+    haystackRemainingLength -= jumpAmount
+    haystackOffset += jumpAmount
+  }
+
+  // needle was not found in the haystack
   return -1
 }

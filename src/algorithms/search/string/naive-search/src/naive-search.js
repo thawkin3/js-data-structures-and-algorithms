@@ -16,6 +16,12 @@ export const naiveSearch = (haystack, needle, showLogs) => {
     return -1
   }
 
+  if (needle.length > haystack.length) {
+    /* istanbul ignore next */
+    showLogs && console.log('needle is longer than the haystack, exiting early')
+    return -1
+  }
+
   for (let i = 0; i < haystack.length; i++) {
     for (let j = 0; j < needle.length; j++) {
       if (haystack[i + j] !== needle[j]) {

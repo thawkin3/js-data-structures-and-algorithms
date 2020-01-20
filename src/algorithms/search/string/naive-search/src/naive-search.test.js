@@ -23,6 +23,12 @@ describe('naiveSearch', () => {
     expect(naiveSearch('blah', 'hey', showLogs)).toBe(-1)
   })
 
+  it('returns -1 if the needle is longer than the haystack', () => {
+    expect(
+      naiveSearch('small haystack', 'really long needle to search for')
+    ).toBe(-1)
+  })
+
   it('can correctly find a substring in a string with no spaces', () => {
     const haystack = 'abcdefghijklmnopqrstuvwxyz'
     const needle = 'ijk'

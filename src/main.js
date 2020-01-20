@@ -6,6 +6,10 @@
 export { binarySearch } from './algorithms/search/array/binary-search/src/binary-search'
 export { linearSearch } from './algorithms/search/array/linear-search/src/linear-search'
 
+// Search (String)
+export { boyerMooreHorspoolSearch } from './algorithms/search/string/boyer-moore-horspool-search/src/boyer-moore-horspool-search'
+export { naiveSearch } from './algorithms/search/string/naive-search/src/naive-search'
+
 // Set
 export { intersection } from './algorithms/set/intersection/src/intersection'
 export { setDifference } from './algorithms/set/set-difference/src/set-difference'
