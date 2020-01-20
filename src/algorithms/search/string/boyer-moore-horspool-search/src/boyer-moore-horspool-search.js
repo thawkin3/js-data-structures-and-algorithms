@@ -28,12 +28,12 @@
  *
  * This algorithm is appropriate as a general purpose string search algorithm.
  *
- * Best case performance: O(n/m), where n is the length of the string to search and m is the length of the string to find
+ * Best case performance: Ω(n/m), where n is the length of the string to search and m is the length of the string to find
  * Average case performance: 0(n)
  * Worst case performance: O(n*m), where n is the length of the string to search and m is the length of the string to find
  */
 
-// TODO: Actually implement this.
+// TODO: Actually implement this. Right now it's just a naive search.
 
 export const boyerMooreHorspoolSearch = (haystack, needle, showLogs) => {
   if (typeof haystack !== 'string' || typeof needle !== 'string') {
@@ -42,6 +42,17 @@ export const boyerMooreHorspoolSearch = (haystack, needle, showLogs) => {
     return -1
   }
 
-  // TODO
+  for (let i = 0; i < haystack.length; i++) {
+    for (let j = 0; j < needle.length; j++) {
+      if (haystack[i + j] !== needle[j]) {
+        break
+      }
+
+      if (j === needle.length - 1) {
+        return i
+      }
+    }
+  }
+
   return -1
 }

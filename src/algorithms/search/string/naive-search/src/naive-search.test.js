@@ -1,5 +1,3 @@
-// TODO: Write more tests after the implementation is complete
-
 import { naiveSearch } from './naive-search'
 
 const showLogs = process.env.SHOW_LOGS === '1'
@@ -23,5 +21,23 @@ describe('naiveSearch', () => {
 
   it('returns -1 if the string is not found', () => {
     expect(naiveSearch('blah', 'hey', showLogs)).toBe(-1)
+  })
+
+  it('can correctly find a substring in a string with no spaces', () => {
+    const haystack = 'abcdefghijklmnopqrstuvwxyz'
+    const needle = 'ijk'
+    expect(naiveSearch(haystack, needle)).toBe(8)
+  })
+
+  it('can correctly find a substring in a string with spaces', () => {
+    const haystack = 'look at this nice short string'
+    const needle = 'at'
+    expect(naiveSearch(haystack, needle)).toBe(5)
+  })
+
+  it('returns the index of the first instance of the string found if there are duplicates', () => {
+    const haystack = 'ababababababababab'
+    const needle = 'ba'
+    expect(naiveSearch(haystack, needle)).toBe(1)
   })
 })

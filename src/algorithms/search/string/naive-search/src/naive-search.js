@@ -4,12 +4,10 @@
  * Starts at the beginning and iterates through the whole string
  *
  * Best case performance: Ω(1) (the substring you're looking for is the start of the string)
- * Average case performance: 0(n)
- * Worst case performance: O(nm), where the length of the pattern is m and the length of the search string is n
+ * Average case performance: 0(n+m)
+ * Worst case performance: O(n*m), where the length of the pattern is m and the length of the search string is n
  *     (the substring you're looking for is the end of the string or not in the string at all)
  */
-
-// TODO: Actually implement this.
 
 export const naiveSearch = (haystack, needle, showLogs) => {
   if (typeof haystack !== 'string' || typeof needle !== 'string') {
@@ -18,6 +16,17 @@ export const naiveSearch = (haystack, needle, showLogs) => {
     return -1
   }
 
-  // TODO
+  for (let i = 0; i < haystack.length; i++) {
+    for (let j = 0; j < needle.length; j++) {
+      if (haystack[i + j] !== needle[j]) {
+        break
+      }
+
+      if (j === needle.length - 1) {
+        return i
+      }
+    }
+  }
+
   return -1
 }
