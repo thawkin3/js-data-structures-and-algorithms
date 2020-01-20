@@ -1,6 +1,6 @@
 {
   "name": "js-data-structures-and-algorithms",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Data structures and algorithms implemented in JavaScript",
   "main": "dist/main.cjs.min.js",
   "module": "dist/main.esm.min.js",
