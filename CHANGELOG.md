@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.4.0...v1.5.0) (2020-01-20)
+
+
+### Features
+
+* **b-m-h-search:** implements the Boyer-Moore-Horspool searching algorithm ([07f5ce4](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/07f5ce41c4efb630bb427fe0a9e263482fd3ec6e))
+
 ## [1.4.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.3.0...v1.4.0) (2020-01-20)
 
 
