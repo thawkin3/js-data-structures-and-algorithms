@@ -2,8 +2,8 @@
   "types":[
     "feat",
     "fix",
-    "docs",
     "improvement",
+    "docs",
     "style",
     "refactor",
     "perf",
