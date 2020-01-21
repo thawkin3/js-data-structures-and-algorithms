@@ -10,6 +10,8 @@
  * - deleteFirstNode: Constant — O(1)
  * - deleteLastNode: Linear — O(n)
  * - deleteAt: Linear — O(n)
+ * - reverse: Linear — O(n)
+ * - traverse: Linear — O(n)
  * - isEmpty: Constant — O(1)
  * - size: Constant — O(1)
  * - enumerate: Linear - O(n)
@@ -161,6 +163,30 @@ export class LinkedList {
     this.length--
     return this.head
   }
+
+  reverse() {
+    let currentNode = this.head
+    let previousNode = null
+
+    while (currentNode !== null) {
+      // save the next pointer before we overwrite currentNode.next!
+      const tmp = currentNode.next
+
+      // reverse the next pointer to point at the previous node
+      currentNode.next = previousNode
+
+      // step forward in the list
+      previousNode = currentNode
+      currentNode = tmp
+    }
+
+    // set the new head node when the reversal is finished
+    this.head = previousNode
+
+    return true
+  }
+
+  // traverse() {}
 
   isEmpty() {
     return this.length === 0

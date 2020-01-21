@@ -425,6 +425,73 @@ describe('DoublyLinkedList', () => {
     })
   })
 
+  describe('reverse', () => {
+    it('can correctly reverse a list', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(1)
+      doublyLinkedList1.insertAtBeginning(2)
+      doublyLinkedList1.insertAtBeginning(3)
+      doublyLinkedList1.insertAtBeginning(4)
+
+      expect(doublyLinkedList1.head.prev).toEqual(null)
+      expect(doublyLinkedList1.head.val).toEqual(4)
+      expect(doublyLinkedList1.head.next.val).toEqual(3)
+
+      expect(doublyLinkedList1.head.next.prev.val).toEqual(4)
+      expect(doublyLinkedList1.head.next.next.val).toEqual(2)
+
+      expect(doublyLinkedList1.head.next.next.prev.val).toEqual(3)
+      expect(doublyLinkedList1.head.next.next.next.val).toEqual(1)
+
+      expect(doublyLinkedList1.head.next.next.next.prev.val).toEqual(2)
+      expect(doublyLinkedList1.head.next.next.next.next).toEqual(null)
+
+      expect(doublyLinkedList1.tail.prev.val).toEqual(2)
+      expect(doublyLinkedList1.tail.val).toEqual(1)
+      expect(doublyLinkedList1.tail.next).toEqual(null)
+
+      expect(doublyLinkedList1.size()).toBe(4)
+
+      doublyLinkedList1.reverse()
+
+      expect(doublyLinkedList1.head.prev).toEqual(null)
+      expect(doublyLinkedList1.head.val).toEqual(1)
+      expect(doublyLinkedList1.head.next.val).toEqual(2)
+
+      expect(doublyLinkedList1.head.next.prev.val).toEqual(1)
+      expect(doublyLinkedList1.head.next.next.val).toEqual(3)
+
+      expect(doublyLinkedList1.head.next.next.prev.val).toEqual(2)
+      expect(doublyLinkedList1.head.next.next.next.val).toEqual(4)
+
+      expect(doublyLinkedList1.head.next.next.next.prev.val).toEqual(3)
+      expect(doublyLinkedList1.head.next.next.next.next).toEqual(null)
+
+      expect(doublyLinkedList1.tail.prev.val).toEqual(3)
+      expect(doublyLinkedList1.tail.val).toEqual(4)
+      expect(doublyLinkedList1.tail.next).toEqual(null)
+
+      expect(doublyLinkedList1.size()).toBe(4)
+    })
+
+    it('can handle an empty list', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      expect(() => doublyLinkedList1.reverse()).not.toThrow()
+    })
+
+    it('can handle a list of only one node', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(1)
+      expect(doublyLinkedList1.size()).toBe(1)
+      expect(doublyLinkedList1.head).toEqual(new Node(1, null, null))
+
+      doublyLinkedList1.reverse()
+
+      expect(doublyLinkedList1.size()).toBe(1)
+      expect(doublyLinkedList1.head).toEqual(new Node(1, null, null))
+    })
+  })
+
   describe('isEmpty', () => {
     it('returns true if the doubly linked list is empty', () => {
       const doublyLinkedList1 = new DoublyLinkedList()

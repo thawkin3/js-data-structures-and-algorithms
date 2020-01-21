@@ -10,6 +10,8 @@
  * - deleteFirstNode: Constant — O(1)
  * - deleteLastNode: Constant — O(1)
  * - deleteAt: Linear — O(n)
+ * - reverse: Linear — O(n)
+ * - traverse: Linear — O(n)
  * - isEmpty: Constant — O(1)
  * - size: Constant — O(1)
  * - enumerate: Linear - O(n)
@@ -178,6 +180,30 @@ export class DoublyLinkedList {
     this.length--
     return this.head
   }
+
+  reverse() {
+    let currentNode = this.head
+    let previousNode = null
+
+    while (currentNode !== null) {
+      // save the next pointer before we overwrite currentNode.next!
+      const tmp = currentNode.next
+
+      // switch the values of the next and prev pointers
+      currentNode.next = previousNode
+      currentNode.prev = tmp
+
+      // step forward in the list
+      previousNode = currentNode
+      currentNode = tmp
+    }
+
+    // set the new head and tail nodes when the reversal is finished
+    this.tail = this.head
+    this.head = previousNode
+  }
+
+  // traverse() {}
 
   isEmpty() {
     return this.length === 0

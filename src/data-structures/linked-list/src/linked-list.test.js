@@ -332,6 +332,45 @@ describe('LinkedList', () => {
     })
   })
 
+  describe('reverse', () => {
+    it('can correctly reverse a list', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(1)
+      linkedList1.insertAtBeginning(2)
+      linkedList1.insertAtBeginning(3)
+      linkedList1.insertAtBeginning(4)
+
+      expect(linkedList1.head).toEqual(
+        new Node(4, new Node(3, new Node(2, new Node(1, null))))
+      )
+      expect(linkedList1.size()).toBe(4)
+
+      linkedList1.reverse()
+
+      expect(linkedList1.head).toEqual(
+        new Node(1, new Node(2, new Node(3, new Node(4, null))))
+      )
+      expect(linkedList1.size()).toBe(4)
+    })
+
+    it('can handle an empty list', () => {
+      const linkedList1 = new LinkedList()
+      expect(() => linkedList1.reverse()).not.toThrow()
+    })
+
+    it('can handle a list of only one node', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(1)
+      expect(linkedList1.size()).toBe(1)
+      expect(linkedList1.head).toEqual(new Node(1, null))
+
+      linkedList1.reverse()
+
+      expect(linkedList1.size()).toBe(1)
+      expect(linkedList1.head).toEqual(new Node(1, null))
+    })
+  })
+
   describe('isEmpty', () => {
     it('returns true if the linked list is empty', () => {
       const linkedList1 = new LinkedList()
