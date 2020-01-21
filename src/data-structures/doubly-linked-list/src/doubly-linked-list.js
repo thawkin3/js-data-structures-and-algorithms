@@ -203,7 +203,19 @@ export class DoublyLinkedList {
     this.head = previousNode
   }
 
-  // traverse() {}
+  traverse(callback) {
+    if (typeof callback !== 'function') {
+      return false
+    }
+
+    let currentNode = this.head
+    while (currentNode !== null) {
+      callback(currentNode)
+      currentNode = currentNode.next
+    }
+
+    return true
+  }
 
   isEmpty() {
     return this.length === 0

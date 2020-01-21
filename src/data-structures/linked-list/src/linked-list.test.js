@@ -371,6 +371,51 @@ describe('LinkedList', () => {
     })
   })
 
+  describe('traverse', () => {
+    it('calls the callback function once for each node in the list', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(1)
+      linkedList1.insertAtBeginning(2)
+      linkedList1.insertAtBeginning(3)
+
+      const mockCallback = jest.fn()
+      linkedList1.traverse(mockCallback)
+
+      expect(mockCallback).toHaveBeenCalledTimes(3)
+    })
+
+    it('does not call the callback function if the list is empty', () => {
+      const linkedList1 = new LinkedList()
+
+      const mockCallback = jest.fn()
+      linkedList1.traverse(mockCallback)
+
+      expect(mockCallback).not.toHaveBeenCalled()
+    })
+
+    it('traverses the list starting at the beginning', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(1)
+      linkedList1.insertAtBeginning(2)
+      linkedList1.insertAtBeginning(3)
+
+      const nodeValues = []
+      const callback = node => nodeValues.push(node.val)
+      linkedList1.traverse(callback)
+
+      expect(nodeValues).toEqual([3, 2, 1])
+    })
+
+    it('does not throw if no callback is provided', () => {
+      const linkedList1 = new LinkedList()
+      linkedList1.insertAtBeginning(1)
+      linkedList1.insertAtBeginning(2)
+      linkedList1.insertAtBeginning(3)
+
+      expect(() => linkedList1.traverse()).not.toThrow()
+    })
+  })
+
   describe('isEmpty', () => {
     it('returns true if the linked list is empty', () => {
       const linkedList1 = new LinkedList()
