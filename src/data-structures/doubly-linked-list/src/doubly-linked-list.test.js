@@ -537,6 +537,51 @@ describe('DoublyLinkedList', () => {
     })
   })
 
+  describe('traverseReverse', () => {
+    it('calls the callback function once for each node in the list', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(1)
+      doublyLinkedList1.insertAtBeginning(2)
+      doublyLinkedList1.insertAtBeginning(3)
+
+      const mockCallback = jest.fn()
+      doublyLinkedList1.traverseReverse(mockCallback)
+
+      expect(mockCallback).toHaveBeenCalledTimes(3)
+    })
+
+    it('does not call the callback function if the list is empty', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+
+      const mockCallback = jest.fn()
+      doublyLinkedList1.traverseReverse(mockCallback)
+
+      expect(mockCallback).not.toHaveBeenCalled()
+    })
+
+    it('traverses the list starting at the end', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(1)
+      doublyLinkedList1.insertAtBeginning(2)
+      doublyLinkedList1.insertAtBeginning(3)
+
+      const nodeValues = []
+      const callback = node => nodeValues.push(node.val)
+      doublyLinkedList1.traverseReverse(callback)
+
+      expect(nodeValues).toEqual([1, 2, 3])
+    })
+
+    it('does not throw if no callback is provided', () => {
+      const doublyLinkedList1 = new DoublyLinkedList()
+      doublyLinkedList1.insertAtBeginning(1)
+      doublyLinkedList1.insertAtBeginning(2)
+      doublyLinkedList1.insertAtBeginning(3)
+
+      expect(() => doublyLinkedList1.traverseReverse()).not.toThrow()
+    })
+  })
+
   describe('isEmpty', () => {
     it('returns true if the doubly linked list is empty', () => {
       const doublyLinkedList1 = new DoublyLinkedList()

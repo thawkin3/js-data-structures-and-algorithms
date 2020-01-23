@@ -12,6 +12,7 @@
  * - deleteAt: Linear — O(n)
  * - reverse: Linear — O(n)
  * - traverse: Linear — O(n)
+ * - traverseReverse: Linear — O(n)
  * - isEmpty: Constant — O(1)
  * - size: Constant — O(1)
  * - enumerate: Linear - O(n)
@@ -212,6 +213,20 @@ export class DoublyLinkedList {
     while (currentNode !== null) {
       callback(currentNode)
       currentNode = currentNode.next
+    }
+
+    return true
+  }
+
+  traverseReverse(callback) {
+    if (typeof callback !== 'function') {
+      return false
+    }
+
+    let currentNode = this.tail
+    while (currentNode !== null) {
+      callback(currentNode)
+      currentNode = currentNode.prev
     }
 
     return true
