@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.6.0...v1.7.0) (2020-01-23)
+
+
+### Features
+
+* **doubly-linked-list:** implements a traverseReverse method for traversing from tail to head ([a8d272e](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/a8d272e7e504c4dcde81416f536abe7c3b9f7d23))
+
 ## [1.6.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.5.1...v1.6.0) (2020-01-21)
 
 
