@@ -53,6 +53,8 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@storybook/addon-links": "^5.3.8",
     "@storybook/addons": "^5.3.8",
     "@storybook/react": "^5.3.8",
@@ -83,8 +85,7 @@
     "standard-version": "^7.1.0",
     "storybook-readme": "^5.0.8",
     "stylelint": "^13.0.0",
-    "stylelint-config-standard": "^19.0.0",
-    "validate-commit-msg": "^2.14.0"
+    "stylelint-config-standard": "^19.0.0"
   },
   "config": {
     "commitizen": {

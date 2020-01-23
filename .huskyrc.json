@@ -1,6 +1,6 @@
 {
   "hooks": {
     "pre-commit": "lint-staged && yarn test:coverage",
-    "commit-msg": "validate-commit-msg"
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   }
 }
