@@ -1,0 +1,49 @@
+.binarySearchTreeDemo .flexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.binarySearchTreeDemo .flexContainer .leftColumn {
+  margin-right: 2rem;
+}
+
+.binarySearchTreeDemo .flexContainer .rightColumn {
+  flex-shrink: 0;
+}
+
+.binarySearchTreeDemo .binarySearchTreeContainer {
+  width: auto;
+  margin-bottom: 0.25rem;
+}
+
+.binarySearchTreeDemo h2 {
+  margin-top: 0;
+}
+
+.binarySearchTreeDemo .node {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #071a32;
+  border-radius: 0.25rem;
+  background: #f2f2f2;
+  color: #071a32;
+  text-align: center;
+  word-break: break-word;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.binarySearchTreeDemo button,
+.binarySearchTreeDemo label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.binarySearchTreeDemo label span {
+  margin-right: 1rem;
+}
+
+.binarySearchTreeDemo fieldset {
+  margin-bottom: 0.5rem;
+}

@@ -30,7 +30,7 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 ## Data Structures
 
 - [Array](src/data-structures/array/src/array.js)
-- [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js) TODO: Add Storybook example
+- [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js)
 - [Doubly Linked List](src/data-structures/doubly-linked-list/src/doubly-linked-list.js)
 - [Hash Table (Object)](src/data-structures/hash-table/src/hash-table.js)
 - [Linked List](src/data-structures/linked-list/src/linked-list.js)
