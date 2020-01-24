@@ -17,7 +17,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **linked-list:** implements the reverse method for both linked lists ([216b354](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/216b354b7f2c46d3fd439a63fce46561f3f6b885))
 * **linked-list:** implements the traverse method for both linked lists ([67452b0](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/67452b059c4668bdbe0fa5e9fd041a64f374ccef))
 
-### [1.5.1](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.5.0...v1.5.1) (2020-01-20)
+## [1.5.1](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.5.0...v1.5.1) (2020-01-20)
 
 ## [1.5.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.4.0...v1.5.0) (2020-01-20)
 
