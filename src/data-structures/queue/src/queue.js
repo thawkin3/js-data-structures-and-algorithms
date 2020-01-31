@@ -1,6 +1,8 @@
 /**
  * Queue - FIFO, like a checkout line at a grocery store
  *
+ * NOTE: This queue is implemented with an array as its underlying data structure.
+ *
  * Methods and properties:
  *
  * - enqueue: Constant — O(1)
