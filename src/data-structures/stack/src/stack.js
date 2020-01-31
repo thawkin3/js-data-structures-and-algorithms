@@ -1,6 +1,8 @@
 /**
  * Stack - LIFO, like a stack of dishes
  *
+ * NOTE: This stack is implemented with an array as its underlying data structure.
+ *
  * Methods and properties:
  *
  * - push: Constant — O(1)
