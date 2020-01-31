@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.8.1...v1.9.0) (2020-01-31)
+
+
+### Features
+
+* **queue:** adds a queue implementation from a doubly linked list ([9b6442a](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/9b6442ab4c14ff836952b03be5cfbd9b81e18a2f))
+* **stack:** adds a stack implementation that uses a linked list ([a4d389d](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/a4d389d86e0a461eb61de7e7c7b187489c6ed0c2))
+
 ## [1.8.1](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.8.0...v1.8.1) (2020-01-29)
 
 ## [1.8.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.7.0...v1.8.0) (2020-01-24)
