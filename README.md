@@ -38,9 +38,11 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 - [Node (with only Next pointer)](src/data-structures/linked-list/src/node.js)
 - [Node (with Next and Previous pointers)](src/data-structures/doubly-linked-list/src/node.js)
 - [Priority Queue](src/data-structures/priority-queue/src/priority-queue.js)
-- [Queue](src/data-structures/queue/src/queue.js)
+- [Queue (from Array)](src/data-structures/queue/src/queue.js)
+- [Queue (from DoublyLinkedList)](src/data-structures/queue/src/queue-from-doubly-linked-list.js)
 - [Set](src/data-structures/set/src/set.js)
-- [Stack](src/data-structures/stack/src/stack.js)
+- [Stack (from Array)](src/data-structures/stack/src/stack.js)
+- [Stack (from LinkedList)](src/data-structures/stack/src/stack-from-linked-list.js)
 
 ## Algorithms
 
