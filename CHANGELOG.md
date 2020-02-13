@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.9.0...v1.10.0) (2020-02-13)
+
+
+### Features
+
+* **data-structures:** exports nodes, stack, and queue implementations ([2ad704e](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/2ad704eaa046a6519d8bf4d9ba9cead2a9af7d1b))
+
 ## [1.9.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.8.1...v1.9.0) (2020-01-31)
 
 
