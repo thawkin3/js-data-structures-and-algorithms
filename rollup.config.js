@@ -5,37 +5,6 @@ import { terser } from 'rollup-plugin-terser'
 import del from 'rollup-plugin-delete'
 import pkg from './package.json'
 
-// export default {
-//   input: 'src/main.js',
-//   output: [
-//     { dir: 'dist', file: pkg.main, format: 'cjs', freeze: false },
-//     { dir: 'dist', file: pkg.module, format: 'esm', freeze: false },
-//     {
-//       dir: 'dist',
-//       chunkFileNames: '[name].[hash].js',
-//       entryFileNames: '[name].[hash].js',
-//       format: 'cjs',
-//       name: 'JsDsa',
-//     },
-//     {
-//       dir: 'dist',
-//       chunkFileNames: '[name].[hash].min.js',
-//       entryFileNames: '[name].[hash].min.js',
-//       format: 'cjs',
-//       name: 'JsDsa',
-//       plugins: [terser()],
-//     },
-//   ],
-//   plugins: [
-//     del({ targets: 'dist/*' }),
-//     resolve(),
-//     commonjs(),
-//     babel({
-//       exclude: 'node_modules/**',
-//     }),
-//   ],
-// }
-
 export default [
   // browser-friendly UMD build
   {
