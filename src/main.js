@@ -28,9 +28,14 @@ export { selectionSort } from './algorithms/sort/selection-sort/src/selection-so
 ////////////////////////
 
 export { BinarySearchTree } from './data-structures/binary-search-tree/src/binary-search-tree'
+export { Node as BinarySearchTreeNode } from './data-structures/binary-search-tree/src/node'
 export { DoublyLinkedList } from './data-structures/doubly-linked-list/src/doubly-linked-list'
+export { Node as DoublyLinkedListNode } from './data-structures/doubly-linked-list/src/node'
 export { LinkedList } from './data-structures/linked-list/src/linked-list'
+export { Node as LinkedListNode } from './data-structures/linked-list/src/node'
 export { PriorityQueue } from './data-structures/priority-queue/src/priority-queue'
 export { Queue } from './data-structures/queue/src/queue'
+export { QueueFromDoublyLinkedList } from './data-structures/queue/src/queue-from-doubly-linked-list'
 export { Set } from './data-structures/set/src/set'
 export { Stack } from './data-structures/stack/src/stack'
+export { StackFromLinkedList } from './data-structures/stack/src/stack-from-linked-list'
