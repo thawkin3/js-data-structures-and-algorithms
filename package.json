@@ -79,7 +79,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-tree-graph": "^4.0.1",
-    "rollup": "^1.31.0",
+    "rollup": "^1.31.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-delete": "^1.2.0",
@@ -87,7 +87,7 @@
     "rollup-plugin-terser": "^5.2.0",
     "standard-version": "^7.1.0",
     "storybook-readme": "^5.0.8",
-    "stylelint": "^13.1.0",
+    "stylelint": "^13.2.0",
     "stylelint-config-standard": "^20.0.0"
   },
   "config": {
