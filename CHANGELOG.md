@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.10.0...v1.11.0) (2020-02-18)
+
+
+### Features
+
+* **queue:** adds queue performance test demo ([366703e](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/366703e361b1d6ed8a0811662e22bef2a871495b))
+* **stack:** adds stack performance test demo ([420e13b](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/420e13bd93d1fd03e1611cdb0797eb870df03299))
+
 ## [1.10.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.9.0...v1.10.0) (2020-02-13)
 
 
