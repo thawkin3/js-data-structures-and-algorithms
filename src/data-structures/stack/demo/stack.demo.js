@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react'
 import { Stack } from '../src/stack'
+import { StackPerformanceTest } from './stack-performance-test.demo'
 import './stack.demo.css'
 
 export default {
@@ -120,3 +121,5 @@ class StackVisualizer extends Component {
 }
 
 export const stackVisualizer = () => <StackVisualizer />
+
+export const performanceTest = () => <StackPerformanceTest />
