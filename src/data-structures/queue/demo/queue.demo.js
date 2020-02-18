@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react'
 import { Queue } from '../src/queue'
+import { QueuePerformanceTest } from './queue-performance-test.demo'
 import './queue.demo.css'
 
 export default {
@@ -112,3 +113,5 @@ class QueueVisualizer extends Component {
 }
 
 export const queueVisualizer = () => <QueueVisualizer />
+
+export const performanceTest = () => <QueuePerformanceTest />
