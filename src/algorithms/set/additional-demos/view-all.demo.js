@@ -44,39 +44,19 @@ class ViewAllSetAlgorithms extends Component {
     return (
       <div>
         <h2>Union of Set 1 and Set 2:</h2>
-        <p>
-          {union(set1, set2)
-            .enumerate()
-            .join(', ')}
-        </p>
+        <p>{union(set1, set2).enumerate().join(', ')}</p>
         <hr />
         <h2>Intersection of Set 1 and Set 2:</h2>
-        <p>
-          {intersection(set1, set2)
-            .enumerate()
-            .join(', ')}
-        </p>
+        <p>{intersection(set1, set2).enumerate().join(', ')}</p>
         <hr />
         <h2>Set Difference of Set 1 and Set 2:</h2>
-        <p>
-          {setDifference(set1, set2)
-            .enumerate()
-            .join(', ')}
-        </p>
+        <p>{setDifference(set1, set2).enumerate().join(', ')}</p>
         <hr />
         <h2>Set Difference of Set 2 and Set 1:</h2>
-        <p>
-          {setDifference(set2, set1)
-            .enumerate()
-            .join(', ')}
-        </p>
+        <p>{setDifference(set2, set1).enumerate().join(', ')}</p>
         <hr />
         <h2>Symmetric Difference of Set 1 and Set 2:</h2>
-        <p>
-          {symmetricDifference(set1, set2)
-            .enumerate()
-            .join(', ')}
-        </p>
+        <p>{symmetricDifference(set1, set2).enumerate().join(', ')}</p>
       </div>
     )
   }

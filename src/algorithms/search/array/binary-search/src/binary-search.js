@@ -31,9 +31,9 @@ export const binarySearch = (haystack, needle, showLogs) => {
       console.log(
         `iteration ${i}: midpoint index: ${fullHaystackMidpointIndex}; array to search: ${searchableHaystack.join(
           ', '
-        )}; ${needle} === ${
-          searchableHaystack[midpointIndex]
-        } ? ... ${needle === searchableHaystack[midpointIndex]}!`
+        )}; ${needle} === ${searchableHaystack[midpointIndex]} ? ... ${
+          needle === searchableHaystack[midpointIndex]
+        }!`
       )
 
     if (searchableHaystack[midpointIndex] === needle) {

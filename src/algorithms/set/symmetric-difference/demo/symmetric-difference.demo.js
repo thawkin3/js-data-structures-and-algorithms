@@ -38,13 +38,7 @@ class SymmetricDifferenceOfTwoSetsVisualizer extends Component {
       }
     })
 
-    return (
-      <p>
-        {symmetricDifference(set1, set2)
-          .enumerate()
-          .join(', ')}
-      </p>
-    )
+    return <p>{symmetricDifference(set1, set2).enumerate().join(', ')}</p>
   }
 
   render() {

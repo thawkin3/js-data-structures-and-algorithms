@@ -21,8 +21,9 @@ export const linearSearch = (haystack, needle, showLogs) => {
     /* istanbul ignore next */
     showLogs &&
       console.log(
-        `iteration ${i + 1}: ${needle} === ${haystack[i]} ? ... ${needle ===
-          haystack[i]}!`
+        `iteration ${i + 1}: ${needle} === ${haystack[i]} ? ... ${
+          needle === haystack[i]
+        }!`
       )
     if (needle === haystack[i]) {
       return i

@@ -38,13 +38,7 @@ class IntersectionOfTwoSetsVisualizer extends Component {
       }
     })
 
-    return (
-      <p>
-        {intersection(set1, set2)
-          .enumerate()
-          .join(', ')}
-      </p>
-    )
+    return <p>{intersection(set1, set2).enumerate().join(', ')}</p>
   }
 
   render() {
