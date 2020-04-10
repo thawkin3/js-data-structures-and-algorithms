@@ -5,6 +5,7 @@ export class SearchPerformanceTest extends Component {
   state = {
     needle: '',
     haystack: [],
+    haystackConvertedToNumbers: [],
     lastResultSet: null,
   }
 
@@ -19,16 +20,19 @@ export class SearchPerformanceTest extends Component {
     // Need a sorted array for binary search
     if (searchMethodName === 'Binary Search') {
       for (let i = 0; i < 100000; i += 5) {
-        initialSearchArray.push(String(i + 1 + Math.floor(Math.random() * 4)))
+        initialSearchArray.push(i + 1 + Math.floor(Math.random() * 4))
       }
       // Array can be in random order for other search methods
     } else {
       for (let i = 0; i < 20000; i++) {
-        initialSearchArray.push(String(Math.floor(Math.random() * 20000)))
+        initialSearchArray.push(Math.floor(Math.random() * 20000))
       }
     }
 
-    this.setState({ haystack: initialSearchArray })
+    this.setState({
+      haystack: initialSearchArray,
+      haystackConvertedToNumbers: initialSearchArray,
+    })
   }
 
   handleNeedleChange = e => {
@@ -36,22 +40,53 @@ export class SearchPerformanceTest extends Component {
   }
 
   handleHaystackChange = e => {
-    this.setState({ haystack: e.target.value.split(', ') })
+    const updatedHaystack = e.target.value.split(', ')
+    const haystackConvertedToNumbers = updatedHaystack.reduce(
+      (fullArray, value) => {
+        const valueWithoutTrailingComma = value.replace(',', '')
+        if (valueWithoutTrailingComma === '') {
+          return fullArray
+        }
+
+        const valueConvertedToNumberIfPossible = isNaN(
+          valueWithoutTrailingComma
+        )
+          ? valueWithoutTrailingComma
+          : Number(valueWithoutTrailingComma)
+        return [...fullArray, valueConvertedToNumberIfPossible]
+      },
+      []
+    )
+    this.setState({ haystack: updatedHaystack, haystackConvertedToNumbers })
   }
 
   runPerformanceTest = e => {
     e.preventDefault()
 
-    const { needle, haystack } = this.state
+    const { needle, haystackConvertedToNumbers } = this.state
     const { searchMethod } = this.props
 
+    if (
+      !needle ||
+      !haystackConvertedToNumbers ||
+      haystackConvertedToNumbers.length === 0
+    ) {
+      return this.setState({ lastResultSet: null })
+    }
+
+    const needleConvertedToNumberIfPossible = isNaN(needle)
+      ? needle
+      : Number(needle)
     const startTime = performance.now()
-    const result = searchMethod(haystack, needle)
+    const result = searchMethod(
+      haystackConvertedToNumbers,
+      needleConvertedToNumberIfPossible
+    )
     const endTime = performance.now()
 
     this.setState({
       lastResultSet: {
-        haystack,
+        haystack: [...haystackConvertedToNumbers],
         needle,
         result,
         timeTaken: endTime - startTime,
@@ -113,7 +148,7 @@ export class SearchPerformanceTest extends Component {
               <div className="arrayHaystack">
                 <b>Array Haystack:</b>{' '}
                 <div className="arrayHaystackCharacters">
-                  {haystack.join(', ')}
+                  {lastResultSet.haystack.join(', ')}
                 </div>
               </div>
             </div>
