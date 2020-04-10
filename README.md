@@ -31,18 +31,22 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 ## Data Structures
 
 - [Array](src/data-structures/array/src/array.js)
+- AVL Tree (TODO)
 - [Binary Search Tree](src/data-structures/binary-search-tree/src/binary-search-tree.js)
 - [Doubly Linked List](src/data-structures/doubly-linked-list/src/doubly-linked-list.js)
+- Graph (TODO)
 - [Hash Table (Object)](src/data-structures/hash-table/src/hash-table.js)
+- Heap (TODO)
 - [Linked List](src/data-structures/linked-list/src/linked-list.js)
 - [Node (with only Next pointer)](src/data-structures/linked-list/src/node.js)
 - [Node (with Next and Previous pointers)](src/data-structures/doubly-linked-list/src/node.js)
 - [Priority Queue](src/data-structures/priority-queue/src/priority-queue.js)
 - [Queue (from Array)](src/data-structures/queue/src/queue.js)
-- [Queue (from DoublyLinkedList)](src/data-structures/queue/src/queue-from-doubly-linked-list.js)
+- [Queue (from Doubly Linked List)](src/data-structures/queue/src/queue-from-doubly-linked-list.js)
 - [Set](src/data-structures/set/src/set.js)
 - [Stack (from Array)](src/data-structures/stack/src/stack.js)
-- [Stack (from LinkedList)](src/data-structures/stack/src/stack-from-linked-list.js)
+- [Stack (from Linked List)](src/data-structures/stack/src/stack-from-linked-list.js)
+- Trie (TODO)
 
 ## Algorithms
 
@@ -56,13 +60,22 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 - [Boyer-Moore-Horspool Search](src/algorithms/search/string/boyer-moore-horspool-search/src/boyer-moore-horspool-search.js)
 - [Naive Search](src/algorithms/search/string/naive-search/src/naive-search.js)
 
+### Searching (Tree and Graph)
+
+- Breadth-First Search (TODO)
+- Depth-First Search (TODO)
+
 ### Sorting
 
 - [Bubble Sort](src/algorithms/sort/bubble-sort/src/bubble-sort.js)
+- Counting Sort (TODO)
+- Heap Sort (TODO)
 - [Insertion Sort](src/algorithms/sort/insertion-sort/src/insertion-sort.js)
 - [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js)
 - [Quick Sort](src/algorithms/sort/quick-sort/src/quick-sort.js)
+- Radix Sort (TODO)
 - [Selection Sort](src/algorithms/sort/selection-sort/src/selection-sort.js)
+- Shell Sort (TODO)
 
 ### Sets
 
