@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.2](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.1...v1.11.2) (2020-04-10)
+
+
+### Bug Fixes
+
+* fixes the binary search storybook demo ([7bd10c9](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/7bd10c92d7609a2eb2f5938d841397fb7bcda87d))
+
 ### [1.11.1](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.0...v1.11.1) (2020-03-13)
 
 ## [1.11.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.10.0...v1.11.0) (2020-02-18)
