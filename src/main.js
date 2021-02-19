@@ -23,6 +23,8 @@ export { mergeSort } from './algorithms/sort/merge-sort/src/merge-sort'
 export { quickSort } from './algorithms/sort/quick-sort/src/quick-sort'
 export { selectionSort } from './algorithms/sort/selection-sort/src/selection-sort'
 export { radixSort } from './algorithms/sort/radix-sort/src/radix-sort'
+export { countSort } from './algorithms/sort/count-sort/src/count-sort'
+
 ////////////////////////
 // Data Structures
 ////////////////////////

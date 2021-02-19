@@ -6,6 +6,7 @@ import { mergeSort } from '../merge-sort/src/merge-sort'
 import { quickSort } from '../quick-sort/src/quick-sort'
 import { selectionSort } from '../selection-sort/src/selection-sort'
 import { radixSort } from '../radix-sort/src/radix-sort'
+import { countSort } from '../count-sort/src/count-sort'
 
 export default {
   title: 'Algorithms|Sort/Sort Comparisons',
@@ -175,6 +176,11 @@ class SortPerformanceComparisonTest extends Component {
     radixSort(initialArrayCopy)
     const endTimeForRadixSort = performance.now()
 
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForCountSort = performance.now()
+    countSort(initialArrayCopy)
+    const endTimeforCountSort = performance.now()
+
     this.setState(prevState => ({
       currentResultKey: arrayKey,
       storedArrays: {
@@ -188,6 +194,7 @@ class SortPerformanceComparisonTest extends Component {
             quickSort: endTimeForQuickSort - startTimeForQuickSort,
             selectionSort: endTimeForSelectionSort - startTimeForSelectionSort,
             radixSort: endTimeForRadixSort - startTimeForRadixSort,
+            countSort: endTimeforCountSort - startTimeForCountSort,
           },
         },
       },
@@ -352,6 +359,22 @@ class SortPerformanceComparisonTest extends Component {
                 <b>
                   {(
                     storedArrays[currentResultKey].timeTaken.radixSort / 1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
+              <hr />
+              <div>
+                <h3>Count Sort</h3> took{' '}
+                <b>
+                  {storedArrays[currentResultKey].timeTaken.countSort.toFixed(
+                    3
+                  )}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.countSort / 1000
                   ).toFixed(6)}
                 </b>{' '}
                 seconds).
