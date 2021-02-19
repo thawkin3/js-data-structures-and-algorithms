@@ -22,7 +22,7 @@ export { insertionSort } from './algorithms/sort/insertion-sort/src/insertion-so
 export { mergeSort } from './algorithms/sort/merge-sort/src/merge-sort'
 export { quickSort } from './algorithms/sort/quick-sort/src/quick-sort'
 export { selectionSort } from './algorithms/sort/selection-sort/src/selection-sort'
-
+export { radixSort } from './algorithms/sort/radix-sort/src/radix-sort'
 ////////////////////////
 // Data Structures
 ////////////////////////

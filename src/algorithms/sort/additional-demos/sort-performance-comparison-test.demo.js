@@ -5,6 +5,7 @@ import { insertionSort } from '../insertion-sort/src/insertion-sort'
 import { mergeSort } from '../merge-sort/src/merge-sort'
 import { quickSort } from '../quick-sort/src/quick-sort'
 import { selectionSort } from '../selection-sort/src/selection-sort'
+import { radixSort } from '../radix-sort/src/radix-sort'
 
 export default {
   title: 'Algorithms|Sort/Sort Comparisons',
@@ -169,6 +170,11 @@ class SortPerformanceComparisonTest extends Component {
     selectionSort(initialArrayCopy)
     const endTimeForSelectionSort = performance.now()
 
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForRadixSort = performance.now()
+    radixSort(initialArrayCopy)
+    const endTimeForRadixSort = performance.now()
+
     this.setState(prevState => ({
       currentResultKey: arrayKey,
       storedArrays: {
@@ -181,6 +187,7 @@ class SortPerformanceComparisonTest extends Component {
             mergeSort: endTimeForMergeSort - startTimeForMergeSort,
             quickSort: endTimeForQuickSort - startTimeForQuickSort,
             selectionSort: endTimeForSelectionSort - startTimeForSelectionSort,
+            radixSort: endTimeForRadixSort - startTimeForRadixSort,
           },
         },
       },
@@ -334,6 +341,21 @@ class SortPerformanceComparisonTest extends Component {
                 seconds).
               </div>
               <hr />
+              <div>
+                <h3>Radix Sort</h3> took{' '}
+                <b>
+                  {storedArrays[currentResultKey].timeTaken.radixSort.toFixed(
+                    3
+                  )}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.radixSort / 1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
               <div className="arrayData">
                 <b>Initial Array:</b>{' '}
                 <div className="elements">
