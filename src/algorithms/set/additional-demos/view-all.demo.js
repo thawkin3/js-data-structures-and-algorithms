@@ -7,7 +7,7 @@ import { symmetricDifference } from '../symmetric-difference/src/symmetric-diffe
 import './view-all.demo.css'
 
 export default {
-  title: 'Algorithms|Set/View All Side by Side',
+  title: 'Algorithms/Set/View All Side by Side',
 }
 
 class ViewAllSetAlgorithms extends Component {

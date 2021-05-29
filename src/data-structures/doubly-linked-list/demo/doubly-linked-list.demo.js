@@ -4,7 +4,7 @@ import { NodeVisualizer } from './node.demo'
 import './doubly-linked-list.demo.css'
 
 export default {
-  title: 'Data Structures|Doubly Linked List',
+  title: 'Data Structures/Doubly Linked List',
 }
 
 const DoublyLinkedListNodeItem = ({ val }) => {
@@ -128,12 +128,8 @@ class DoublyLinkedListVisualizer extends Component {
   }
 
   render() {
-    const {
-      doublyLinkedList,
-      itemToAdd,
-      indexToAddAt,
-      indexToRemoveAt,
-    } = this.state
+    const { doublyLinkedList, itemToAdd, indexToAddAt, indexToRemoveAt } =
+      this.state
 
     return (
       <div className="doublyLinkedListDemo">

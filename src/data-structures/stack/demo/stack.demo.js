@@ -4,7 +4,7 @@ import { StackPerformanceTest } from './stack-performance-test.demo'
 import './stack.demo.css'
 
 export default {
-  title: 'Data Structures|Stack',
+  title: 'Data Structures/Stack',
 }
 
 const Item = ({ value, className }) => {

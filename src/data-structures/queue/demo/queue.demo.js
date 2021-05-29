@@ -4,7 +4,7 @@ import { QueuePerformanceTest } from './queue-performance-test.demo'
 import './queue.demo.css'
 
 export default {
-  title: 'Data Structures|Queue',
+  title: 'Data Structures/Queue',
 }
 
 const Item = ({ value, className }) => {

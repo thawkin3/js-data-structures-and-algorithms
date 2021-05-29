@@ -3,7 +3,7 @@ import { PriorityQueue } from '../src/priority-queue'
 import './priority-queue.demo.css'
 
 export default {
-  title: 'Data Structures|Priority Queue',
+  title: 'Data Structures/Priority Queue',
 }
 
 const Item = ({ item, className }) => {

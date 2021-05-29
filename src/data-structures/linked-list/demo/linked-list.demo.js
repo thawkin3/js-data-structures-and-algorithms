@@ -4,7 +4,7 @@ import { NodeVisualizer } from './node.demo'
 import './linked-list.demo.css'
 
 export default {
-  title: 'Data Structures|Linked List',
+  title: 'Data Structures/Linked List',
 }
 
 const LinkedListNodeItem = ({ val }) => {

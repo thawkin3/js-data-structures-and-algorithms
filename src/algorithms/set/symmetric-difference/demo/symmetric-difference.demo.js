@@ -4,7 +4,7 @@ import { symmetricDifference } from '../src/symmetric-difference'
 import './symmetric-difference.demo.css'
 
 export default {
-  title: 'Algorithms|Set/Symmetric Difference',
+  title: 'Algorithms/Set/Symmetric Difference',
 }
 
 class SymmetricDifferenceOfTwoSetsVisualizer extends Component {

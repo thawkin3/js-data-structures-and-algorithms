@@ -5,7 +5,7 @@ import 'react-tree-graph/dist/style.css'
 import './binary-search-tree.demo.css'
 
 export default {
-  title: 'Data Structures|Binary Search Tree',
+  title: 'Data Structures/Binary Search Tree',
 }
 
 class BinarySearchTreeVisualizer extends Component {

@@ -3,7 +3,7 @@ import { Set } from '../src/set'
 import './set.demo.css'
 
 export default {
-  title: 'Data Structures|Set',
+  title: 'Data Structures/Set',
 }
 
 const Item = ({ value, className }) => {

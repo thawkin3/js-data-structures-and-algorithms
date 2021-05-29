@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default {
-  title: 'Data Structures|Hash Table',
+  title: 'Data Structures/Hash Table',
 }
 
 export const readTheDocs = () => (

@@ -3,7 +3,7 @@ import { SearchPerformanceTest } from '../../demo-utils/search-performance-test.
 import { naiveSearch } from '../src/naive-search'
 
 export default {
-  title: 'Algorithms|Search (String)/Naive Search',
+  title: 'Algorithms/Search (String)/Naive Search',
 }
 
 export const naiveSearchPerformanceTest = () => (

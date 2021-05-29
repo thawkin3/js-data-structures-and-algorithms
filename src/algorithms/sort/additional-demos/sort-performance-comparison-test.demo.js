@@ -7,7 +7,7 @@ import { quickSort } from '../quick-sort/src/quick-sort'
 import { selectionSort } from '../selection-sort/src/selection-sort'
 
 export default {
-  title: 'Algorithms|Sort/Sort Comparisons',
+  title: 'Algorithms/Sort/Sort Comparisons',
 }
 
 const arrayElementCountOptions = [

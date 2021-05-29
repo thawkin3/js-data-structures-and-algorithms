@@ -5,7 +5,7 @@ import './search-performance-comparison-test.demo.css'
 import { declarationOfIndependence } from '../demo-utils/declaration-of-independence'
 
 export default {
-  title: 'Algorithms|Search (String)/Search Comparisions',
+  title: 'Algorithms/Search (String)/Search Comparisions',
 }
 
 class SearchPerformanceComparisonTest extends Component {

@@ -3,7 +3,7 @@ import { SearchPerformanceTest } from '../../demo-utils/search-performance-test.
 import { boyerMooreHorspoolSearch } from '../src/boyer-moore-horspool-search'
 
 export default {
-  title: 'Algorithms|Search (String)/Boyer-Moore-Horspool Search',
+  title: 'Algorithms/Search (String)/Boyer-Moore-Horspool Search',
 }
 
 export const boyerMooreHorspoolSearchPerformanceTest = () => (

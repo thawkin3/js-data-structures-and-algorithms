@@ -3,7 +3,7 @@ import { SearchPerformanceTest } from '../../demo-utils/search-performance-test.
 import { binarySearch } from '../src/binary-search'
 
 export default {
-  title: 'Algorithms|Search (Array)/Binary Search',
+  title: 'Algorithms/Search (Array)/Binary Search',
 }
 
 export const binarySearchPerformanceTest = () => (

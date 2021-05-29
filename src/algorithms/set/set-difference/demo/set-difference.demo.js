@@ -4,7 +4,7 @@ import { setDifference } from '../src/set-difference'
 import './set-difference.demo.css'
 
 export default {
-  title: 'Algorithms|Set/Set Difference',
+  title: 'Algorithms/Set/Set Difference',
 }
 
 class SetDifferenceOfTwoSetsVisualizer extends Component {

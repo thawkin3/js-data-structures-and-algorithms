@@ -112,9 +112,10 @@ export class BinarySearchTreeWithDisplay extends BinarySearchTree {
     // deleting a node with no children
     if (currentNode.left === null && currentNode.right === null) {
       currentNode = null
-      currentTreeVisualizerDataNodeParent.children = currentTreeVisualizerDataNodeParent.children.filter(
-        childNode => childNode.name !== currentTreeVisualizerDataNode.name
-      )
+      currentTreeVisualizerDataNodeParent.children =
+        currentTreeVisualizerDataNodeParent.children.filter(
+          childNode => childNode.name !== currentTreeVisualizerDataNode.name
+        )
       return currentNode
     }
 

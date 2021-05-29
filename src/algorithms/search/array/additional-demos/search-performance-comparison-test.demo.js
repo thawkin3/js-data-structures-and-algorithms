@@ -4,7 +4,7 @@ import { binarySearch } from '../binary-search/src/binary-search'
 import './search-performance-comparison-test.demo.css'
 
 export default {
-  title: 'Algorithms|Search (Array)/Search Comparisions',
+  title: 'Algorithms/Search (Array)/Search Comparisions',
 }
 
 class SearchPerformanceComparisonTest extends Component {

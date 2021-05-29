@@ -4,7 +4,7 @@ import { union } from '../src/union'
 import './union.demo.css'
 
 export default {
-  title: 'Algorithms|Set/Union',
+  title: 'Algorithms/Set/Union',
 }
 
 class UnionOfTwoSetsVisualizer extends Component {

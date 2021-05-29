@@ -3,7 +3,7 @@ import { SearchPerformanceTest } from '../../demo-utils/search-performance-test.
 import { linearSearch } from '../src/linear-search'
 
 export default {
-  title: 'Algorithms|Search (Array)/Linear Search',
+  title: 'Algorithms/Search (Array)/Linear Search',
 }
 
 export const linearSearchPerformanceTest = () => (

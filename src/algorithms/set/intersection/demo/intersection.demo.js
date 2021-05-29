@@ -4,7 +4,7 @@ import { intersection } from '../src/intersection'
 import './intersection.demo.css'
 
 export default {
-  title: 'Algorithms|Set/Intersection',
+  title: 'Algorithms/Set/Intersection',
 }
 
 class IntersectionOfTwoSetsVisualizer extends Component {
