@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.4](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.3...v1.11.4) (2021-05-29)
+
 ### [1.11.3](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.2...v1.11.3) (2020-05-27)
 
 ### [1.11.2](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.1...v1.11.2) (2020-04-10)
