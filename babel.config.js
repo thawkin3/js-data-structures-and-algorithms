@@ -17,5 +17,18 @@ module.exports = {
     production: {
       presets: [['@babel/preset-env', { modules: false }]],
     },
+    // For Storybook, which requires ES6 modules to be transpiled
+    storybook: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              node: 'current',
+            },
+          },
+        ],
+      ],
+    },
   },
 }
