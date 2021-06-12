@@ -27,7 +27,8 @@ body {
   font-size: 1rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
   border-radius: 0.5rem;
-  background: deeppink;
+  border: none;
+  background: #216869;
   color: #fff;
   cursor: pointer;
   position: relative;
@@ -44,7 +45,7 @@ body {
 
 .button.outline:focus::before,
 .button.outline:hover::before {
-  box-shadow: deeppink 0 0 0 0.0625rem;
+  box-shadow: #216869 0 0 0 0.0625rem;
   content: "";
   height: calc(100% + 0.25rem);
   left: 0;
@@ -62,7 +63,7 @@ body {
   border: none;
   border-radius: 0;
   background: transparent;
-  color: deeppink;
+  color: #216869;
   padding: 0;
   margin: 0.25rem 0.5rem;
   font-weight: bold;
@@ -70,7 +71,7 @@ body {
 
 .button.underline:focus::before,
 .button.underline:hover::before {
-  border-bottom: 0.0625rem solid currentcolor;
+  border-bottom: 0.0625rem solid currentColor;
   bottom: -0.1875rem;
   content: "";
   height: 0;
