@@ -17,7 +17,7 @@ module.exports = {
     production: {
       presets: [['@babel/preset-env', { modules: false }]],
     },
-    // For Storybook, which requires ES6 modules to be transpiled
+    // For Storybook
     storybook: {
       presets: [
         [
@@ -28,6 +28,9 @@ module.exports = {
             },
           },
         ],
+      ],
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
       ],
     },
   },

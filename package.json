@@ -43,7 +43,7 @@
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
     "prettier-watch": "onchange \"**/*.{js,jsx,ts,tsx,md}\" -- prettier --write {{changed}}",
     "release": "standard-version",
-    "storybook": "start-storybook -p 9009",
+    "storybook": "NODE_ENV=storybook start-storybook -p 9009",
     "stylelint": "stylelint --fix \"src/**/*.css\"",
     "test": "NODE_ENV=test jest",
     "test:coverage": "NODE_ENV=test jest --coverage",
