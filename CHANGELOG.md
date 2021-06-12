@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.5](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.4...v1.11.5) (2021-06-12)
+
+
+### Bug Fixes
+
+* **storybook:** removes babel loose mode warning ([0d41ade](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/0d41aded758a43b4869d4769af2e84a3c782abca))
+* changes Storybook button color for better color contrast ([730ea76](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/730ea76e10146e197aa60724e6b015acc60974b4))
+
 ### [1.11.4](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.3...v1.11.4) (2021-05-29)
 
 ### [1.11.3](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.2...v1.11.3) (2020-05-27)
