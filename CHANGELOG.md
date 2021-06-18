@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.5...v1.12.0) (2021-06-18)
+
+
+### Features
+
+* implements counting sort algorithm ([0ed5b40](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/0ed5b4045f7f53d273a1dd7cc0f149ed3bd97948))
+
 ### [1.11.5](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.11.4...v1.11.5) (2021-06-12)
 
 
