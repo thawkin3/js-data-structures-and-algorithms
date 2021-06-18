@@ -1,9 +1,7 @@
 /**
  * Counting Sort
  *
- * Compares each pair of adjacent items and swaps them if they are in the wrong order
- * Continues looping through the array until no more swaps are needed
- * Not appropriate for large unsorted data sets
+ * Counts the occurrence of each element in the input array and uses that to create a sorted output array
  *
  * Best case performance: Ω(n + k) (always loops through the input array, count array, and output array)
  * Average case performance: θ(n + k) (always loops through the input array, count array, and output array)
