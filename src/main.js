@@ -18,6 +18,7 @@ export { union } from './algorithms/set/union/src/union'
 
 // Sort
 export { bubbleSort } from './algorithms/sort/bubble-sort/src/bubble-sort'
+export { countingSort } from './algorithms/sort/counting-sort/src/counting-sort'
 export { insertionSort } from './algorithms/sort/insertion-sort/src/insertion-sort'
 export { mergeSort } from './algorithms/sort/merge-sort/src/merge-sort'
 export { quickSort } from './algorithms/sort/quick-sort/src/quick-sort'

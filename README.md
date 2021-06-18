@@ -68,7 +68,7 @@ Demos can be found at: http://tylerhawkins.info/js-data-structures-and-algorithm
 ### Sorting
 
 - [Bubble Sort](src/algorithms/sort/bubble-sort/src/bubble-sort.js)
-- Counting Sort (TODO)
+- [Counting Sort](src/algorithms/sort/counting-sort/src/counting-sort.js)
 - Heap Sort (TODO)
 - [Insertion Sort](src/algorithms/sort/insertion-sort/src/insertion-sort.js)
 - [Merge Sort](src/algorithms/sort/merge-sort/src/merge-sort.js)

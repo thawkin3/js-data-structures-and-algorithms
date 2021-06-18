@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './sort-performance-comparison-test.demo.css'
 import { bubbleSort } from '../bubble-sort/src/bubble-sort'
+import { countingSort } from '../counting-sort/src/counting-sort'
 import { insertionSort } from '../insertion-sort/src/insertion-sort'
 import { mergeSort } from '../merge-sort/src/merge-sort'
 import { quickSort } from '../quick-sort/src/quick-sort'
@@ -150,6 +151,11 @@ class SortPerformanceComparisonTest extends Component {
     const endTimeForBubbleSort = performance.now()
 
     initialArrayCopy = [...storedArrays[arrayKey].initialArray]
+    const startTimeForCountingSort = performance.now()
+    countingSort(initialArrayCopy)
+    const endTimeForCountingSort = performance.now()
+
+    initialArrayCopy = [...storedArrays[arrayKey].initialArray]
     const startTimeForInsertionSort = performance.now()
     insertionSort(initialArrayCopy)
     const endTimeForInsertionSort = performance.now()
@@ -177,6 +183,7 @@ class SortPerformanceComparisonTest extends Component {
           ...prevState.storedArrays[arrayKey],
           timeTaken: {
             bubbleSort: endTimeForBubbleSort - startTimeForBubbleSort,
+            countingSort: endTimeForCountingSort - startTimeForCountingSort,
             insertionSort: endTimeForInsertionSort - startTimeForInsertionSort,
             mergeSort: endTimeForMergeSort - startTimeForMergeSort,
             quickSort: endTimeForQuickSort - startTimeForQuickSort,
@@ -263,6 +270,22 @@ class SortPerformanceComparisonTest extends Component {
                 <b>
                   {(
                     storedArrays[currentResultKey].timeTaken.bubbleSort / 1000
+                  ).toFixed(6)}
+                </b>{' '}
+                seconds).
+              </div>
+              <hr />
+              <div>
+                <h3>Counting Sort </h3> took{' '}
+                <b>
+                  {storedArrays[
+                    currentResultKey
+                  ].timeTaken.countingSort.toFixed(3)}
+                </b>{' '}
+                milliseconds (or{' '}
+                <b>
+                  {(
+                    storedArrays[currentResultKey].timeTaken.countingSort / 1000
                   ).toFixed(6)}
                 </b>{' '}
                 seconds).
