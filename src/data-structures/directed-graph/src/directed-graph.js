@@ -61,9 +61,38 @@ export class DirectedGraph {
     console.log(printedMessage)
   }
 
-  // eslint-disable-next-line no-unused-vars
-  breadthFirstSearch(startingNode, searchingForNode) {}
+  breadthFirstSearch(startingNode, searchingForNode, callback) {
+    const visitedNodes = {}
+    const nodesToVisitQueue = []
+
+    nodesToVisitQueue.push(startingNode)
+
+    while (nodesToVisitQueue.length > 0) {
+      const currentNode = nodesToVisitQueue.shift()
+
+      if (!visitedNodes[currentNode]) {
+        visitedNodes[currentNode] = true
+        callback(currentNode)
+
+        if (currentNode === searchingForNode) {
+          break
+        }
+
+        const currentNodeNeighbors = this.nodes.get(currentNode)
+        console.log(
+          'currentNode:',
+          currentNode,
+          'currentNodeNeighbors:',
+          currentNodeNeighbors.join(', ')
+        )
+
+        currentNodeNeighbors.forEach(neighborNode => {
+          nodesToVisitQueue.push(neighborNode)
+        })
+      }
+    }
+  }
 
   // eslint-disable-next-line no-unused-vars
-  depthFirstSearch(startingNode, searchingForNode) {}
+  depthFirstSearch(startingNode, searchingForNode, callback) {}
 }
