@@ -20,10 +20,12 @@
       }
     }
   ],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
   },
   "root": true,
   "rules": {
@@ -32,7 +34,7 @@
   },
   "settings": {
     "react": {
-      "version": "16.12.0"
+      "version": "17.0.2"
     }
   }
 }
