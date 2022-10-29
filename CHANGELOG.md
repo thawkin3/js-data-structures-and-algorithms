@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.12.3...v1.13.0) (2022-10-29)
+
+
+### Features
+
+* adds DirectedGraph data structure ([cf97711](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/cf97711ecc468d967c2e27104587716d3b1c270d))
+* implements breadth-first search on a graph ([427adfb](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/427adfb70a9cb1827ac1fb737ba0efe7e986fdd1))
+* implements depth-first search on a directed graph ([c1a2305](https://github.com/thawkin3/js-data-structures-and-algorithms/commit/c1a2305d80fa4978694c446e378877c881cea9f1))
+
 ### [1.12.3](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.12.2...v1.12.3) (2022-10-29)
 
 ### [1.12.2](https://github.com/thawkin3/js-data-structures-and-algorithms/compare/v1.12.1...v1.12.2) (2022-10-29)
