@@ -95,4 +95,39 @@ export class DirectedGraph {
       }
     }
   }
+
+  depthFirstSearch(startingNode, searchingForNode, callback, showLogs) {
+    const visitedNodes = {}
+    const nodesToVisitStack = []
+
+    nodesToVisitStack.unshift(startingNode)
+
+    while (nodesToVisitStack.length > 0) {
+      const currentNode = nodesToVisitStack.shift()
+
+      if (!visitedNodes[currentNode]) {
+        visitedNodes[currentNode] = true
+        callback(currentNode)
+
+        if (currentNode === searchingForNode) {
+          break
+        }
+
+        const currentNodeNeighbors = this.nodes.get(currentNode)
+
+        /* istanbul ignore next */
+        showLogs &&
+          console.log(
+            'currentNode:',
+            currentNode,
+            'currentNodeNeighbors:',
+            currentNodeNeighbors.join(', ')
+          )
+
+        currentNodeNeighbors.forEach(neighborNode => {
+          nodesToVisitStack.unshift(neighborNode)
+        })
+      }
+    }
+  }
 }

@@ -267,5 +267,123 @@ D ->
     })
   })
 
-  describe('depthFirstSearch', () => {})
+  describe('depthFirstSearch', () => {
+    it('performs a depth-first search starting at a given node in a non-tree-like graph', () => {
+      // A  ->  B
+      // |    / |
+      // v  <   v
+      // C  ->  D
+      const graph = new DirectedGraph()
+
+      graph.addNode('A')
+      graph.addNode('B')
+      graph.addNode('C')
+      graph.addNode('D')
+
+      graph.addEdge('A', 'B')
+      graph.addEdge('A', 'C')
+      graph.addEdge('B', 'C')
+      graph.addEdge('B', 'D')
+      graph.addEdge('C', 'D')
+
+      const visitedNodes = []
+      const traversalCallback = node => {
+        visitedNodes.push(node)
+      }
+
+      graph.depthFirstSearch('A', 'D', traversalCallback)
+
+      expect(visitedNodes).toEqual(['A', 'C', 'D'])
+    })
+
+    it('performs a depth-first search starting at a given node at the top of a tree and ending at the bottom right of the tree', () => {
+      //                A
+      //    B           C           D
+      // E     F     G     H     I     J
+      const graph = new DirectedGraph()
+
+      graph.addNode('A')
+      graph.addNode('B')
+      graph.addNode('C')
+      graph.addNode('D')
+      graph.addNode('E')
+      graph.addNode('F')
+      graph.addNode('G')
+      graph.addNode('H')
+      graph.addNode('I')
+      graph.addNode('J')
+
+      graph.addEdge('A', 'B')
+      graph.addEdge('A', 'C')
+      graph.addEdge('A', 'D')
+
+      graph.addEdge('B', 'E')
+      graph.addEdge('B', 'F')
+
+      graph.addEdge('C', 'G')
+      graph.addEdge('C', 'H')
+
+      graph.addEdge('D', 'I')
+      graph.addEdge('D', 'J')
+
+      const visitedNodes = []
+      const traversalCallback = node => {
+        visitedNodes.push(node)
+      }
+
+      graph.depthFirstSearch('A', 'J', traversalCallback)
+
+      expect(visitedNodes).toEqual(['A', 'D', 'J'])
+    })
+
+    it('performs a depth-first search starting at a given node at the top of a tree and ending midway through the tree without visiting every node', () => {
+      //                A
+      //    B           C           D
+      // E     F     G     H     I     J
+      const graph = new DirectedGraph()
+
+      graph.addNode('A')
+      graph.addNode('B')
+      graph.addNode('C')
+      graph.addNode('D')
+      graph.addNode('E')
+      graph.addNode('F')
+      graph.addNode('G')
+      graph.addNode('H')
+      graph.addNode('I')
+      graph.addNode('J')
+
+      graph.addEdge('A', 'B')
+      graph.addEdge('A', 'C')
+      graph.addEdge('A', 'D')
+
+      graph.addEdge('B', 'E')
+      graph.addEdge('B', 'F')
+
+      graph.addEdge('C', 'G')
+      graph.addEdge('C', 'H')
+
+      graph.addEdge('D', 'I')
+      graph.addEdge('D', 'J')
+
+      const visitedNodes = []
+      const traversalCallback = node => {
+        visitedNodes.push(node)
+      }
+
+      graph.depthFirstSearch('A', 'F', traversalCallback)
+
+      expect(visitedNodes).toEqual([
+        'A',
+        'D',
+        'J',
+        'I',
+        'C',
+        'H',
+        'G',
+        'B',
+        'F',
+      ])
+    })
+  })
 })
