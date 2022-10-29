@@ -86,6 +86,30 @@ describe('DirectedGraph', () => {
         'Node does not exist in the graph.'
       )
     })
+
+    it('returns an array of node neghbors for an existing node with some neighbors', () => {
+      const graph = new DirectedGraph()
+      graph.addNode('A')
+      graph.addNode('B')
+      graph.addNode('C')
+
+      graph.addEdge('A', 'B')
+      graph.addEdge('A', 'C')
+
+      expect(graph.getNodeNeighbors('A')).toEqual(['B', 'C'])
+    })
+
+    it('returns an empty array of node neghbors for an existing node that does not have any neighbors', () => {
+      const graph = new DirectedGraph()
+      graph.addNode('A')
+      graph.addNode('B')
+      graph.addNode('C')
+
+      graph.addEdge('A', 'B')
+      graph.addEdge('A', 'C')
+
+      expect(graph.getNodeNeighbors('C')).toEqual([])
+    })
   })
 
   describe('printGraph', () => {

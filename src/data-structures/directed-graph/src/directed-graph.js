@@ -61,7 +61,7 @@ export class DirectedGraph {
     console.log(printedMessage)
   }
 
-  breadthFirstSearch(startingNode, searchingForNode, callback) {
+  breadthFirstSearch(startingNode, searchingForNode, callback, showLogs) {
     const visitedNodes = {}
     const nodesToVisitQueue = []
 
@@ -79,12 +79,15 @@ export class DirectedGraph {
         }
 
         const currentNodeNeighbors = this.nodes.get(currentNode)
-        console.log(
-          'currentNode:',
-          currentNode,
-          'currentNodeNeighbors:',
-          currentNodeNeighbors.join(', ')
-        )
+
+        /* istanbul ignore next */
+        showLogs &&
+          console.log(
+            'currentNode:',
+            currentNode,
+            'currentNodeNeighbors:',
+            currentNodeNeighbors.join(', ')
+          )
 
         currentNodeNeighbors.forEach(neighborNode => {
           nodesToVisitQueue.push(neighborNode)
@@ -92,7 +95,4 @@ export class DirectedGraph {
       }
     }
   }
-
-  // eslint-disable-next-line no-unused-vars
-  depthFirstSearch(startingNode, searchingForNode, callback) {}
 }
